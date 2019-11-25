@@ -1,0 +1,6 @@
+C:\Users\ASUS\source\repos\DrawingModel\DrawingModel\bin\Debug\DrawingModel.dll
+C:\Users\ASUS\source\repos\DrawingModel\DrawingModel\bin\Debug\DrawingModel.pdb
+C:\Users\ASUS\source\repos\DrawingModel\DrawingModel\obj\Debug\DrawingModel.csprojAssemblyReference.cache
+C:\Users\ASUS\source\repos\DrawingModel\DrawingModel\obj\Debug\DrawingModel.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\DrawingModel\DrawingModel\obj\Debug\DrawingModel.dll
+C:\Users\ASUS\source\repos\DrawingModel\DrawingModel\obj\Debug\DrawingModel.pdb
