@@ -10,18 +10,18 @@ namespace DrawingApp.PresentationModel
     class PresentationModel
     {
         Model _model;
-        IGraphics _igraphics;
+        IGraphics _interfaceGraphics;
         public PresentationModel(Model model, Canvas canvas)
         {
             this._model = model;
-            _igraphics = new WindowsStoreGraphicsAdaptor(canvas);
+            _interfaceGraphics = new WindowsStoreGraphicsAdaptor(canvas);
         }
 
         // 畫圖
         public void Draw()
         {
             // 重複使用igraphics物件
-            _model.Draw(_igraphics);
+            _model.Draw(_interfaceGraphics);
         }
     }
 }

@@ -45,26 +45,21 @@ namespace DrawingApp.PresentationModel
                 Stroke = new SolidColorBrush(Colors.Black)
             };
             if (x2 > x1 && y2 > y1)
-            {
-                Canvas.SetLeft(rectangle, x1);
-                Canvas.SetTop(rectangle, y1);
-            }
+                this.SetTopLeft(rectangle, y1, x1);
             if (x2 < x1 && y2 > y1)
-            {
-                Canvas.SetLeft(rectangle, x2);
-                Canvas.SetTop(rectangle, y1);
-            }
+                this.SetTopLeft(rectangle, y1, x2);
             if (x2 > x1 && y2 < y1)
-            {
-                Canvas.SetLeft(rectangle, x1);
-                Canvas.SetTop(rectangle, y2);
-            }
+                this.SetTopLeft(rectangle, y2, x1);
             if (x2 < x1 && y2 < y1)
-            {
-                Canvas.SetLeft(rectangle, x2);
-                Canvas.SetTop(rectangle, y2);
-            }
+                this.SetTopLeft(rectangle, y2, x2);
             _canvas.Children.Add(rectangle);
+        }
+
+        // 設定左上角座標
+        private void SetTopLeft(Windows.UI.Xaml.Shapes.Rectangle rectangle, double top, double left)
+        {
+            Canvas.SetTop(rectangle, top);
+            Canvas.SetLeft(rectangle, left);
         }
     }
 }

@@ -97,21 +97,23 @@ namespace DrawingModel
             if (CurrentMode == 0) // 畫矩形
             {
                 Rectangle newRectangle = new Rectangle();
-                newRectangle._x1 = _firstPointX;
-                newRectangle._y1 = _firstPointY;
-                newRectangle._x2 = _lastPointX;
-                newRectangle._y2 = _lastPointY;
-                _shapes.Add(newRectangle);
+                _shapes.Add(this.AddNewShape(newRectangle));
             }
             else if (CurrentMode == 1) // 畫線
             {
                 Line newLine = new Line();
-                newLine._x1 = _firstPointX;
-                newLine._y1 = _firstPointY;
-                newLine._x2 = _lastPointX;
-                newLine._y2 = _lastPointY;
-                _shapes.Add(newLine);
+                _shapes.Add(this.AddNewShape(newLine));
             }
+        }
+
+        // 新增新圖
+        private Shape AddNewShape(Shape shape)
+        {
+            shape._x1 = _firstPointX;
+            shape._y1 = _firstPointY;
+            shape._x2 = _lastPointX;
+            shape._y2 = _lastPointY;
+            return shape;
         }
 
         // 偵測所有動作

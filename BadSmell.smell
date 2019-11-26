@@ -316,22 +316,6 @@
             </Smell>
             <Smell>
               <Id>9</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.Model.SaveDrawing.21</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>21</Weight>
-              <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>95</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>10</Id>
               <SmellType>ICS(類別宣告-1)</SmellType>
               <HashCode>ClassDeclaration1.Shape._x1</HashCode>
               <Severity>Red</Severity>
@@ -347,7 +331,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>11</Id>
+              <Id>10</Id>
               <SmellType>ICS(類別宣告-1)</SmellType>
               <HashCode>ClassDeclaration1.Shape._y1</HashCode>
               <Severity>Red</Severity>
@@ -363,7 +347,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>12</Id>
+              <Id>11</Id>
               <SmellType>ICS(類別宣告-1)</SmellType>
               <HashCode>ClassDeclaration1.Shape._x2</HashCode>
               <Severity>Red</Severity>
@@ -379,7 +363,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>13</Id>
+              <Id>12</Id>
               <SmellType>ICS(類別宣告-1)</SmellType>
               <HashCode>ClassDeclaration1.Shape._y2</HashCode>
               <Severity>Red</Severity>
@@ -395,87 +379,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>14</Id>
-              <SmellType>Literal constants(字面常數)-"Failed to load Page "</SmellType>
-              <HashCode>LiteralConstants.OnNavigationFailed."Failed to load Page "</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>App.xaml.cs</File>
-              <Line>83</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>15</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.App.OnLaunched.35LaunchActivatedEventArgs e;</HashCode>
-              <Severity>Red</Severity>
-              <Weight>35</Weight>
-              <Project>DrawingApp</Project>
-              <File>App.xaml.cs</File>
-              <Line>40</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>16</Id>
-              <SmellType>ICS(函式-2)</SmellType>
-              <HashCode>Method2.App.OnNavigationFailed</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>App.xaml.cs</File>
-              <Line>81</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>17</Id>
-              <SmellType>ICS(函式-2)</SmellType>
-              <HashCode>Method2.App.OnSuspending</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>App.xaml.cs</File>
-              <Line>93</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>18</Id>
-              <SmellType>Unsuitable naming(名不符實)-_igraphics(igraphics)</SmellType>
-              <HashCode>UnsuitableNaming.PresentationModel._igraphics._igraphics</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>PresentationModel.cs</File>
-              <Line>13</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>19</Id>
+              <Id>13</Id>
               <SmellType>ICS(空白與空行-9)</SmellType>
               <HashCode>SpacingAndNewLine9</HashCode>
               <Severity>Red</Severity>
@@ -491,7 +395,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>20</Id>
+              <Id>14</Id>
               <SmellType>ICS(空白與空行-9)</SmellType>
               <HashCode>SpacingAndNewLine9</HashCode>
               <Severity>Red</Severity>
@@ -507,7 +411,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>21</Id>
+              <Id>15</Id>
               <SmellType>ICS(空白與空行-9)</SmellType>
               <HashCode>SpacingAndNewLine9</HashCode>
               <Severity>Red</Severity>
@@ -523,7 +427,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>22</Id>
+              <Id>16</Id>
               <SmellType>ICS(空白與空行-9)</SmellType>
               <HashCode>SpacingAndNewLine9</HashCode>
               <Severity>Red</Severity>
@@ -536,86 +440,6 @@
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
               <Comment>ICS(空白與空行-9) 陣列初始化的左大括號後面，右大括號前面</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>23</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.WindowsStoreGraphicsAdaptor.DrawRectangle.30double x1;double y1;double x2;double y2;</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>30</Weight>
-              <Project>DrawingApp</Project>
-              <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>39</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>24</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>44 DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>MainPage.g.i.cs</File>
-              <Line>44</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>25</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>129 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByType(System.Type)</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>XamlTypeInfo.g.cs</File>
-              <Line>129</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByType(System.Type)</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>26</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>134 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByName(string)</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>XamlTypeInfo.g.cs</File>
-              <Line>134</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByName(string)</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>27</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>20 DrawingApp.Program.Main(string[])</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>App.g.i.cs</File>
-              <Line>20</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>DrawingApp.Program.Main(string[])</Comment>
               <Auto>false</Auto>
             </Smell>
           </Reviews>
@@ -701,7 +525,7 @@
               <AnalysisFile>
                 <RelativePath>App.xaml.cs</RelativePath>
                 <ProjectName>DrawingApp</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Test</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>MainPage.xaml.cs</RelativePath>
@@ -725,8 +549,8 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>905</ProductionLoc>
-          <TestLoc>0</TestLoc>
+          <ProductionLoc>802</ProductionLoc>
+          <TestLoc>102</TestLoc>
         </CodeReview>
       </Data>
     </div>
