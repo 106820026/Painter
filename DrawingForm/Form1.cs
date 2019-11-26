@@ -40,6 +40,9 @@ namespace DrawingForm
         public void HandleClearButtonClick(object sender, System.EventArgs e)
         {
             _model.Clear();
+            _model.CurrentMode = (int)999m;
+            _rectangle.Enabled = true;
+            _line.Enabled = true;
         }
 
         // 畫矩形

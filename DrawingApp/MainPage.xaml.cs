@@ -43,6 +43,9 @@ namespace DrawingApp
         private void HandleClearButtonClick(object sender, RoutedEventArgs e)
         {
             _model.Clear();
+            _model.CurrentMode = (int)999m;
+            _rectangle.IsEnabled = true;
+            _line.IsEnabled = true;
         }
 
         // 畫矩形
