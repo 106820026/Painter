@@ -19,9 +19,7 @@ namespace DrawingForm
         public Form1()
         {
             InitializeComponent();
-            //
             // prepare canvas
-            //
             _canvas.Dock = DockStyle.Fill;
             _canvas.BackColor = Color.CornflowerBlue;
             _canvas.MouseDown += HandleCanvasPressed;
@@ -29,52 +27,63 @@ namespace DrawingForm
             _canvas.MouseMove += HandleCanvasMoved;
             _canvas.Paint += HandleCanvasPaint;
             Controls.Add(_canvas);
-            //
             // prepare clear button
-            //
             _clear.AutoSize = true;
             _clear.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            //
             // prepare presentation model and model
-            //
             _model = new DrawingModel.Model();
             _presentationModel = new PresentationModel.PresentationModel(_model, _canvas);
             _model._modelChanged += HandleModelChanged;
         }
+
+        // 清除畫面
         public void HandleClearButtonClick(object sender, System.EventArgs e)
         {
             _model.Clear();
         }
 
+        // 畫矩形
         public void HandleRectangleButtonClick(object sender, System.EventArgs e)
         {
             _model.CurrentMode = 0;
+            _rectangle.Enabled = false;
+            _line.Enabled = true;
+            
         }
 
+        // 畫線
         public void HandleLineButtonClick(object sender, System.EventArgs e)
         {
             _model.CurrentMode = 1;
+            _rectangle.Enabled = true;
+            _line.Enabled = false;
         }
-        public void HandleCanvasPressed(object sender,
-       System.Windows.Forms.MouseEventArgs e)
+
+        // 按下滑鼠
+        public void HandleCanvasPressed(object sender, MouseEventArgs e)
         {
-            _model.PointerPressed(e.X, e.Y);
+            _model.PressPointer(e.X, e.Y);
         }
-        public void HandleCanvasReleased(object sender,
-       System.Windows.Forms.MouseEventArgs e)
+
+        // 釋放滑鼠
+        public void HandleCanvasReleased(object sender, MouseEventArgs e)
         {
-            _model.PointerReleased(e.X, e.Y);
+            _model.ReleasePointer(e.X, e.Y);
         }
-        public void HandleCanvasMoved(object sender,
-       System.Windows.Forms.MouseEventArgs e)
+
+        // 偵測滑鼠移動
+        public void HandleCanvasMoved(object sender, MouseEventArgs e)
         {
-            _model.PointerMoved(e.X, e.Y);
+            _model.MovePointer(e.X, e.Y);
         }
-        public void HandleCanvasPaint(object sender,
-       System.Windows.Forms.PaintEventArgs e)
+
+        // 畫圖
+        public void HandleCanvasPaint(object sender, PaintEventArgs e)
         {
             _presentationModel.Draw(e.Graphics);
         }
+
+        // 偵測改變
         public void HandleModelChanged()
         {
             Invalidate(true);

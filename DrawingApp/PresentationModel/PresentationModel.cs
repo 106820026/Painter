@@ -16,6 +16,8 @@ namespace DrawingApp.PresentationModel
             this._model = model;
             _igraphics = new WindowsStoreGraphicsAdaptor(canvas);
         }
+
+        // 畫圖
         public void Draw()
         {
             // 重複使用igraphics物件

@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace DrawingModel
 {
-    class Line
+    class Line : Shape
     {
-        public double x1;
-        public double y1;
-        public double x2;
-        public double y2;
-        public void Draw(IGraphics graphics)
+        // 畫線
+        public override void Draw(IGraphics graphics)
         {
-            graphics.DrawLine(x1, y1, x2, y2);
+            graphics.DrawLine(_x1, _y1, _x2, _y2);
         }
     }
 }

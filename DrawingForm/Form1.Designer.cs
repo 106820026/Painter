@@ -30,7 +30,7 @@
         {
             this._tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this._clear = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this._line = new System.Windows.Forms.Button();
             this._rectangle = new System.Windows.Forms.Button();
             this._tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +44,7 @@
             this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this._tableLayoutPanel.Controls.Add(this._clear, 2, 0);
-            this._tableLayoutPanel.Controls.Add(this.button1, 1, 0);
+            this._tableLayoutPanel.Controls.Add(this._line, 1, 0);
             this._tableLayoutPanel.Controls.Add(this._rectangle, 0, 0);
             this._tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this._tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
@@ -71,20 +71,20 @@
             this._clear.UseVisualStyleBackColor = true;
             this._clear.Click += new System.EventHandler(this.HandleClearButtonClick);
             // 
-            // button1
+            // _line
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this._line.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(599, 3);
-            this.button1.Margin = new System.Windows.Forms.Padding(150, 3, 150, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 36);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Line";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.HandleLineButtonClick);
+            this._line.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._line.Location = new System.Drawing.Point(599, 3);
+            this._line.Margin = new System.Windows.Forms.Padding(150, 3, 150, 3);
+            this._line.Name = "_line";
+            this._line.Size = new System.Drawing.Size(149, 36);
+            this._line.TabIndex = 1;
+            this._line.Text = "Line";
+            this._line.UseVisualStyleBackColor = true;
+            this._line.Click += new System.EventHandler(this.HandleLineButtonClick);
             // 
             // _rectangle
             // 
@@ -119,7 +119,7 @@
         private System.Windows.Forms.TableLayoutPanel _tableLayoutPanel;
         private System.Windows.Forms.Button _rectangle;
         private System.Windows.Forms.Button _clear;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button _line;
     }
 }
 

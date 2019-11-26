@@ -1,20 +1,26 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-
-// 空白頁項目範本已記錄在 https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x404
-
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 namespace DrawingApp
 {
     /// <summary>
-    /// 可以在本身使用或巡覽至框架內的空白頁面。
+    /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
     {
         DrawingModel.Model _model;
         PresentationModel.PresentationModel _presentationModel;
-
         public MainPage()
         {
             this.InitializeComponent();
@@ -24,32 +30,56 @@ namespace DrawingApp
             _canvas.PointerReleased += HandleCanvasReleased;
             _canvas.PointerMoved += HandleCanvasMoved;
             _clear.Click += HandleClearButtonClick;
+            _rectangle.Click += HandleRectangleButtonClick;
+            _line.Click += HandleLineButtonClick;
             _model._modelChanged += HandleModelChanged;
         }
 
+        //protected override void OnNavigatedTo(NavigationEventArgs e)
+        //{
+        //}
+
+        // 清除畫面
         private void HandleClearButtonClick(object sender, RoutedEventArgs e)
         {
             _model.Clear();
         }
 
+        // 畫矩形
+        private void HandleRectangleButtonClick(object sender, RoutedEventArgs e)
+        {
+            _model.CurrentMode = 0;
+            _rectangle.IsEnabled = false;
+            _line.IsEnabled = true;
+        }
+
+        // 畫線
+        private void HandleLineButtonClick(object sender, RoutedEventArgs e)
+        {
+            _model.CurrentMode = 1;
+            _rectangle.IsEnabled = true;
+            _line.IsEnabled = false;
+        }
+
+        // 按下滑鼠
         public void HandleCanvasPressed(object sender, PointerRoutedEventArgs e)
         {
-            _model.PointerPressed(e.GetCurrentPoint(_canvas).Position.X,
-           e.GetCurrentPoint(_canvas).Position.Y);
+            _model.PressPointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
         }
 
+        // 釋放滑鼠
         public void HandleCanvasReleased(object sender, PointerRoutedEventArgs e)
         {
-            _model.PointerReleased(e.GetCurrentPoint(_canvas).Position.X,
-           e.GetCurrentPoint(_canvas).Position.Y);
+            _model.ReleasePointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
         }
 
+        // 滑鼠移動偵測
         public void HandleCanvasMoved(object sender, PointerRoutedEventArgs e)
         {
-            _model.PointerMoved(e.GetCurrentPoint(_canvas).Position.X,
-           e.GetCurrentPoint(_canvas).Position.Y);
+            _model.MovePointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
         }
 
+        // 偵測改變
         public void HandleModelChanged()
         {
             _presentationModel.Draw();

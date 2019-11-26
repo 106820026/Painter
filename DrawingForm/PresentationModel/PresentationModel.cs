@@ -10,6 +10,8 @@ namespace DrawingForm.PresentationModel
         {
             this._model = model;
         }
+
+        // 畫圖
         public void Draw(System.Drawing.Graphics graphics)
         {
             // graphics物件是Paint事件帶進來的，只能在當次Paint使用

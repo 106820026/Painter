@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace DrawingModel
 {
-    class Rectangle
+    class Rectangle : Shape
     {
-        public double x1;
-        public double y1;
-        public double x2;
-        public double y2;
-        public void Draw(IGraphics graphics)
+        // 畫
+        public override void Draw(IGraphics graphics)
         {
-            graphics.DrawRectangle(x1, y1, x2, y2);
+            graphics.DrawRectangle(_x1, _y1, _x2, _y2);
         }
     }
 }

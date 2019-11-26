@@ -16,24 +16,23 @@ namespace DrawingModel
         double _lastPointX;
         double _lastPointY;
         bool _isPressed = false;
-        List<Line> _lines = new List<Line>();
-        List<Rectangle> _rectangles = new List<Rectangle>();
-        Line _lineHint = new Line();
-        Rectangle _rectangleHint = new Rectangle();
+        List<Shape> _shapes = new List<Shape>();
+        List<Shape> _shapeHint = new List<Shape> { new Rectangle(), new Line() };
 
         public Model()
         {
-            this.CurrentMode = 999;
+            this.CurrentMode = (int)(int)999m;
         }
 
-        public int CurrentMode{
+        public int CurrentMode
+        {
             get; set;
         }
 
         // 按下滑鼠
-        public void PointerPressed(double x, double y)
+        public void PressPointer(double x, double y)
         {
-            if (x > 0 && y > 0 && CurrentMode != 999)
+            if (x > 0 && y > 0 && CurrentMode != (int)999m)
             {
                 _firstPointX = x;
                 _firstPointY = y;
@@ -43,9 +42,9 @@ namespace DrawingModel
         }
 
         // 滑鼠移動偵測
-        public void PointerMoved(double x, double y)
+        public void MovePointer(double x, double y)
         {
-            if (_isPressed && CurrentMode != 999)
+            if (_isPressed && CurrentMode != (int)999m)
             {
                 this.DrawHint(_firstPointX, _firstPointY, x, y);
                 NotifyModelChanged();
@@ -53,7 +52,7 @@ namespace DrawingModel
         }
 
         // 釋放滑鼠
-        public void PointerReleased(double x, double y)
+        public void ReleasePointer(double x, double y)
         {
             if (_isPressed)
             {
@@ -68,28 +67,17 @@ namespace DrawingModel
         // 畫預覽圖
         public void DrawHint(double x1, double y1, double x2, double y2)
         {
-            if (CurrentMode == 0) // 畫矩形
-            {
-                _rectangleHint.x1 = x1;
-                _rectangleHint.y1 = y1;
-                _rectangleHint.x2 = x2 - x1;
-                _rectangleHint.y2 = y2 - y1;
-            }
-            else if(CurrentMode == 1) // 畫線
-            {
-                _lineHint.x1 = x1;
-                _lineHint.y1 = y1;
-                _lineHint.x2 = x2;
-                _lineHint.y2 = y2;
-            }
+            _shapeHint[CurrentMode]._x1 = x1;
+            _shapeHint[CurrentMode]._y1 = y1;
+            _shapeHint[CurrentMode]._x2 = x2;
+            _shapeHint[CurrentMode]._y2 = y2;
         }
 
         // 清空畫布
         public void Clear()
         {
             _isPressed = false;
-            _lines.Clear();
-            _rectangles.Clear();
+            _shapes.Clear();
             NotifyModelChanged();
         }
 
@@ -97,20 +85,10 @@ namespace DrawingModel
         public void Draw(IGraphics graphics)
         {
             graphics.ClearAll();
-            if (CurrentMode == 0) // 畫矩形
-            {
-                if (_isPressed)
-                    _rectangleHint.Draw(graphics);
-            }
-            else if (CurrentMode == 1) // 畫線
-            {
-                if (_isPressed)
-                    _lineHint.Draw(graphics);
-            }
-            foreach (Rectangle aRectangle in _rectangles)
-                aRectangle.Draw(graphics);
-            foreach (Line aLine in _lines)
-                aLine.Draw(graphics);
+            if (_isPressed)
+                _shapeHint[CurrentMode].Draw(graphics);
+            foreach (Shape aShape in _shapes)
+                aShape.Draw(graphics);
         }
 
         // 存圖
@@ -119,20 +97,20 @@ namespace DrawingModel
             if (CurrentMode == 0) // 畫矩形
             {
                 Rectangle newRectangle = new Rectangle();
-                newRectangle.x1 = _firstPointX;
-                newRectangle.y1 = _firstPointY;
-                newRectangle.x2 = _lastPointX - _firstPointX;
-                newRectangle.y2 = _lastPointY - _firstPointY;
-                _rectangles.Add(newRectangle);
+                newRectangle._x1 = _firstPointX;
+                newRectangle._y1 = _firstPointY;
+                newRectangle._x2 = _lastPointX;
+                newRectangle._y2 = _lastPointY;
+                _shapes.Add(newRectangle);
             }
             else if (CurrentMode == 1) // 畫線
             {
                 Line newLine = new Line();
-                newLine.x1 = _firstPointX;
-                newLine.y1 = _firstPointY;
-                newLine.x2 = _lastPointX;
-                newLine.y2 = _lastPointY;
-                _lines.Add(newLine);
+                newLine._x1 = _firstPointX;
+                newLine._y1 = _firstPointY;
+                newLine._x2 = _lastPointX;
+                newLine._y2 = _lastPointY;
+                _shapes.Add(newLine);
             }
         }
 

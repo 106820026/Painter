@@ -5,17 +5,12 @@
     xmlns:local="using:DrawingApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Button x:ConnectionId='2' x:Name="_clear" Content="Clear" HorizontalAlignment="Stretch" Margin="99,48,99,0" VerticalAlignment="Top" Height="78" FontSize="36" RenderTransformOrigin="1.795,0.549" Grid.Column="1"/>
-        <Canvas x:ConnectionId='3' x:Name="_canvas" HorizontalAlignment="Stretch" Margin="99,138,99,99" VerticalAlignment="Stretch" Grid.Column="1" Background="#FF005500"/>
-
+    mc:Ignorable="d">
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:ConnectionId='2' x:Name="_clear" Content="Clear" HorizontalAlignment="Right" Height="44" Margin="0,43,98,0" VerticalAlignment="Top" Width="201"/>
+        <Button x:ConnectionId='3' x:Name="_rectangle" Content="Rectangle" HorizontalAlignment="Left" Height="44" Margin="99,48,0,0" VerticalAlignment="Top" Width="201"/>
+        <Button x:ConnectionId='4' x:Name="_line" Content="Line" HorizontalAlignment="Center" Height="44" Margin="0,48,0,0" VerticalAlignment="Top" Width="200"/>
+        <Canvas x:ConnectionId='5' x:Name="_canvas" Margin="10,97,11,11" Background="#FFFFFFA0"/>
     </Grid>
 </Page>
 
