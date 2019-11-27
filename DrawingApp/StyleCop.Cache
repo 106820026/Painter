@@ -40,57 +40,12 @@
     <timestamps>
       <styleCop>2019/09/10 22:51:54.372</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/11/26 23:47:41.591</sourceFile>
+      <sourceFile>2019/11/27 13:10:03.983</sourceFile>
       <parser>2019/09/10 22:51:54.372</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine9" ruleCheckId="SN0009">
-        <context>ICS(空白與空行-9)</context>
-        <line>29</line>
-        <index>703</index>
-        <endIndex>718</endIndex>
-        <startLine>29</startLine>
-        <startColumn>1</startColumn>
-        <endLine>29</endLine>
-        <endColumn>16</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine9" ruleCheckId="SN0009">
-        <context>ICS(空白與空行-9)</context>
-        <line>34</line>
-        <index>881</index>
-        <endIndex>882</endIndex>
-        <startLine>34</startLine>
-        <startColumn>15</startColumn>
-        <endLine>34</endLine>
-        <endColumn>16</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine9" ruleCheckId="SN0009">
-        <context>ICS(空白與空行-9)</context>
-        <line>43</line>
-        <index>1153</index>
-        <endIndex>1168</endIndex>
-        <startLine>43</startLine>
-        <startColumn>1</startColumn>
-        <endLine>43</endLine>
-        <endColumn>16</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine9" ruleCheckId="SN0009">
-        <context>ICS(空白與空行-9)</context>
-        <line>46</line>
-        <index>1316</index>
-        <endIndex>1317</endIndex>
-        <startLine>46</startLine>
-        <startColumn>15</startColumn>
-        <endLine>46</endLine>
-        <endColumn>16</endColumn>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>

@@ -1,0 +1,6 @@
+C:\Users\ASUS\source\repos\DrawingModel\GUITest\bin\Debug\GUITest.dll
+C:\Users\ASUS\source\repos\DrawingModel\GUITest\bin\Debug\GUITest.pdb
+C:\Users\ASUS\source\repos\DrawingModel\GUITest\obj\Debug\GUITest.csprojAssemblyReference.cache
+C:\Users\ASUS\source\repos\DrawingModel\GUITest\obj\Debug\GUITest.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\DrawingModel\GUITest\obj\Debug\GUITest.dll
+C:\Users\ASUS\source\repos\DrawingModel\GUITest\obj\Debug\GUITest.pdb

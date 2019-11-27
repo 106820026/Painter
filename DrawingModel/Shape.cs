@@ -8,10 +8,25 @@ namespace DrawingModel
 {
     abstract class Shape
     {
-        public double _x1;
-        public double _y1;
-        public double _x2;
-        public double _y2;
+        public double X1
+        {
+            get; set;
+        }
+
+        public double Y1
+        {
+            get; set;
+        }
+
+        public double X2
+        {
+            get; set;
+        }
+
+        public double Y2
+        {
+            get; set;
+        }
 
         // 畫各種形狀
         public abstract void Draw(IGraphics graphics);

@@ -26,13 +26,14 @@ namespace DrawingForm
             _canvas.MouseUp += HandleCanvasReleased;
             _canvas.MouseMove += HandleCanvasMoved;
             _canvas.Paint += HandleCanvasPaint;
+            _canvas.AccessibleName = "canvas";
             Controls.Add(_canvas);
             // prepare clear button
             _clear.AutoSize = true;
             _clear.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             // prepare presentation model and model
             _model = new DrawingModel.Model();
-            _presentationModel = new PresentationModel.PresentationModel(_model, _canvas);
+            _presentationModel = new PresentationModel.PresentationModel(_model);
             _model._modelChanged += HandleModelChanged;
         }
 

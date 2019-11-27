@@ -11,7 +11,7 @@ namespace DrawingModel
         // 畫線
         public override void Draw(IGraphics graphics)
         {
-            graphics.DrawLine(_x1, _y1, _x2, _y2);
+            graphics.DrawLine(X1, Y1, X2, Y2);
         }
     }
 }

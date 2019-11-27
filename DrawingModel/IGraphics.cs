@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DrawingModel
 {
-    interface IGraphics
+    public interface IGraphics
     {
         // 畫矩形
         void DrawRectangle(double x1, double y1, double x2, double y2);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DrawingModel
 {
-    class Model
+    public class Model
     {
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
@@ -17,11 +17,15 @@ namespace DrawingModel
         double _lastPointY;
         bool _isPressed = false;
         List<Shape> _shapes = new List<Shape>();
-        List<Shape> _shapeHint = new List<Shape> { new Rectangle(), new Line() };
+        List<Shape> _shapeHint = new List<Shape>();
 
         public Model()
         {
-            this.CurrentMode = (int)(int)999m;
+            this.CurrentMode = (int)999m;
+            Rectangle rectangle = new Rectangle();
+            Line line = new Line();
+            _shapeHint.Add(rectangle);
+            _shapeHint.Add(line);
         }
 
         public int CurrentMode
@@ -67,10 +71,10 @@ namespace DrawingModel
         // 畫預覽圖
         public void DrawHint(double x1, double y1, double x2, double y2)
         {
-            _shapeHint[CurrentMode]._x1 = x1;
-            _shapeHint[CurrentMode]._y1 = y1;
-            _shapeHint[CurrentMode]._x2 = x2;
-            _shapeHint[CurrentMode]._y2 = y2;
+            _shapeHint[CurrentMode].X1 = x1;
+            _shapeHint[CurrentMode].Y1 = y1;
+            _shapeHint[CurrentMode].X2 = x2;
+            _shapeHint[CurrentMode].Y2 = y2;
         }
 
         // 清空畫布
@@ -109,10 +113,10 @@ namespace DrawingModel
         // 新增新圖
         private Shape AddNewShape(Shape shape)
         {
-            shape._x1 = _firstPointX;
-            shape._y1 = _firstPointY;
-            shape._x2 = _lastPointX;
-            shape._y2 = _lastPointY;
+            shape.X1 = _firstPointX;
+            shape.Y1 = _firstPointY;
+            shape.X2 = _lastPointX;
+            shape.Y2 = _lastPointY;
             return shape;
         }
 

@@ -188,45 +188,45 @@
           <Reviews>
             <Smell>
               <Id>1</Id>
-              <SmellType>ICS(縮排與換行-1)</SmellType>
-              <HashCode>IndentAndNewLine1._shapeHint.        List&lt;Shape&gt; _shapeHint = new List&lt;Shape&gt; { new Rectangle(), new Line() };</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>20</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>ICS(縮排與換行-1) 左大括號一律換行</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>2</Id>
-              <SmellType>ICS(縮排與換行-3)</SmellType>
-              <HashCode>IndentAndNewLine3._shapeHint.        List&lt;Shape&gt; _shapeHint = new List&lt;Shape&gt; { new Rectangle(), new Line() };</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>20</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>ICS(縮排與換行-3) 左大括號後，一律換行撰寫程式碼</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>3</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.Model.PressPointer.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingModel</Project>
               <File>Model.cs</File>
-              <Line>33</Line>
+              <Line>37</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>2</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Model.PressPointer.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Model.cs</File>
+              <Line>37</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>3</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Model.MovePointer.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Model.cs</File>
+              <Line>49</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -237,12 +237,12 @@
             <Smell>
               <Id>4</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.PressPointer.y</HashCode>
+              <HashCode>UnsuitableNaming.Model.MovePointer.y</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingModel</Project>
               <File>Model.cs</File>
-              <Line>33</Line>
+              <Line>49</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -253,12 +253,12 @@
             <Smell>
               <Id>5</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.MovePointer.x</HashCode>
+              <HashCode>UnsuitableNaming.Model.ReleasePointer.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingModel</Project>
               <File>Model.cs</File>
-              <Line>45</Line>
+              <Line>59</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -269,12 +269,12 @@
             <Smell>
               <Id>6</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.MovePointer.y</HashCode>
+              <HashCode>UnsuitableNaming.Model.ReleasePointer.y</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingModel</Project>
               <File>Model.cs</File>
-              <Line>45</Line>
+              <Line>59</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -284,13 +284,13 @@
             </Smell>
             <Smell>
               <Id>7</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.ReleasePointer.x</HashCode>
-              <Severity>Warning</Severity>
+              <SmellType>Literal constants(字面常數)-"canvas"</SmellType>
+              <HashCode>LiteralConstants.Form1."canvas"</HashCode>
+              <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>55</Line>
+              <Project>DrawingForm</Project>
+              <File>Form1.cs</File>
+              <Line>29</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -300,13 +300,13 @@
             </Smell>
             <Smell>
               <Id>8</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.ReleasePointer.y</HashCode>
-              <Severity>Warning</Severity>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解.25</HashCode>
+              <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>55</Line>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>25</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -316,130 +316,146 @@
             </Smell>
             <Smell>
               <Id>9</Id>
-              <SmellType>ICS(類別宣告-1)</SmellType>
-              <HashCode>ClassDeclaration1.Shape._x1</HashCode>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawRectangleTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 DrawRectangleTest 缺乏註解.31</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Shape.cs</File>
-              <Line>11</Line>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>31</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment>ICS(類別宣告-1) 除非為類別常數(static class constants)，成員變數請勿宣告為 public</Comment>
+              <Comment />
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>10</Id>
-              <SmellType>ICS(類別宣告-1)</SmellType>
-              <HashCode>ClassDeclaration1.Shape._y1</HashCode>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawLineTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 DrawLineTest 缺乏註解.38</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Shape.cs</File>
-              <Line>12</Line>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>38</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment>ICS(類別宣告-1) 除非為類別常數(static class constants)，成員變數請勿宣告為 public</Comment>
+              <Comment />
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>11</Id>
-              <SmellType>ICS(類別宣告-1)</SmellType>
-              <HashCode>ClassDeclaration1.Shape._x2</HashCode>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickClearTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 ClickClearTest 缺乏註解.44</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Shape.cs</File>
-              <Line>13</Line>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>44</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment>ICS(類別宣告-1) 除非為類別常數(static class constants)，成員變數請勿宣告為 public</Comment>
+              <Comment />
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>12</Id>
-              <SmellType>ICS(類別宣告-1)</SmellType>
-              <HashCode>ClassDeclaration1.Shape._y2</HashCode>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawLine 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.DrawingToolTest.cs.Unresolved warnings(忽視警告)-函式 DrawLine 缺乏註解.22</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Shape.cs</File>
-              <Line>14</Line>
+              <Project>GUITest\GUITest</Project>
+              <File>DrawingToolTest.cs</File>
+              <Line>22</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment>ICS(類別宣告-1) 除非為類別常數(static class constants)，成員變數請勿宣告為 public</Comment>
+              <Comment />
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>13</Id>
-              <SmellType>ICS(空白與空行-9)</SmellType>
-              <HashCode>SpacingAndNewLine9</HashCode>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickClear 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.DrawingToolTest.cs.Unresolved warnings(忽視警告)-函式 ClickClear 缺乏註解.30</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>29</Line>
+              <Project>GUITest\GUITest</Project>
+              <File>DrawingToolTest.cs</File>
+              <Line>30</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment>ICS(空白與空行-9) 陣列初始化的左大括號後面，右大括號前面</Comment>
+              <Comment />
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>14</Id>
-              <SmellType>ICS(空白與空行-9)</SmellType>
-              <HashCode>SpacingAndNewLine9</HashCode>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>44 DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingApp</Project>
-              <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>34</Line>
+              <File>MainPage.g.i.cs</File>
+              <Line>44</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment>ICS(空白與空行-9) 陣列初始化的左大括號後面，右大括號前面</Comment>
+              <Comment>DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>15</Id>
-              <SmellType>ICS(空白與空行-9)</SmellType>
-              <HashCode>SpacingAndNewLine9</HashCode>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>129 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByType(System.Type)</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingApp</Project>
-              <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>43</Line>
+              <File>XamlTypeInfo.g.cs</File>
+              <Line>129</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment>ICS(空白與空行-9) 陣列初始化的左大括號後面，右大括號前面</Comment>
+              <Comment>DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByType(System.Type)</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>16</Id>
-              <SmellType>ICS(空白與空行-9)</SmellType>
-              <HashCode>SpacingAndNewLine9</HashCode>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>134 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByName(string)</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingApp</Project>
-              <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>46</Line>
+              <File>XamlTypeInfo.g.cs</File>
+              <Line>134</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment>ICS(空白與空行-9) 陣列初始化的左大括號後面，右大括號前面</Comment>
+              <Comment>DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByName(string)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>17</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>20 DrawingApp.Program.Main(string[])</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>App.g.i.cs</File>
+              <Line>20</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>DrawingApp.Program.Main(string[])</Comment>
               <Auto>false</Auto>
             </Smell>
           </Reviews>
@@ -547,10 +563,35 @@
                 <ProjectName>DrawingApp</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>CodedUITest1.cs</RelativePath>
+                <ProjectName>GUITest</ProjectName>
+                <AnalysisFileType>Test</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>DrawingToolTest.cs</RelativePath>
+                <ProjectName>GUITest</ProjectName>
+                <AnalysisFileType>Test</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
+                <ProjectName>GUITest</ProjectName>
+                <AnalysisFileType>Test</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Robot.cs</RelativePath>
+                <ProjectName>GUITest</ProjectName>
+                <AnalysisFileType>Test</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>UIMap.cs</RelativePath>
+                <ProjectName>GUITest</ProjectName>
+                <AnalysisFileType>Test</AnalysisFileType>
+              </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>802</ProductionLoc>
-          <TestLoc>102</TestLoc>
+          <ProductionLoc>818</ProductionLoc>
+          <TestLoc>702</TestLoc>
         </CodeReview>
       </Data>
     </div>

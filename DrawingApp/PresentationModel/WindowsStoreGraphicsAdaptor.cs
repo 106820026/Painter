@@ -24,26 +24,22 @@ namespace DrawingApp.PresentationModel
         // 畫線
         public void DrawLine(double x1, double y1, double x2, double y2)
         {
-            Windows.UI.Xaml.Shapes.Line line = new Windows.UI.Xaml.Shapes.Line
-            {
-                X1 = x1,
-                Y1 = y1,
-                X2 = x2,
-                Y2 = y2,
-                Stroke = new SolidColorBrush(Colors.Black)
-            };
+            Windows.UI.Xaml.Shapes.Line line = new Windows.UI.Xaml.Shapes.Line();
+            line.X1 = x1;
+            line.Y1 = y1;
+            line.X2 = x2;
+            line.Y2 = y2;
+            line.Stroke = new SolidColorBrush(Colors.Black);
             _canvas.Children.Add(line);
         }
 
         // 畫矩形
         public void DrawRectangle(double x1, double y1, double x2, double y2)
         {
-            Windows.UI.Xaml.Shapes.Rectangle rectangle = new Windows.UI.Xaml.Shapes.Rectangle
-            {
-                Width = Math.Abs(x2 - x1),
-                Height = Math.Abs(y2 - y1),
-                Stroke = new SolidColorBrush(Colors.Black)
-            };
+            Windows.UI.Xaml.Shapes.Rectangle rectangle = new Windows.UI.Xaml.Shapes.Rectangle();
+            rectangle.Width = Math.Abs(x2 - x1);
+            rectangle.Height = Math.Abs(y2 - y1);
+            rectangle.Stroke = new SolidColorBrush(Colors.Black);
             if (x2 > x1 && y2 > y1)
                 this.SetTopLeft(rectangle, y1, x1);
             if (x2 < x1 && y2 > y1)

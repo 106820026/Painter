@@ -18,7 +18,7 @@
     <timestamps>
       <styleCop>2019/09/10 22:51:54.372</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/11/26 16:52:56.723</sourceFile>
+      <sourceFile>2019/11/27 13:00:26.625</sourceFile>
       <parser>2019/09/10 22:51:54.372</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -29,97 +29,75 @@
     <timestamps>
       <styleCop>2019/09/10 22:51:54.372</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/11/27 00:01:50.095</sourceFile>
+      <sourceFile>2019/11/27 14:01:07.480</sourceFile>
       <parser>2019/09/10 22:51:54.372</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="IndentAndNewLine1" ruleCheckId="IN0001">
-        <context>ICS(縮排與換行-1)</context>
-        <line>20</line>
-        <index>572</index>
-        <endIndex>572</endIndex>
-        <startLine>20</startLine>
-        <startColumn>50</startColumn>
-        <endLine>20</endLine>
-        <endColumn>50</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="IndentAndNewLine3" ruleCheckId="IN0003">
-        <context>ICS(縮排與換行-3)</context>
-        <line>20</line>
-        <index>572</index>
-        <endIndex>572</endIndex>
-        <startLine>20</startLine>
-        <startColumn>50</startColumn>
-        <endLine>20</endLine>
-        <endColumn>50</endColumn>
-        <warning>False</warning>
-      </violation>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-x(x)</context>
-        <line>33</line>
-        <index>833</index>
-        <endIndex>840</endIndex>
-        <startLine>33</startLine>
+        <line>37</line>
+        <index>962</index>
+        <endIndex>969</endIndex>
+        <startLine>37</startLine>
         <startColumn>34</startColumn>
-        <endLine>33</endLine>
+        <endLine>37</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-y(y)</context>
-        <line>33</line>
-        <index>843</index>
-        <endIndex>850</endIndex>
-        <startLine>33</startLine>
+        <line>37</line>
+        <index>972</index>
+        <endIndex>979</endIndex>
+        <startLine>37</startLine>
         <startColumn>44</startColumn>
-        <endLine>33</endLine>
+        <endLine>37</endLine>
         <endColumn>51</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-x(x)</context>
-        <line>45</line>
-        <index>1214</index>
-        <endIndex>1221</endIndex>
-        <startLine>45</startLine>
+        <line>49</line>
+        <index>1343</index>
+        <endIndex>1350</endIndex>
+        <startLine>49</startLine>
         <startColumn>33</startColumn>
-        <endLine>45</endLine>
+        <endLine>49</endLine>
         <endColumn>40</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-y(y)</context>
-        <line>45</line>
-        <index>1224</index>
-        <endIndex>1231</endIndex>
-        <startLine>45</startLine>
+        <line>49</line>
+        <index>1353</index>
+        <endIndex>1360</endIndex>
+        <startLine>49</startLine>
         <startColumn>43</startColumn>
-        <endLine>45</endLine>
+        <endLine>49</endLine>
         <endColumn>50</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-x(x)</context>
-        <line>55</line>
-        <index>1503</index>
-        <endIndex>1510</endIndex>
-        <startLine>55</startLine>
+        <line>59</line>
+        <index>1632</index>
+        <endIndex>1639</endIndex>
+        <startLine>59</startLine>
         <startColumn>36</startColumn>
-        <endLine>55</endLine>
+        <endLine>59</endLine>
         <endColumn>43</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-y(y)</context>
-        <line>55</line>
-        <index>1513</index>
-        <endIndex>1520</endIndex>
-        <startLine>55</startLine>
+        <line>59</line>
+        <index>1642</index>
+        <endIndex>1649</endIndex>
+        <startLine>59</startLine>
         <startColumn>46</startColumn>
-        <endLine>55</endLine>
+        <endLine>59</endLine>
         <endColumn>53</endColumn>
         <warning>False</warning>
       </violation>
@@ -140,7 +118,7 @@
     <timestamps>
       <styleCop>2019/09/10 22:51:54.372</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/11/26 16:48:19.188</sourceFile>
+      <sourceFile>2019/11/27 13:00:09.034</sourceFile>
       <parser>2019/09/10 22:51:54.372</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -151,32 +129,11 @@
     <timestamps>
       <styleCop>2019/09/10 22:51:54.372</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/11/27 00:04:45.880</sourceFile>
+      <sourceFile>2019/11/27 13:00:43.468</sourceFile>
       <parser>2019/09/10 22:51:54.372</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="ClassDeclaration1" ruleCheckId="CD0001">
-        <context>ICS(類別宣告-1)</context>
-        <line>11</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="ClassDeclaration1" ruleCheckId="CD0001">
-        <context>ICS(類別宣告-1)</context>
-        <line>12</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="ClassDeclaration1" ruleCheckId="CD0001">
-        <context>ICS(類別宣告-1)</context>
-        <line>13</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="ClassDeclaration1" ruleCheckId="CD0001">
-        <context>ICS(類別宣告-1)</context>
-        <line>14</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
 </stylecopresultscache>
