@@ -48,7 +48,7 @@ namespace DrawingModel
         // 滑鼠移動偵測
         public void MovePointer(double x, double y)
         {
-            if (_isPressed && CurrentMode != (int)999m)
+            if (_isPressed)
             {
                 this.DrawHint(_firstPointX, _firstPointY, x, y);
                 NotifyModelChanged();

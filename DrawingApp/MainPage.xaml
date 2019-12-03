@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="_clear" Content="Clear" HorizontalAlignment="Right" Height="44" Margin="0,43,98,0" VerticalAlignment="Top" Width="201"/>
+        <Button x:Name="_clear" Content="Clear" HorizontalAlignment="Right" Height="44" Margin="0,48,99,0" VerticalAlignment="Top" Width="201"/>
         <Button x:Name="_rectangle" Content="Rectangle" HorizontalAlignment="Left" Height="44" Margin="99,48,0,0" VerticalAlignment="Top" Width="201"/>
         <Button x:Name="_line" Content="Line" HorizontalAlignment="Center" Height="44" Margin="0,48,0,0" VerticalAlignment="Top" Width="200"/>
         <Canvas x:Name="_canvas" Margin="10,97,11,11" Background="#FFFFFFA0"/>

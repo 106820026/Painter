@@ -7,21 +7,19 @@ using Windows.UI.Xaml.Controls;
 using DrawingModel;
 namespace DrawingApp.PresentationModel
 {
-    class PresentationModel
+    public class PresentationModel
     {
         Model _model;
-        IGraphics _interfaceGraphics;
-        public PresentationModel(Model model, Canvas canvas)
+        public PresentationModel(Model model)
         {
             this._model = model;
-            _interfaceGraphics = new WindowsStoreGraphicsAdaptor(canvas);
         }
 
         // 畫圖
-        public void Draw()
+        public void Draw(IGraphics interfaceGraphics)
         {
             // 重複使用igraphics物件
-            _model.Draw(_interfaceGraphics);
+            _model.Draw(interfaceGraphics);
         }
     }
 }

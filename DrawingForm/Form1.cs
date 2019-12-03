@@ -15,6 +15,7 @@ namespace DrawingForm
         DrawingModel.Model _model;
         PresentationModel.PresentationModel _presentationModel;
         Panel _canvas = new DoubleBufferedPanel();
+        const String CANVAS = "canvas";
 
         public Form1()
         {
@@ -26,7 +27,7 @@ namespace DrawingForm
             _canvas.MouseUp += HandleCanvasReleased;
             _canvas.MouseMove += HandleCanvasMoved;
             _canvas.Paint += HandleCanvasPaint;
-            _canvas.AccessibleName = "canvas";
+            _canvas.AccessibleName = CANVAS;
             Controls.Add(_canvas);
             // prepare clear button
             _clear.AutoSize = true;

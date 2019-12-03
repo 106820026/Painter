@@ -7,6 +7,35 @@ using System.Text;
 using System.Threading.Tasks;
 using DrawingModel;
 
+namespace DrawingForm.FakeAdapter
+{
+    public class FakeAdapter : IGraphics
+    {
+        public FakeAdapter()
+        {
+
+        }
+
+        // 清除畫面
+        public void ClearAll()
+        {
+
+        }
+
+        // 畫線
+        public void DrawLine(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
+        // 畫矩形
+        public void DrawRectangle(double x1, double y1, double x2, double y2)
+        {
+
+        }
+    }
+}
+
 namespace DrawingForm.PresentationModel.Tests
 {
     [TestClass()]
@@ -18,6 +47,7 @@ namespace DrawingForm.PresentationModel.Tests
         [TestInitialize]
         public void Initialize()
         {
+            model = new Model();
             presentationModel = new PresentationModel(model);
         }
 
@@ -30,7 +60,8 @@ namespace DrawingForm.PresentationModel.Tests
         [TestMethod()]
         public void DrawTest()
         {
-            Assert.Fail();
+            model.Draw(new FakeAdapter.FakeAdapter());
+            Assert.IsNotNull(presentationModel);
         }
     }
 }

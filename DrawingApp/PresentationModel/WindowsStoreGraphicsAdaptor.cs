@@ -7,7 +7,7 @@ using System;
 
 namespace DrawingApp.PresentationModel
 {
-    class WindowsStoreGraphicsAdaptor : IGraphics
+    public class WindowsStoreGraphicsAdaptor : IGraphics
     {
         Canvas _canvas;
         public WindowsStoreGraphicsAdaptor(Canvas canvas)

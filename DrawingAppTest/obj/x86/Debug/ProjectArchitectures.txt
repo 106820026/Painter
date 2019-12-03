@@ -1,0 +1,2 @@
+C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\DrawingApp.csproj;x86
+C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\DrawingAppTest.csproj;x86

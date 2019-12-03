@@ -1,0 +1,39 @@
+<stylecopresultscache>
+  <version>12</version>
+  <project key="332654461">
+    <configuration>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</configuration>
+  </project>
+  <sourcecode name="PresentationModelTest.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2019/09/10 22:51:54.372</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2019/12/03 22:13:32.513</sourceFile>
+      <parser>2019/09/10 22:51:54.372</parser>
+      <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2019/09/10 22:51:54.372</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2019/12/03 21:41:21.115</sourceFile>
+      <parser>2019/09/10 22:51:54.372</parser>
+      <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="UnitTestApp.xaml.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2019/09/10 22:51:54.372</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2019/12/03 21:41:21.124</sourceFile>
+      <parser>2019/09/10 22:51:54.372</parser>
+      <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+</stylecopresultscache>

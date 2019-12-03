@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DrawingApp.PresentationModel;
+using DrawingModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,11 +23,13 @@ namespace DrawingApp
     {
         DrawingModel.Model _model;
         PresentationModel.PresentationModel _presentationModel;
+        IGraphics _interfaceGraphics;
         public MainPage()
         {
             this.InitializeComponent();
             _model = new DrawingModel.Model();
-            _presentationModel = new PresentationModel.PresentationModel(_model, _canvas);
+            _presentationModel = new PresentationModel.PresentationModel(_model);
+            _interfaceGraphics = new WindowsStoreGraphicsAdaptor(_canvas);
             _canvas.PointerPressed += HandleCanvasPressed;
             _canvas.PointerReleased += HandleCanvasReleased;
             _canvas.PointerMoved += HandleCanvasMoved;
@@ -85,7 +89,7 @@ namespace DrawingApp
         // 偵測改變
         public void HandleModelChanged()
         {
-            _presentationModel.Draw();
+            _presentationModel.Draw(_interfaceGraphics);
         }
     }
 }

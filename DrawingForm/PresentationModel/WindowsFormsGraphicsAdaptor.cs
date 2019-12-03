@@ -5,9 +5,10 @@ using System;
 
 namespace DrawingForm.PresentationModel
 {
-    class WindowsFormsGraphicsAdaptor : IGraphics
+    public class WindowsFormsGraphicsAdaptor : IGraphics
     {
         Graphics _graphics;
+
         public WindowsFormsGraphicsAdaptor(Graphics graphics)
         {
             this._graphics = graphics;
