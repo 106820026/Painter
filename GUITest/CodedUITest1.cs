@@ -25,7 +25,7 @@ namespace GUITest
         [TestInitialize]
         public void Initialize()
         {
-            Robot.Initialize(@"C:\Users\ASUS\source\repos\DrawingModel\DrawingForm\bin\Debug\DrawingForm.exe", "Form1");
+            Robot.Initialize(@"..\..\..\DrawingForm\bin\Debug\DrawingForm.exe", "Form1");
         }
 
         [TestMethod]

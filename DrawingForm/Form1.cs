@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DrawingForm.PresentationModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -85,7 +86,7 @@ namespace DrawingForm
         // 畫圖
         public void HandleCanvasPaint(object sender, PaintEventArgs e)
         {
-            _presentationModel.Draw(e.Graphics);
+            _presentationModel.Draw(new WindowsFormsGraphicsAdaptor(e.Graphics));
         }
 
         // 偵測改變

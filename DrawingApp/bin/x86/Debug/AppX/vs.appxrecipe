@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LAPTOP-BDH7D5P4</Machine>
-    <WindowsUser>ASUS</WindowsUser>
+    <Machine>DESKTOP-6BK5TEH</Machine>
+    <WindowsUser>Rosie</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>c5b178bc-5f53-4917-939a-c86405f6d77e</PackageIdentityName>
     <PackageIdentityPublisher>CN=ASUS</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>7C69FB2D0BB43C3C068FB3BBCC5A97519BBD3D238540A235D5673A90B254B8AF</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>EB04E6F5F34461AE33D9642AB4A9B21F4433C4B3B36142C90451B50E54F9EB4D</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c5b178bc-5f53-4917-939a-c86405f6d77e_1.0.0.0_x86__wkbqm3a0n06q2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c5b178bc-5f53-4917-939a-c86405f6d77e_wkbqm3a0n06q2!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c5b178bc-5f53-4917-939a-c86405f6d77e</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T12:55:55.613</Modified>
+      <Modified>2019-12-04T11:48:36.731</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.exe">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.exe">
       <PackagePath>entrypoint\DrawingApp.exe</PackagePath>
-      <Modified>2019-12-03T12:55:54.912</Modified>
+      <Modified>2019-12-04T11:48:34.714</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -498,67 +498,67 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2018-10-22T17:33:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-11-25T06:48:27.716</Modified>
+      <Modified>2019-11-25T06:48:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.xr.xml">
       <PackagePath>DrawingApp.xr.xml</PackagePath>
-      <Modified>2019-11-26T05:23:32.507</Modified>
+      <Modified>2019-11-26T05:23:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-03T12:55:54.761</Modified>
+      <Modified>2019-12-04T11:48:34.523</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-03T12:55:54.762</Modified>
+      <Modified>2019-12-04T11:48:34.523</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-10-22T16:44:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-11-26T15:22:32.879</Modified>
+      <Modified>2019-12-04T11:48:36.194</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\Core\DrawingApp.exe">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\Core\DrawingApp.exe">
       <PackagePath>DrawingApp.exe</PackagePath>
-      <Modified>2019-12-03T12:55:55.596</Modified>
+      <Modified>2019-12-04T11:48:36.714</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

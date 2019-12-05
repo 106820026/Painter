@@ -27970,24 +27970,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
+    "C:\\Users\\Rosie\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\DrawingModel\\DrawingApp\\DrawingApp.csproj",
+      "projectUniqueName": "C:\\Users\\Rosie\\source\\repos\\DrawingModel\\DrawingApp\\DrawingApp.csproj",
       "projectName": "DrawingApp",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\DrawingModel\\DrawingApp\\DrawingApp.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\source\\repos\\DrawingModel\\DrawingApp\\obj\\",
+      "projectPath": "C:\\Users\\Rosie\\source\\repos\\DrawingModel\\DrawingApp\\DrawingApp.csproj",
+      "packagesPath": "C:\\Users\\Rosie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rosie\\source\\repos\\DrawingModel\\DrawingApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rosie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

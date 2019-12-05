@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LAPTOP-BDH7D5P4</Machine>
-    <WindowsUser>ASUS</WindowsUser>
+    <Machine>DESKTOP-6BK5TEH</Machine>
+    <WindowsUser>Rosie</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>a2699e91-252c-4df2-b701-8758bb36e24c</PackageIdentityName>
     <PackageIdentityPublisher>CN=ASUS</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>6C354A78746905269D93EBCE3063374BB0E767BA0163345784EDF21BB905D7D8</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>BC3E0F79662935413E671B01BC3E9F428444D56989491ED4B844F39AFAA72E6F</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>a2699e91-252c-4df2-b701-8758bb36e24c_1.0.0.0_x86__wkbqm3a0n06q2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>a2699e91-252c-4df2-b701-8758bb36e24c_wkbqm3a0n06q2!vstest.executionengine.universal.App</RegisteredUserModeAppID>
     <RegisteredPackageID>a2699e91-252c-4df2-b701-8758bb36e24c</RegisteredPackageID>
@@ -27,28 +27,28 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T14:13:37.785</Modified>
+      <Modified>2019-12-04T13:39:42.454</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\DrawingAppTest.exe">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\DrawingAppTest.exe">
       <PackagePath>entrypoint\DrawingAppTest.exe</PackagePath>
-      <Modified>2019-12-03T14:13:37.169</Modified>
+      <Modified>2019-12-04T13:39:37.703</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.exe">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.exe">
       <PackagePath>DrawingApp.exe</PackagePath>
-      <Modified>2019-12-03T12:55:54.912</Modified>
+      <Modified>2019-12-04T11:48:34.714</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\DrawingAppTest.pdb">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\DrawingAppTest.pdb">
       <PackagePath>DrawingAppTest.pdb</PackagePath>
-      <Modified>2019-12-03T14:13:37.169</Modified>
+      <Modified>2019-12-04T13:39:37.703</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.pdb">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.pdb">
       <PackagePath>DrawingApp.pdb</PackagePath>
-      <Modified>2019-12-03T12:55:54.912</Modified>
+      <Modified>2019-12-04T11:48:34.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\TestPlatform.Universal\15.5\References\CommonConfiguration\neutral\testhost.dll">
       <PackagePath>testhost.dll</PackagePath>
@@ -110,15 +110,15 @@
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
       <Modified>2016-06-11T15:13:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\mstest.testframework\1.3.2\lib\uap10.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\Rosie\.nuget\packages\mstest.testframework\1.3.2\lib\uap10.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</PackagePath>
       <Modified>2018-06-05T04:55:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\mstest.testframework\1.3.2\lib\uap10.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll">
+    <AppxPackagedFile Include="C:\Users\Rosie\.nuget\packages\mstest.testframework\1.3.2\lib\uap10.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.TestFramework.dll</PackagePath>
       <Modified>2018-06-05T04:47:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Rosie\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2016-06-13T15:06:14.000</Modified>
     </AppxPackagedFile>
@@ -262,11 +262,11 @@
       <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
       <Modified>2016-06-11T15:13:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\system.componentmodel.primitives\4.1.0\lib\netstandard1.0\System.ComponentModel.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Rosie\.nuget\packages\system.componentmodel.primitives\4.1.0\lib\netstandard1.0\System.ComponentModel.Primitives.dll">
       <PackagePath>System.ComponentModel.Primitives.dll</PackagePath>
       <Modified>2016-06-11T15:13:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\system.componentmodel.typeconverter\4.1.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll">
+    <AppxPackagedFile Include="C:\Users\Rosie\.nuget\packages\system.componentmodel.typeconverter\4.1.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll">
       <PackagePath>System.ComponentModel.TypeConverter.dll</PackagePath>
       <Modified>2016-06-11T15:13:28.000</Modified>
     </AppxPackagedFile>
@@ -410,7 +410,7 @@
       <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
       <Modified>2016-06-11T15:14:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\system.runtime.interopservices.runtimeinformation\4.0.0\runtimes\win\lib\netcore50\System.Runtime.InteropServices.RuntimeInformation.dll">
+    <AppxPackagedFile Include="C:\Users\Rosie\.nuget\packages\system.runtime.interopservices.runtimeinformation\4.0.0\runtimes\win\lib\netcore50\System.Runtime.InteropServices.RuntimeInformation.dll">
       <PackagePath>System.Runtime.InteropServices.RuntimeInformation.dll</PackagePath>
       <Modified>2016-06-11T15:14:28.000</Modified>
     </AppxPackagedFile>
@@ -570,91 +570,91 @@
       <PackagePath>msdia140.dll</PackagePath>
       <Modified>2018-10-01T09:37:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\mstest.testadapter\1.3.2\build\_common\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll">
+    <AppxPackagedFile Include="C:\Users\Rosie\.nuget\packages\mstest.testadapter\1.3.2\build\_common\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll</PackagePath>
       <Modified>2018-06-05T04:51:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\mstest.testadapter\1.3.2\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll">
+    <AppxPackagedFile Include="C:\Users\Rosie\.nuget\packages\mstest.testadapter\1.3.2\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll</PackagePath>
       <Modified>2018-06-05T04:50:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\mstest.testadapter\1.3.2\build\uap10.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll">
+    <AppxPackagedFile Include="C:\Users\Rosie\.nuget\packages\mstest.testadapter\1.3.2\build\uap10.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll</PackagePath>
       <Modified>2018-06-05T04:52:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\Properties\UnitTestApp.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\Properties\UnitTestApp.rd.xml">
       <PackagePath>Properties\UnitTestApp.rd.xml</PackagePath>
-      <Modified>2019-12-03T13:41:21.118</Modified>
+      <Modified>2019-12-03T13:41:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-11-25T06:48:27.716</Modified>
+      <Modified>2019-11-25T06:48:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-22T03:37:49.444</Modified>
+      <Modified>2019-11-22T03:37:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\DrawingAppTest.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\DrawingAppTest.xr.xml">
       <PackagePath>DrawingAppTest.xr.xml</PackagePath>
-      <Modified>2019-12-03T14:13:05.032</Modified>
+      <Modified>2019-12-03T14:13:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.xr.xml">
       <PackagePath>DrawingApp.xr.xml</PackagePath>
-      <Modified>2019-11-26T05:23:32.507</Modified>
+      <Modified>2019-11-26T05:23:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\UnitTestApp.xbf">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\UnitTestApp.xbf">
       <PackagePath>UnitTestApp.xbf</PackagePath>
-      <Modified>2019-12-03T14:13:37.032</Modified>
+      <Modified>2019-12-04T13:39:37.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-03T12:55:54.761</Modified>
+      <Modified>2019-12-04T11:48:34.523</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-03T12:55:54.762</Modified>
+      <Modified>2019-12-04T11:48:34.523</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-10-22T16:44:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-12-03T14:13:07.226</Modified>
+      <Modified>2019-12-04T13:39:40.533</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\Core\DrawingAppTest.exe">
+    <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\bin\x86\Debug\Core\DrawingAppTest.exe">
       <PackagePath>DrawingAppTest.exe</PackagePath>
-      <Modified>2019-12-03T14:13:37.772</Modified>
+      <Modified>2019-12-04T13:39:42.451</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
