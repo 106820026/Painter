@@ -285,12 +285,12 @@
             <Smell>
               <Id>7</Id>
               <SmellType>Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解</SmellType>
-              <HashCode>DrawingAppTest\DrawingAppTest.PresentationModelTest.cs.Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解.42</HashCode>
+              <HashCode>DrawingFormTests\DrawingFormTests.PresentationModelTests.cs.Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解.47</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingAppTest\DrawingAppTest</Project>
-              <File>PresentationModelTest.cs</File>
-              <Line>42</Line>
+              <Project>DrawingFormTests\DrawingFormTests</Project>
+              <File>PresentationModelTests.cs</File>
+              <Line>47</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -301,12 +301,12 @@
             <Smell>
               <Id>8</Id>
               <SmellType>Unresolved warnings(忽視警告)-函式 PresentationModelTest 缺乏註解</SmellType>
-              <HashCode>DrawingAppTest\DrawingAppTest.PresentationModelTest.cs.Unresolved warnings(忽視警告)-函式 PresentationModelTest 缺乏註解.49</HashCode>
+              <HashCode>DrawingFormTests\DrawingFormTests.PresentationModelTests.cs.Unresolved warnings(忽視警告)-函式 PresentationModelTest 缺乏註解.54</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingAppTest\DrawingAppTest</Project>
-              <File>PresentationModelTest.cs</File>
-              <Line>49</Line>
+              <Project>DrawingFormTests\DrawingFormTests</Project>
+              <File>PresentationModelTests.cs</File>
+              <Line>54</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -317,12 +317,12 @@
             <Smell>
               <Id>9</Id>
               <SmellType>Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解</SmellType>
-              <HashCode>DrawingAppTest\DrawingAppTest.PresentationModelTest.cs.Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解.55</HashCode>
+              <HashCode>DrawingFormTests\DrawingFormTests.PresentationModelTests.cs.Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解.60</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingAppTest\DrawingAppTest</Project>
-              <File>PresentationModelTest.cs</File>
-              <Line>55</Line>
+              <Project>DrawingFormTests\DrawingFormTests</Project>
+              <File>PresentationModelTests.cs</File>
+              <Line>60</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -332,198 +332,6 @@
             </Smell>
             <Smell>
               <Id>10</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.LineTests.cs.Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解.44</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>LineTests.cs</File>
-              <Line>44</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>11</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.ModelTests.cs.Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解.48</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>48</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>12</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 ModelTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.ModelTests.cs.Unresolved warnings(忽視警告)-函式 ModelTest 缺乏註解.55</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>55</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>13</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 PressPointerTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.ModelTests.cs.Unresolved warnings(忽視警告)-函式 PressPointerTest 缺乏註解.61</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>61</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>14</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 MovePointerTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.ModelTests.cs.Unresolved warnings(忽視警告)-函式 MovePointerTest 缺乏註解.72</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>72</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>15</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 ReleasePointerTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.ModelTests.cs.Unresolved warnings(忽視警告)-函式 ReleasePointerTest 缺乏註解.85</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>85</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>16</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 DrawHintTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.ModelTests.cs.Unresolved warnings(忽視警告)-函式 DrawHintTest 缺乏註解.98</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>98</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>17</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 ClearTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.ModelTests.cs.Unresolved warnings(忽視警告)-函式 ClearTest 缺乏註解.106</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>106</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>18</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.ModelTests.cs.Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解.113</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>113</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>19</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 EventHandler 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.ModelTests.cs.Unresolved warnings(忽視警告)-函式 EventHandler 缺乏註解.128</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>128</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>20</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.RectangleTests.cs.Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解.39</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>RectangleTests.cs</File>
-              <Line>39</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>21</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>44 DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>MainPage.g.i.cs</File>
-              <Line>44</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>22</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>129 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByType(System.Type)</HashCode>
               <Severity>Red</Severity>
@@ -539,7 +347,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>23</Id>
+              <Id>11</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>134 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByName(string)</HashCode>
               <Severity>Red</Severity>
@@ -555,7 +363,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>24</Id>
+              <Id>12</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>20 DrawingApp.Program.Main(string[])</HashCode>
               <Severity>Red</Severity>
@@ -571,7 +379,23 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>25</Id>
+              <Id>13</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>44 DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>MainPage.g.i.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>14</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>20 DrawingAppTest.Program.Main(string[])</HashCode>
               <Severity>Red</Severity>
@@ -588,7 +412,9 @@
             </Smell>
           </Reviews>
           <HashCodeIgnoreList />
-          <HashCodeRequestIgnoreList />
+          <HashCodeRequestIgnoreList>
+            <string>UnsuitableNaming.Model.ReleasePointer.x</string>
+          </HashCodeRequestIgnoreList>
           <AnalysisFileManager>
             <AnalysisFiles>
               <AnalysisFile>
@@ -717,16 +543,6 @@
                 <AnalysisFileType>Test</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
-                <RelativePath>PresentationModel\PresentationModelTests.cs</RelativePath>
-                <ProjectName>DrawingFormTests</ProjectName>
-                <AnalysisFileType>Test</AnalysisFileType>
-              </AnalysisFile>
-              <AnalysisFile>
-                <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
-                <ProjectName>DrawingFormTests</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
-              </AnalysisFile>
-              <AnalysisFile>
                 <RelativePath>LineTests.cs</RelativePath>
                 <ProjectName>DrawingModelTests</ProjectName>
                 <AnalysisFileType>Test</AnalysisFileType>
@@ -739,7 +555,7 @@
               <AnalysisFile>
                 <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
                 <ProjectName>DrawingModelTests</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Test</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>RectangleTests.cs</RelativePath>
@@ -754,17 +570,27 @@
               <AnalysisFile>
                 <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
                 <ProjectName>DrawingAppTest</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Test</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>UnitTestApp.xaml.cs</RelativePath>
                 <ProjectName>DrawingAppTest</ProjectName>
                 <AnalysisFileType>Test</AnalysisFileType>
               </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>PresentationModel\PresentationModelTests.cs</RelativePath>
+                <ProjectName>DrawingFormTests</ProjectName>
+                <AnalysisFileType>Test</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
+                <ProjectName>DrawingFormTests</ProjectName>
+                <AnalysisFileType>Test</AnalysisFileType>
+              </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>912</ProductionLoc>
-          <TestLoc>1181</TestLoc>
+          <ProductionLoc>823</ProductionLoc>
+          <TestLoc>1271</TestLoc>
         </CodeReview>
       </Data>
     </div>

@@ -3,46 +3,49 @@
   <project key="905800481">
     <configuration>DEBUG;TRACE</configuration>
   </project>
+  <project key="-1553655198">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="LineTests.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
-      <styleCop>2019/09/10 22:51:54.372</styleCop>
+      <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/03 22:08:49.645</sourceFile>
-      <parser>2019/09/10 22:51:54.372</parser>
-      <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
+      <sourceFile>2019/12/03 22:08:50.000</sourceFile>
+      <parser>2019/12/05 18:55:05.506</parser>
+      <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />
   </sourcecode>
   <sourcecode name="ModelTests.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
-      <styleCop>2019/09/10 22:51:54.372</styleCop>
+      <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/03 22:09:56.383</sourceFile>
-      <parser>2019/09/10 22:51:54.372</parser>
-      <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
+      <sourceFile>2019/12/03 22:09:58.000</sourceFile>
+      <parser>2019/12/05 18:55:05.506</parser>
+      <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />
   </sourcecode>
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
-      <styleCop>2019/09/10 22:51:54.372</styleCop>
+      <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/11/28 10:51:10.428</sourceFile>
-      <parser>2019/09/10 22:51:54.372</parser>
-      <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
+      <sourceFile>2019/11/28 10:51:12.000</sourceFile>
+      <parser>2019/12/05 18:55:05.506</parser>
+      <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />
   </sourcecode>
   <sourcecode name="RectangleTests.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
-      <styleCop>2019/09/10 22:51:54.372</styleCop>
+      <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/03 22:11:01.653</sourceFile>
-      <parser>2019/09/10 22:51:54.372</parser>
-      <KellyPalRules.KellyPalAnalyzer>2019/09/10 22:51:54.372</KellyPalRules.KellyPalAnalyzer>
+      <sourceFile>2019/12/03 22:11:02.000</sourceFile>
+      <parser>2019/12/05 18:55:05.506</parser>
+      <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />

@@ -60,7 +60,7 @@ namespace DrawingForm.PresentationModel.Tests
         [TestMethod()]
         public void DrawTest()
         {
-            model.Draw(new FakeAdapter.FakeAdapter());
+            presentationModel.Draw(new FakeAdapter.FakeAdapter());
             Assert.IsNotNull(presentationModel);
         }
     }
