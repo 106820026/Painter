@@ -1,6 +1,6 @@
 ﻿namespace DrawingForm
 {
-    partial class Form1
+    partial class Form
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -28,48 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this._clear = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this._selectTextLabel = new System.Windows.Forms.Label();
+            this._shapePositionTextLabel = new System.Windows.Forms.Label();
             this._line = new System.Windows.Forms.Button();
+            this._hexagon = new System.Windows.Forms.Button();
             this._rectangle = new System.Windows.Forms.Button();
+            this._clear = new System.Windows.Forms.Button();
+            this._tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this._undo = new System.Windows.Forms.ToolStripLabel();
+            this._redo = new System.Windows.Forms.ToolStripLabel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tableLayoutPanel1.SuspendLayout();
             this._tableLayoutPanel.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // _tableLayoutPanel
+            // tableLayoutPanel1
             // 
-            this._tableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this._tableLayoutPanel.BackColor = System.Drawing.Color.Transparent;
-            this._tableLayoutPanel.ColumnCount = 3;
-            this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
-            this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this._tableLayoutPanel.Controls.Add(this._clear, 2, 0);
-            this._tableLayoutPanel.Controls.Add(this._line, 1, 0);
-            this._tableLayoutPanel.Controls.Add(this._rectangle, 0, 0);
-            this._tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this._tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this._tableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this._tableLayoutPanel.Name = "_tableLayoutPanel";
-            this._tableLayoutPanel.RowCount = 1;
-            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this._tableLayoutPanel.Size = new System.Drawing.Size(1350, 34);
-            this._tableLayoutPanel.TabIndex = 0;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.Controls.Add(this._selectTextLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this._shapePositionTextLabel, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1307, 881);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(493, 26);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // _clear
+            // _selectTextLabel
             // 
-            this._clear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._clear.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._clear.Location = new System.Drawing.Point(1011, 2);
-            this._clear.Margin = new System.Windows.Forms.Padding(112, 2, 112, 2);
-            this._clear.Name = "_clear";
-            this._clear.Size = new System.Drawing.Size(227, 30);
-            this._clear.TabIndex = 2;
-            this._clear.Text = "Clear";
-            this._clear.UseVisualStyleBackColor = true;
-            this._clear.Click += new System.EventHandler(this.HandleClearButtonClick);
+            this._selectTextLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._selectTextLabel.AutoSize = true;
+            this._selectTextLabel.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._selectTextLabel.Location = new System.Drawing.Point(31, 3);
+            this._selectTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._selectTextLabel.Name = "_selectTextLabel";
+            this._selectTextLabel.Size = new System.Drawing.Size(61, 19);
+            this._selectTextLabel.TabIndex = 0;
+            this._selectTextLabel.Text = "Select : ";
+            // 
+            // _shapePositionTextLabel
+            // 
+            this._shapePositionTextLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._shapePositionTextLabel.AutoSize = true;
+            this._shapePositionTextLabel.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._shapePositionTextLabel.Location = new System.Drawing.Point(308, 3);
+            this._shapePositionTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._shapePositionTextLabel.Name = "_shapePositionTextLabel";
+            this._shapePositionTextLabel.Size = new System.Drawing.Size(0, 19);
+            this._shapePositionTextLabel.TabIndex = 4;
             // 
             // _line
             // 
@@ -77,14 +89,29 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._line.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._line.Location = new System.Drawing.Point(561, 2);
-            this._line.Margin = new System.Windows.Forms.Padding(112, 2, 112, 2);
+            this._line.Location = new System.Drawing.Point(599, 2);
+            this._line.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
             this._line.Name = "_line";
-            this._line.Size = new System.Drawing.Size(226, 30);
-            this._line.TabIndex = 1;
+            this._line.Size = new System.Drawing.Size(152, 38);
+            this._line.TabIndex = 3;
             this._line.Text = "Line";
             this._line.UseVisualStyleBackColor = true;
             this._line.Click += new System.EventHandler(this.HandleLineButtonClick);
+            // 
+            // _hexagon
+            // 
+            this._hexagon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._hexagon.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._hexagon.Location = new System.Drawing.Point(1049, 2);
+            this._hexagon.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
+            this._hexagon.Name = "_hexagon";
+            this._hexagon.Size = new System.Drawing.Size(152, 38);
+            this._hexagon.TabIndex = 1;
+            this._hexagon.Text = "Hexagon";
+            this._hexagon.UseVisualStyleBackColor = true;
+            this._hexagon.Click += new System.EventHandler(this.HandleHexagonButtonClick);
             // 
             // _rectangle
             // 
@@ -92,35 +119,115 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._rectangle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._rectangle.Location = new System.Drawing.Point(112, 2);
-            this._rectangle.Margin = new System.Windows.Forms.Padding(112, 2, 112, 2);
+            this._rectangle.Location = new System.Drawing.Point(149, 2);
+            this._rectangle.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
             this._rectangle.Name = "_rectangle";
-            this._rectangle.Size = new System.Drawing.Size(225, 30);
+            this._rectangle.Size = new System.Drawing.Size(152, 38);
             this._rectangle.TabIndex = 0;
             this._rectangle.Text = "Rectangle";
             this._rectangle.UseVisualStyleBackColor = true;
             this._rectangle.Click += new System.EventHandler(this.HandleRectangleButtonClick);
             // 
-            // Form1
+            // _clear
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this._clear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._clear.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._clear.Location = new System.Drawing.Point(1499, 2);
+            this._clear.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
+            this._clear.Name = "_clear";
+            this._clear.Size = new System.Drawing.Size(152, 38);
+            this._clear.TabIndex = 2;
+            this._clear.Text = "Clear";
+            this._clear.UseVisualStyleBackColor = true;
+            this._clear.Click += new System.EventHandler(this.HandleClearButtonClick);
+            // 
+            // _tableLayoutPanel
+            // 
+            this._tableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this._tableLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this._tableLayoutPanel.ColumnCount = 4;
+            this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.00061F));
+            this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
+            this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
+            this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
+            this._tableLayoutPanel.Controls.Add(this._line, 0, 0);
+            this._tableLayoutPanel.Controls.Add(this._hexagon, 1, 0);
+            this._tableLayoutPanel.Controls.Add(this._rectangle, 0, 0);
+            this._tableLayoutPanel.Controls.Add(this._clear, 3, 0);
+            this._tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this._tableLayoutPanel.Location = new System.Drawing.Point(0, 25);
+            this._tableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this._tableLayoutPanel.Name = "_tableLayoutPanel";
+            this._tableLayoutPanel.RowCount = 1;
+            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this._tableLayoutPanel.Size = new System.Drawing.Size(1800, 42);
+            this._tableLayoutPanel.TabIndex = 3;
+            // 
+            // _undo
+            // 
+            this._undo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._undo.Enabled = false;
+            this._undo.Name = "_undo";
+            this._undo.Size = new System.Drawing.Size(48, 22);
+            this._undo.Text = "Undo";
+            this._undo.Click += new System.EventHandler(this.UndoHandler);
+            // 
+            // _redo
+            // 
+            this._redo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._redo.Enabled = false;
+            this._redo.Name = "_redo";
+            this._redo.Size = new System.Drawing.Size(46, 22);
+            this._redo.Text = "Redo";
+            this._redo.Click += new System.EventHandler(this.RedoHandler);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._undo,
+            this._redo});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1800, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // Form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.ClientSize = new System.Drawing.Size(1800, 911);
             this.Controls.Add(this._tableLayoutPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Form";
             this.Text = "Form1";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this._tableLayoutPanel.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel _tableLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label _selectTextLabel;
+        private System.Windows.Forms.Label _shapePositionTextLabel;
+        private System.Windows.Forms.Button _line;
+        private System.Windows.Forms.Button _hexagon;
         private System.Windows.Forms.Button _rectangle;
         private System.Windows.Forms.Button _clear;
-        private System.Windows.Forms.Button _line;
+        private System.Windows.Forms.TableLayoutPanel _tableLayoutPanel;
+        private System.Windows.Forms.ToolStripLabel _undo;
+        private System.Windows.Forms.ToolStripLabel _redo;
+        private System.Windows.Forms.ToolStrip toolStrip1;
     }
 }
 

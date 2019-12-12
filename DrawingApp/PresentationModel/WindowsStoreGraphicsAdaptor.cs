@@ -57,5 +57,26 @@ namespace DrawingApp.PresentationModel
             Canvas.SetTop(rectangle, top);
             Canvas.SetLeft(rectangle, left);
         }
+
+        // 畫六角形
+        public void DrawHexagon(double x1, double y1, double x2, double y2)
+        {
+            float height = (float)Math.Abs(y2 - y1);
+            float width = (float)Math.Abs(x2 - x1);
+            float deltaHeight = height / 2;
+            float edge = width / 13 * 5;
+            float deltaWidth = (width - edge) / 2;
+            if (x2 - x1 < 0)
+            {
+                edge = -edge;
+                deltaWidth = -deltaWidth;
+            }
+            DrawLine(x1, y1, x1 + deltaWidth, y1 + deltaHeight);
+            DrawLine(x1, y1, x1 + deltaWidth, y1 - deltaHeight);
+            DrawLine(x1 + deltaWidth, y1 + deltaHeight, x1 + deltaWidth + edge, y1 + deltaHeight);
+            DrawLine(x1 + deltaWidth, y1 - deltaHeight, x1 + deltaWidth + edge, y1 - deltaHeight);
+            DrawLine(x1 + deltaWidth + edge, y1 + deltaHeight, x2, y1);
+            DrawLine(x1 + deltaWidth + edge, y1 - deltaHeight, x2, y1);
+        }
     }
 }

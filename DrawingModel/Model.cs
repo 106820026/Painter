@@ -11,6 +11,7 @@ namespace DrawingModel
     {
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
+        CommandManager _commandManager = new CommandManager();
         double _firstPointX;
         double _firstPointY;
         double _lastPointX;
@@ -21,11 +22,13 @@ namespace DrawingModel
 
         public Model()
         {
-            this.CurrentMode = (int)999m;
+            this.CurrentMode = -1;
             Rectangle rectangle = new Rectangle();
             Line line = new Line();
+            Hexagon hexagon = new Hexagon();
             _shapeHint.Add(rectangle);
             _shapeHint.Add(line);
+            _shapeHint.Add(hexagon);
         }
 
         public int CurrentMode
@@ -33,10 +36,16 @@ namespace DrawingModel
             get; set;
         }
 
+        // 取得所有形狀
+        public List<Shape> GetTotalShapes()
+        {
+            return _shapes;
+        }
+
         // 按下滑鼠
         public void PressPointer(double x, double y)
         {
-            if (x > 0 && y > 0 && CurrentMode != (int)999m)
+            if (x > 0 && y > 0 && CurrentMode != -1)
             {
                 _firstPointX = x;
                 _firstPointY = y;
@@ -81,8 +90,11 @@ namespace DrawingModel
         public void Clear()
         {
             _isPressed = false;
-            _shapes.Clear();
-            NotifyModelChanged();
+            if (_shapes.Count != 0)
+            {
+                _commandManager.Execute(new ClearCommand(this, _shapes));
+                NotifyModelChanged();
+            }
         }
 
         // 畫圖
@@ -101,23 +113,71 @@ namespace DrawingModel
             if (CurrentMode == 0) // 畫矩形
             {
                 Rectangle newRectangle = new Rectangle();
-                _shapes.Add(this.AddNewShape(newRectangle));
+                this.AddNewShape(newRectangle);
             }
             else if (CurrentMode == 1) // 畫線
             {
                 Line newLine = new Line();
-                _shapes.Add(this.AddNewShape(newLine));
+                this.AddNewShape(newLine);
+            }
+            else if(CurrentMode == 2)
+            {
+                Hexagon newHexagon = new Hexagon();
+                this.AddNewShape(newHexagon);
             }
         }
 
-        // 新增新圖
-        private Shape AddNewShape(Shape shape)
+        // 新增新形狀
+        public Shape AddNewShape(Shape shape)
         {
             shape.X1 = _firstPointX;
             shape.Y1 = _firstPointY;
             shape.X2 = _lastPointX;
             shape.Y2 = _lastPointY;
+            _commandManager.Execute(new DrawCommand(this, shape));
             return shape;
+        }
+
+        // 畫在畫布上
+        public void DrawShape(Shape shape)
+        {
+            _shapes.Add(shape);
+        }
+
+        // 從畫布上清除
+        public void DeleteShape()
+        {
+            _shapes.RemoveAt(_shapes.Count - 1);
+        }
+
+        // 回上一步
+        public void Undo()
+        {
+            _commandManager.Undo();
+            NotifyModelChanged();
+        }
+
+        // 取消回上一步
+        public void Redo()
+        {
+            _commandManager.Redo();
+            NotifyModelChanged();
+        }
+
+        public bool IsRedoEnabled
+        {
+            get
+            {
+                return _commandManager.IsRedoEnabled;
+            }
+        }
+
+        public bool IsUndoEnabled
+        {
+            get
+            {
+                return _commandManager.IsUndoEnabled;
+            }
         }
 
         // 偵測所有動作

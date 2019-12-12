@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace DrawingForm
 {
-    public partial class Form1 : Form
+    public partial class Form : System.Windows.Forms.Form
     {
         DrawingModel.Model _model;
         PresentationModel.PresentationModel _presentationModel;
         Panel _canvas = new DoubleBufferedPanel();
         const String CANVAS = "canvas";
 
-        public Form1()
+        public Form()
         {
             InitializeComponent();
             // prepare canvas
@@ -29,6 +29,7 @@ namespace DrawingForm
             _canvas.MouseMove += HandleCanvasMoved;
             _canvas.Paint += HandleCanvasPaint;
             _canvas.AccessibleName = CANVAS;
+            _canvas.Click += SelectShape;
             Controls.Add(_canvas);
             // prepare clear button
             _clear.AutoSize = true;
@@ -43,44 +44,52 @@ namespace DrawingForm
         public void HandleClearButtonClick(object sender, System.EventArgs e)
         {
             _model.Clear();
-            _model.CurrentMode = (int)999m;
-            _rectangle.Enabled = true;
-            _line.Enabled = true;
+            _model.CurrentMode = -1;
+            SetButtonEnable((Button)sender);
+            RefreshUI();
         }
 
         // 畫矩形
         public void HandleRectangleButtonClick(object sender, System.EventArgs e)
         {
             _model.CurrentMode = 0;
-            _rectangle.Enabled = false;
-            _line.Enabled = true;
-            
+            SetButtonEnable((Button)sender);
+
         }
 
         // 畫線
         public void HandleLineButtonClick(object sender, System.EventArgs e)
         {
             _model.CurrentMode = 1;
-            _rectangle.Enabled = true;
-            _line.Enabled = false;
+            SetButtonEnable((Button)sender);
+        }
+
+        // 畫六角形
+        private void HandleHexagonButtonClick(object sender, EventArgs e)
+        {
+            _model.CurrentMode = 2;
+            SetButtonEnable((Button)sender);
         }
 
         // 按下滑鼠
         public void HandleCanvasPressed(object sender, MouseEventArgs e)
         {
             _model.PressPointer(e.X, e.Y);
+            RefreshUI();
         }
 
         // 釋放滑鼠
         public void HandleCanvasReleased(object sender, MouseEventArgs e)
         {
             _model.ReleasePointer(e.X, e.Y);
+            RefreshUI();
         }
 
         // 偵測滑鼠移動
         public void HandleCanvasMoved(object sender, MouseEventArgs e)
         {
             _model.MovePointer(e.X, e.Y);
+            RefreshUI();
         }
 
         // 畫圖
@@ -93,6 +102,43 @@ namespace DrawingForm
         public void HandleModelChanged()
         {
             Invalidate(true);
+        }
+
+        // 修改Button的Enabled
+        private void SetButtonEnable(Button pressedButton)
+        {
+            foreach (Button button in _tableLayoutPanel.Controls)
+                button.Enabled = true;
+            if (_model.CurrentMode != -1)
+                pressedButton.Enabled = false;
+        }
+
+        // 選擇形狀
+        private void SelectShape(object sender, EventArgs e)
+        {
+            _shapePositionTextLabel.Text = _presentationModel.SelectShape(MousePosition.X, MousePosition.Y);
+        }
+
+        // 回到上一步
+        void UndoHandler(Object sender, EventArgs e)
+        {
+            _model.Undo();
+            RefreshUI();
+        }
+
+        // 取消回到上一步
+        void RedoHandler(Object sender, EventArgs e)
+        {
+            _model.Redo();
+            RefreshUI();
+        }
+
+        // 更新redo與undo是否為enabled
+        void RefreshUI()    
+        {
+            _redo.Enabled = _model.IsRedoEnabled;
+            _undo.Enabled = _model.IsUndoEnabled;
+            Invalidate();
         }
     }
 }

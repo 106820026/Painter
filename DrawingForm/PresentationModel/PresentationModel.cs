@@ -1,4 +1,5 @@
 ﻿using DrawingModel;
+using System;
 
 namespace DrawingForm.PresentationModel
 {
@@ -17,6 +18,15 @@ namespace DrawingForm.PresentationModel
             // 而Adaptor又直接使用graphics，這樣DoubleBuffer才能正確運作
             // 因此，Adaptor不能重複使用，每次都要重新new
             _model.Draw(adaptor);
+        }
+
+        public string SelectShape(double x, double y)
+        {
+            foreach (Shape aShape in _model.GetTotalShapes())
+            {
+                
+            }
+            return "Null";
         }
     }
 }

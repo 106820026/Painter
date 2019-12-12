@@ -14,6 +14,9 @@ namespace DrawingModel
         // 畫線
         void DrawLine(double x1, double y1, double x2, double y2);
 
+        // 畫六角形
+        void DrawHexagon(double x1, double y1, double x2, double y2);
+
         // 清除
         void ClearAll();
     }

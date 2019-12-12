@@ -36,6 +36,7 @@ namespace DrawingApp
             _clear.Click += HandleClearButtonClick;
             _rectangle.Click += HandleRectangleButtonClick;
             _line.Click += HandleLineButtonClick;
+            _hexagon.Click += HandleHexagonButtonClick;
             _model._modelChanged += HandleModelChanged;
         }
 
@@ -47,25 +48,29 @@ namespace DrawingApp
         private void HandleClearButtonClick(object sender, RoutedEventArgs e)
         {
             _model.Clear();
-            _model.CurrentMode = (int)999m;
-            _rectangle.IsEnabled = true;
-            _line.IsEnabled = true;
+            _model.CurrentMode = -1;
+            SetButtonIsEnabled((Button)sender);
         }
 
         // 畫矩形
         private void HandleRectangleButtonClick(object sender, RoutedEventArgs e)
         {
             _model.CurrentMode = 0;
-            _rectangle.IsEnabled = false;
-            _line.IsEnabled = true;
+            SetButtonIsEnabled((Button)sender);
         }
 
         // 畫線
         private void HandleLineButtonClick(object sender, RoutedEventArgs e)
         {
             _model.CurrentMode = 1;
-            _rectangle.IsEnabled = true;
-            _line.IsEnabled = false;
+            SetButtonIsEnabled((Button)sender);
+        }
+
+        // 畫六角形
+        private void HandleHexagonButtonClick(object sender, RoutedEventArgs e)
+        {
+            _model.CurrentMode = 2;
+            SetButtonIsEnabled((Button)sender);
         }
 
         // 按下滑鼠
@@ -90,6 +95,15 @@ namespace DrawingApp
         public void HandleModelChanged()
         {
             _presentationModel.Draw(_interfaceGraphics);
+        }
+
+        // 設定Button的IsEnabled
+        private void SetButtonIsEnabled(Button pressedButton)
+        {
+            foreach (Button button in _grid.Children)
+                button.IsEnabled = true;
+            if (_model.CurrentMode != -1)
+                pressedButton.IsEnabled = false;
         }
     }
 }

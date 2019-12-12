@@ -55,13 +55,13 @@ namespace DrawingModel.Tests
         [TestMethod()]
         public void ModelTest()
         {
-            Assert.AreEqual(model.CurrentMode, 999);
+            Assert.AreEqual(model.CurrentMode, -1);
         }
 
         [TestMethod()]
         public void PressPointerTest()
         {
-            model.CurrentMode = 999;
+            model.CurrentMode = -1;
             model.PressPointer(90, 150);
             model.CurrentMode = 0;
             model.PressPointer(0, 0);
@@ -107,7 +107,7 @@ namespace DrawingModel.Tests
         public void ClearTest()
         {
             model.Clear();
-            Assert.AreEqual(model.CurrentMode, 999);
+            Assert.AreEqual(model.CurrentMode, -1);
         }
 
         [TestMethod()]
