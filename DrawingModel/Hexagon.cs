@@ -13,5 +13,11 @@ namespace DrawingModel
         {
             graphics.DrawHexagon(X1, Y1, X2, Y2);
         }
+
+        // 畫出外框
+        public override void DrawFrame(IGraphics graphics)
+        {
+            graphics.DrawHexagonFrame(X1, Y1, X2, Y2);
+        }
     }
 }

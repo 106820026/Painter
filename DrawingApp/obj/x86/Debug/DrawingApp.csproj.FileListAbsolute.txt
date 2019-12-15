@@ -454,3 +454,10 @@ C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\resources.en-u
 C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758264200000000.json
 C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\DrawingApp.csprojAssemblyReference.cache
+C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\System.Drawing.dll
+C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\System.Configuration.dll
+C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\System.Security.dll
+C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\System.Drawing\en-US\System.Drawing.Res.resw
+C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\System.Configuration\en-US\System.Configuration.resw
+C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\System.Security\en-US\system.security.resw
+C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\obj\x86\Debug\DrawingApp.csproj.GenerateResource.Cache

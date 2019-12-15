@@ -25,19 +25,33 @@ namespace DrawingApp.PresentationModel
         // 畫線
         public void DrawLine(double x1, double y1, double x2, double y2)
         {
+            Windows.UI.Xaml.Shapes.Line line = LinkPointToLine(x1, y1, x2, y2);
+            line.Stroke = new SolidColorBrush(Colors.Black);
+            _canvas.Children.Add(line);
+        }
+
+        // 連線的點
+        private Windows.UI.Xaml.Shapes.Line LinkPointToLine(double x1, double y1, double x2, double y2)
+        {
             Windows.UI.Xaml.Shapes.Line line = new Windows.UI.Xaml.Shapes.Line();
             line.X1 = x1;
             line.Y1 = y1;
             line.X2 = x2;
             line.Y2 = y2;
-            line.Stroke = new SolidColorBrush(Colors.Black);
-            _canvas.Children.Add(line);
+            return line;
         }
 
         // 畫矩形
         public void DrawRectangle(double x1, double y1, double x2, double y2)
         {
-            SolidColorBrush myBrush = new SolidColorBrush(Windows.UI.Colors.Aqua);
+            Windows.UI.Xaml.Shapes.Rectangle rectangle = LinkPointToRectangle(x1, y1, x2, y2);
+            rectangle.Fill = new SolidColorBrush(Windows.UI.Colors.Aqua);
+            _canvas.Children.Add(rectangle);
+        }
+
+        // 連矩形的點
+        private Windows.UI.Xaml.Shapes.Rectangle LinkPointToRectangle(double x1, double y1, double x2, double y2)
+        {
             Windows.UI.Xaml.Shapes.Rectangle rectangle = new Windows.UI.Xaml.Shapes.Rectangle();
             rectangle.Width = Math.Abs(x2 - x1);
             rectangle.Height = Math.Abs(y2 - y1);
@@ -50,8 +64,7 @@ namespace DrawingApp.PresentationModel
                 this.SetTopLeft(rectangle, y2, x1);
             if (x2 < x1 && y2 < y1)
                 this.SetTopLeft(rectangle, y2, x2);
-            _canvas.Children.Add(rectangle);
-            rectangle.Fill = myBrush;
+            return rectangle;
         }
 
         // 設定左上角座標
@@ -64,8 +77,15 @@ namespace DrawingApp.PresentationModel
         // 畫六角形
         public void DrawHexagon(double x1, double y1, double x2, double y2)
         {
-            SolidColorBrush myBrush = new SolidColorBrush(Colors.Tomato);
-            SolidColorBrush myStroke = new SolidColorBrush(Colors.Black);
+            Polygon hexagon = LinkPointToHexagon(x1, y1, x2, y2);
+            hexagon.Fill = new SolidColorBrush(Colors.Tomato);
+            hexagon.Stroke = new SolidColorBrush(Colors.Black);
+            _canvas.Children.Add(hexagon);
+        }
+
+        // 連六角形點
+        private Polygon LinkPointToHexagon(double x1, double y1, double x2, double y2)
+        {
             float height = (float)Math.Abs(y2 - y1);
             float width = (float)Math.Abs(x2 - x1);
             float deltaHeight = height / 2;
@@ -85,10 +105,23 @@ namespace DrawingApp.PresentationModel
             points.Add(new Point(x1 + deltaWidth + edge, y1 - deltaHeight));
             points.Add(new Point(x1 + deltaWidth, y1 - deltaHeight));
             hexagon.Points = points;
-            hexagon.Fill = myBrush;
-            hexagon.Stroke = myStroke;
-            hexagon.StrokeThickness = 1;
-            _canvas.Children.Add(hexagon);
+            return hexagon;
+        }
+
+        public void DrawRectangleFrame(double x1, double y1, double x2, double y2)
+        {
+            //Windows.UI.Xaml.Shapes.Rectangle rectangle = LinkPointToRectangle(x1, y1, x2, y2);
+
+        }
+
+        public void DrawLineFrame(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
+        public void DrawHexagonFrame(double x1, double y1, double x2, double y2)
+        {
+
         }
     }
 }

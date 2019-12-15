@@ -85,8 +85,7 @@ namespace DrawingForm.PresentationModel
                 deltaWidth = -deltaWidth;
             }
             float deltaHeight = height / 2;
-            return x > Math.Min(x1, x2) && x < Math.Max(x1, x2) && y > Math.Min(y1, y2) && y < Math.Max(y1, y2) &&
-                   DistanceFromPointToLine(new Point((int)x1, (int)(y1 + y2) / 2), new Point((int)(x1 + width), (int)(((y1 + y2) / 2) + height)), x, y) < 0;
+            return x > Math.Min(x1, x2) && x < Math.Max(x1, x2) && y > Math.Min(y1, y2) && y < Math.Max(y1, y2);
         }
 
         private static double DistanceFromPointToLine(Point point1, Point point2, double x, double y)

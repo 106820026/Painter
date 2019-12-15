@@ -13,5 +13,11 @@ namespace DrawingModel
         {
             graphics.DrawRectangle(X1, Y1, X2, Y2);
         }
+
+        // 畫矩形外框
+        public override void DrawFrame(IGraphics graphics)
+        {
+            graphics.DrawRectangleFrame(X1, Y1, X2, Y2);
+        }
     }
 }

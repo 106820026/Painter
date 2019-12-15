@@ -13,5 +13,11 @@ namespace DrawingModel
         {
             graphics.DrawLine(X1, Y1, X2, Y2);
         }
+
+        // 畫線框
+        public override void DrawFrame(IGraphics graphics)
+        {
+            graphics.DrawLineFrame(X1, Y1, X2, Y2);
+        }
     }
 }

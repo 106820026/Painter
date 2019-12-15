@@ -32,17 +32,28 @@ namespace DrawingForm.PresentationModel
             SolidBrush myBrush = new SolidBrush(Color.Aqua);
             float width = (float)Math.Abs(x2 - x1);
             float height = (float)Math.Abs(y2 - y1);
-            _graphics.FillRectangle(myBrush, (float)x1, (float)y1, width, height);
             if (x2 > x1 && y2 > y1)
+            {
+                _graphics.FillRectangle(myBrush, (float)x1, (float)y1, width, height);
                 _graphics.DrawRectangle(Pens.Black, (float)x1, (float)y1, width, height);
+            }
             if (x2 < x1 && y2 > y1)
+            {
+                _graphics.FillRectangle(myBrush, (float)x2, (float)y1, width, height);
                 _graphics.DrawRectangle(Pens.Black, (float)x2, (float)y1, width, height);
+            }
             if (x2 > x1 && y2 < y1)
+            {
+                _graphics.FillRectangle(myBrush, (float)x1, (float)y2, width, height);
                 _graphics.DrawRectangle(Pens.Black, (float)x1, (float)y2, width, height);
+            }
             if (x2 < x1 && y2 < y1)
+            {
+                _graphics.FillRectangle(myBrush, (float)x2, (float)y2, width, height);
                 _graphics.DrawRectangle(Pens.Black, (float)x2, (float)y2, width, height);
+            }
         }
-         
+
         // 畫六角形
         public void DrawHexagon(double x1, double y1, double x2, double y2)
         {
@@ -51,7 +62,8 @@ namespace DrawingForm.PresentationModel
             float edge = width / 13 * 5;
             float deltaWidth = (width - edge) / 2;
             y1 = (y1 + y2) / 2; //平行向下移
-            if (x2 - x1 < 0) {
+            if (x2 - x1 < 0)
+            {
                 edge = -edge;
                 deltaWidth = -deltaWidth;
             }
@@ -65,6 +77,48 @@ namespace DrawingForm.PresentationModel
             DrawLine(x1 + deltaWidth, y1 - deltaHeight, x1 + deltaWidth + edge, y1 - deltaHeight);
             DrawLine(x1 + deltaWidth + edge, y1 + deltaHeight, x2, y1);
             DrawLine(x1 + deltaWidth + edge, y1 - deltaHeight, x2, y1);
+        }
+
+        // 畫矩形框
+        public void DrawRectangleFrame(double x1, double y1, double x2, double y2)
+        {
+            float width = (float)Math.Abs(x2 - x1);
+            float height = (float)Math.Abs(y2 - y1);
+            Pen pen = new Pen(Color.Red);
+            pen.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            _graphics.DrawRectangle(pen, (float)x1, (float)y1, width, height);
+        }
+
+        // 畫線框
+        public void DrawLineFrame(double x1, double y1, double x2, double y2)
+        {
+            Pen pen = new Pen(Color.Red);
+            pen.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            _graphics.DrawLine(pen, (float)x1, (float)y1, (float)x2, (float)y2);
+        }
+
+        // 畫六角形框
+        public void DrawHexagonFrame(double x1, double y1, double x2, double y2)
+        {
+            Pen pen = new Pen(Color.Red);
+            pen.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            float width = (float)Math.Abs(x2 - x1);
+            float height = (float)Math.Abs(y2 - y1);
+            float edge = width / 13 * 5;
+            float deltaWidth = (width - edge) / 2;
+            y1 = (y1 + y2) / 2; //平行向下移
+            if (x2 - x1 < 0)
+            {
+                edge = -edge;
+                deltaWidth = -deltaWidth;
+            }
+            float deltaHeight = height / 2;
+            DrawLineFrame(x1, y1, x1 + deltaWidth, y1 + deltaHeight);
+            DrawLineFrame(x1, y1, x1 + deltaWidth, y1 - deltaHeight);
+            DrawLineFrame(x1 + deltaWidth, y1 + deltaHeight, x1 + deltaWidth + edge, y1 + deltaHeight);
+            DrawLineFrame(x1 + deltaWidth, y1 - deltaHeight, x1 + deltaWidth + edge, y1 - deltaHeight);
+            DrawLineFrame(x1 + deltaWidth + edge, y1 + deltaHeight, x2, y1);
+            DrawLineFrame(x1 + deltaWidth + edge, y1 - deltaHeight, x2, y1);
         }
     }
 }

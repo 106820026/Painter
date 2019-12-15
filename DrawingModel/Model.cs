@@ -50,6 +50,8 @@ namespace DrawingModel
         // 按下滑鼠
         public void PressPointer(double x, double y)
         {
+            if (CurrentMode == -1)
+                _isPressed = true;
             if (x > 0 && y > 0 && CurrentMode != -1)
             {
                 _firstPointX = x;
@@ -62,7 +64,7 @@ namespace DrawingModel
         // 滑鼠移動偵測
         public void MovePointer(double x, double y)
         {
-            if (_isPressed)
+            if (_isPressed && CurrentMode != -1)
             {
                 this.DrawHint(_firstPointX, _firstPointY, x, y);
                 NotifyModelChanged();
@@ -72,7 +74,12 @@ namespace DrawingModel
         // 釋放滑鼠
         public void ReleasePointer(double x, double y)
         {
-            if (_isPressed)
+            if(CurrentMode == -1)
+            {
+                _isPressed = false;
+                NotifyModelChanged();
+            }
+            if (_isPressed && CurrentMode != -1)
             {
                 _isPressed = false;
                 _lastPointX = x;
@@ -113,7 +120,7 @@ namespace DrawingModel
             foreach (Shape aShape in _shapes)
                 aShape.Draw(graphics);
             if (IsSelected)
-                SelectedShape.Draw(graphics);
+                SelectedShape.DrawFrame(graphics);
         }
 
         // 存圖
@@ -125,6 +132,7 @@ namespace DrawingModel
             shape.X2 = _lastPointX;
             shape.Y2 = _lastPointY;
             _commandManager.Execute(new DrawCommand(this, shape));
+            CurrentMode = -1;
         }
 
         // 畫在畫布上

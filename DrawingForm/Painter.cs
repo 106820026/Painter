@@ -45,6 +45,7 @@ namespace DrawingForm
         {
             _model.Clear();
             _model.CurrentMode = -1;
+            _model.IsSelected = false;
             SetButtonEnable((Button)sender);
             RefreshUI();
         }
@@ -81,6 +82,7 @@ namespace DrawingForm
         public void HandleCanvasReleased(object sender, MouseEventArgs e)
         {
             _model.ReleasePointer(e.X, e.Y);
+            SetButtonEnable();
             RefreshUI();
         }
 
@@ -112,6 +114,14 @@ namespace DrawingForm
                 pressedButton.Enabled = false;
         }
 
+        // 修改Button的Enabled
+        private void SetButtonEnable()
+        {
+            if (_model.CurrentMode == -1)
+                foreach (Button button in _tableLayoutPanel.Controls)
+                    button.Enabled = true;
+        }
+
         // 選擇形狀
         private void SelectShape(object sender, EventArgs e)
         {
@@ -121,6 +131,7 @@ namespace DrawingForm
         // 回到上一步
         void UndoHandler(Object sender, EventArgs e)
         {
+            _model.IsSelected = false;
             _model.Undo();
             RefreshUI();
         }
@@ -128,6 +139,7 @@ namespace DrawingForm
         // 取消回到上一步
         void RedoHandler(Object sender, EventArgs e)
         {
+            _model.IsSelected = false;
             _model.Redo();
             RefreshUI();
         }

@@ -30,5 +30,6 @@ namespace DrawingModel
 
         // 畫各種形狀
         public abstract void Draw(IGraphics graphics);
+        public abstract void DrawFrame(IGraphics graphics);
     }
 }
