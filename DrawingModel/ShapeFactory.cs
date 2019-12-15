@@ -13,7 +13,7 @@ namespace DrawingModel
         const int HEXAGON = 2;
 
         // 新增一個形狀
-        Shape CreateShape(int shapeType)
+        public Shape CreateShape(int shapeType)
         {
             if (shapeType == RECTANGLE)
                 return new Rectangle();

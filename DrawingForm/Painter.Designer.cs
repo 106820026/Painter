@@ -115,9 +115,6 @@
             // 
             // _rectangle
             // 
-            this._rectangle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this._rectangle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this._rectangle.Location = new System.Drawing.Point(149, 2);
             this._rectangle.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);

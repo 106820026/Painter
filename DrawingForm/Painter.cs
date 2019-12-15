@@ -54,7 +54,6 @@ namespace DrawingForm
         {
             _model.CurrentMode = 0;
             SetButtonEnable((Button)sender);
-
         }
 
         // 畫線
@@ -116,7 +115,7 @@ namespace DrawingForm
         // 選擇形狀
         private void SelectShape(object sender, EventArgs e)
         {
-            _shapePositionTextLabel.Text = _presentationModel.SelectShape(MousePosition.X, MousePosition.Y);
+            _shapePositionTextLabel.Text = _presentationModel.SelectShape(PointToClient(MousePosition).X, PointToClient(MousePosition).Y);
         }
 
         // 回到上一步

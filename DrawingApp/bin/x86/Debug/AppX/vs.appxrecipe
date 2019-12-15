@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>591E86A88A34561859B203CF0F9D106EA0920B5D461C42D87FCE7560277A54F5</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>D014DC5E3741E7BBCD1787DE419F03E83ADCDCF2378737017D28B500A9E80CA9</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c5b178bc-5f53-4917-939a-c86405f6d77e_1.0.0.0_x86__wkbqm3a0n06q2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c5b178bc-5f53-4917-939a-c86405f6d77e_wkbqm3a0n06q2!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c5b178bc-5f53-4917-939a-c86405f6d77e</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-11T09:41:03.320</Modified>
+      <Modified>2019-12-15T08:35:34.100</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.exe">
       <PackagePath>entrypoint\DrawingApp.exe</PackagePath>
-      <Modified>2019-12-11T09:41:01.583</Modified>
+      <Modified>2019-12-15T08:35:33.484</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -542,11 +542,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-11T09:41:01.467</Modified>
+      <Modified>2019-12-15T08:32:12.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-11T09:41:01.467</Modified>
+      <Modified>2019-12-15T08:32:12.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -554,11 +554,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-12-11T09:41:02.841</Modified>
+      <Modified>2019-12-15T08:35:33.879</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\Core\DrawingApp.exe">
       <PackagePath>DrawingApp.exe</PackagePath>
-      <Modified>2019-12-11T09:41:03.303</Modified>
+      <Modified>2019-12-15T08:35:34.084</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

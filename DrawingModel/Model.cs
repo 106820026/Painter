@@ -12,26 +12,31 @@ namespace DrawingModel
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
         CommandManager _commandManager = new CommandManager();
+        ShapeFactory _shapeFactory = new ShapeFactory();
         double _firstPointX;
         double _firstPointY;
         double _lastPointX;
         double _lastPointY;
         bool _isPressed = false;
         List<Shape> _shapes = new List<Shape>();
-        List<Shape> _shapeHint = new List<Shape>();
+        Shape _shapeHint;
 
         public Model()
         {
             this.CurrentMode = -1;
-            Rectangle rectangle = new Rectangle();
-            Line line = new Line();
-            Hexagon hexagon = new Hexagon();
-            _shapeHint.Add(rectangle);
-            _shapeHint.Add(line);
-            _shapeHint.Add(hexagon);
         }
 
         public int CurrentMode
+        {
+            get; set;
+        }
+
+        public Shape SelectedShape
+        {
+            get; set;
+        }
+
+        public bool IsSelected
         {
             get; set;
         }
@@ -72,7 +77,8 @@ namespace DrawingModel
                 _isPressed = false;
                 _lastPointX = x;
                 _lastPointY = y;
-                SaveDrawing();
+                if ( Math.Abs(_lastPointX - _firstPointX) > 0 || Math.Abs(_lastPointY - _firstPointY) > 0)
+                    SaveDrawing();
                 NotifyModelChanged();
             }
         }
@@ -80,10 +86,11 @@ namespace DrawingModel
         // 畫預覽圖
         public void DrawHint(double x1, double y1, double x2, double y2)
         {
-            _shapeHint[CurrentMode].X1 = x1;
-            _shapeHint[CurrentMode].Y1 = y1;
-            _shapeHint[CurrentMode].X2 = x2;
-            _shapeHint[CurrentMode].Y2 = y2;
+            _shapeHint = _shapeFactory.CreateShape(CurrentMode);
+            _shapeHint.X1 = x1;
+            _shapeHint.Y1 = y1;
+            _shapeHint.X2 = x2;
+            _shapeHint.Y2 = y2;
         }
 
         // 清空畫布
@@ -102,40 +109,22 @@ namespace DrawingModel
         {
             graphics.ClearAll();
             if (_isPressed)
-                _shapeHint[CurrentMode].Draw(graphics);
+                _shapeHint.Draw(graphics);
             foreach (Shape aShape in _shapes)
                 aShape.Draw(graphics);
+            if (IsSelected)
+                SelectedShape.Draw(graphics);
         }
 
         // 存圖
         private void SaveDrawing()
         {
-            if (CurrentMode == 0) // 畫矩形
-            {
-                Rectangle newRectangle = new Rectangle();
-                this.AddNewShape(newRectangle);
-            }
-            else if (CurrentMode == 1) // 畫線
-            {
-                Line newLine = new Line();
-                this.AddNewShape(newLine);
-            }
-            else if(CurrentMode == 2)
-            {
-                Hexagon newHexagon = new Hexagon();
-                this.AddNewShape(newHexagon);
-            }
-        }
-
-        // 新增新形狀
-        public Shape AddNewShape(Shape shape)
-        {
+            Shape shape = _shapeFactory.CreateShape(CurrentMode);
             shape.X1 = _firstPointX;
             shape.Y1 = _firstPointY;
             shape.X2 = _lastPointX;
             shape.Y2 = _lastPointY;
             _commandManager.Execute(new DrawCommand(this, shape));
-            return shape;
         }
 
         // 畫在畫布上

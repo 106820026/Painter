@@ -4,6 +4,7 @@ using Windows.UI.Xaml.Shapes;
 using Windows.UI.Xaml.Media;
 using DrawingModel;
 using System;
+using Windows.Foundation;
 
 namespace DrawingApp.PresentationModel
 {
@@ -36,6 +37,7 @@ namespace DrawingApp.PresentationModel
         // 畫矩形
         public void DrawRectangle(double x1, double y1, double x2, double y2)
         {
+            SolidColorBrush myBrush = new SolidColorBrush(Windows.UI.Colors.Aqua);
             Windows.UI.Xaml.Shapes.Rectangle rectangle = new Windows.UI.Xaml.Shapes.Rectangle();
             rectangle.Width = Math.Abs(x2 - x1);
             rectangle.Height = Math.Abs(y2 - y1);
@@ -49,6 +51,7 @@ namespace DrawingApp.PresentationModel
             if (x2 < x1 && y2 < y1)
                 this.SetTopLeft(rectangle, y2, x2);
             _canvas.Children.Add(rectangle);
+            rectangle.Fill = myBrush;
         }
 
         // 設定左上角座標
@@ -61,6 +64,8 @@ namespace DrawingApp.PresentationModel
         // 畫六角形
         public void DrawHexagon(double x1, double y1, double x2, double y2)
         {
+            SolidColorBrush myBrush = new SolidColorBrush(Colors.Tomato);
+            SolidColorBrush myStroke = new SolidColorBrush(Colors.Black);
             float height = (float)Math.Abs(y2 - y1);
             float width = (float)Math.Abs(x2 - x1);
             float deltaHeight = height / 2;
@@ -71,12 +76,19 @@ namespace DrawingApp.PresentationModel
                 edge = -edge;
                 deltaWidth = -deltaWidth;
             }
-            DrawLine(x1, y1, x1 + deltaWidth, y1 + deltaHeight);
-            DrawLine(x1, y1, x1 + deltaWidth, y1 - deltaHeight);
-            DrawLine(x1 + deltaWidth, y1 + deltaHeight, x1 + deltaWidth + edge, y1 + deltaHeight);
-            DrawLine(x1 + deltaWidth, y1 - deltaHeight, x1 + deltaWidth + edge, y1 - deltaHeight);
-            DrawLine(x1 + deltaWidth + edge, y1 + deltaHeight, x2, y1);
-            DrawLine(x1 + deltaWidth + edge, y1 - deltaHeight, x2, y1);
+            Polygon hexagon = new Polygon();
+            PointCollection points = new PointCollection();
+            points.Add(new Point(x1, y1));
+            points.Add(new Point(x1 + deltaWidth, y1 + deltaHeight));
+            points.Add(new Point(x1 + deltaWidth + edge, y1 + deltaHeight));
+            points.Add(new Point(x2, y1));
+            points.Add(new Point(x1 + deltaWidth + edge, y1 - deltaHeight));
+            points.Add(new Point(x1 + deltaWidth, y1 - deltaHeight));
+            hexagon.Points = points;
+            hexagon.Fill = myBrush;
+            hexagon.Stroke = myStroke;
+            hexagon.StrokeThickness = 1;
+            _canvas.Children.Add(hexagon);
         }
     }
 }
