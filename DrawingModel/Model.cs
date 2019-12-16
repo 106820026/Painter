@@ -84,7 +84,7 @@ namespace DrawingModel
                 _isPressed = false;
                 _lastPointX = x;
                 _lastPointY = y;
-                if ( Math.Abs(_lastPointX - _firstPointX) > 0 || Math.Abs(_lastPointY - _firstPointY) > 0)
+                if ( _lastPointX - _firstPointX != 0 || _lastPointY - _firstPointY != 0)
                     SaveDrawing();
                 NotifyModelChanged();
             }

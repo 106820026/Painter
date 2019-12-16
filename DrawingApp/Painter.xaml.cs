@@ -11,7 +11,7 @@ namespace DrawingApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        DrawingModel.Model _model;
+        Model _model;
         PresentationModel.PresentationModel _presentationModel;
         IGraphics _interfaceGraphics;
         public MainPage()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,11 @@ namespace DrawingModel
 
         // 畫各種形狀
         public abstract void Draw(IGraphics graphics);
+        
+        // 畫紅框
         public abstract void DrawFrame(IGraphics graphics);
+
+        //// 被選取
+        //public abstract bool IsSelect(Point point);
     }
 }

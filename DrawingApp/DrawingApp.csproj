@@ -152,8 +152,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="Painter.xaml.cs">
+      <DependentUpon>Painter.xaml</DependentUpon>
     </Compile>
     <Compile Include="PresentationModel\PresentationModel.cs" />
     <Compile Include="PresentationModel\WindowsStoreGraphicsAdaptor.cs" />
@@ -180,7 +180,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="Painter.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

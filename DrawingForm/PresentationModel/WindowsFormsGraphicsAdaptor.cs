@@ -61,7 +61,7 @@ namespace DrawingForm.PresentationModel
             float height = (float)Math.Abs(y2 - y1);
             float edge = width / 13 * 5;
             float deltaWidth = (width - edge) / 2;
-            y1 = (y1 + y2) / 2; //平行向下移
+            double initialY = (y1 + y2) / 2; //平行向下移
             if (x2 - x1 < 0)
             {
                 edge = -edge;
@@ -69,14 +69,9 @@ namespace DrawingForm.PresentationModel
             }
             float deltaHeight = height / 2;
             SolidBrush myBrush = new SolidBrush(Color.Tomato);
-            Point[] points = new Point[6] { new Point((int)x1, (int)y1), new Point((int)(x1 + deltaWidth), (int)(y1 + deltaHeight)), new Point((int)(x1 + deltaWidth + edge), (int)(y1 + deltaHeight)), new Point((int)x2, (int)y1), new Point((int)(x1 + deltaWidth + edge), (int)(y1 - deltaHeight)), new Point((int)(x1 + deltaWidth), (int)(y1 - deltaHeight)) };
+            Point[] points = new Point[6] { new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY + deltaHeight)), new Point((int)(x1 + deltaWidth + edge), (int)(initialY + deltaHeight)), new Point((int)x2, (int)initialY), new Point((int)(x1 + deltaWidth + edge), (int)(initialY - deltaHeight)), new Point((int)(x1 + deltaWidth), (int)(initialY - deltaHeight)) };
             _graphics.FillPolygon(myBrush, points);
-            DrawLine(x1, y1, x1 + deltaWidth, y1 + deltaHeight);
-            DrawLine(x1, y1, x1 + deltaWidth, y1 - deltaHeight);
-            DrawLine(x1 + deltaWidth, y1 + deltaHeight, x1 + deltaWidth + edge, y1 + deltaHeight);
-            DrawLine(x1 + deltaWidth, y1 - deltaHeight, x1 + deltaWidth + edge, y1 - deltaHeight);
-            DrawLine(x1 + deltaWidth + edge, y1 + deltaHeight, x2, y1);
-            DrawLine(x1 + deltaWidth + edge, y1 - deltaHeight, x2, y1);
+            _graphics.DrawPolygon(new Pen(Color.Black), points);
         }
 
         // 畫矩形框
@@ -100,25 +95,11 @@ namespace DrawingForm.PresentationModel
         // 畫六角形框
         public void DrawHexagonFrame(double x1, double y1, double x2, double y2)
         {
-            Pen pen = new Pen(Color.Red);
-            pen.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             float width = (float)Math.Abs(x2 - x1);
             float height = (float)Math.Abs(y2 - y1);
-            float edge = width / 13 * 5;
-            float deltaWidth = (width - edge) / 2;
-            y1 = (y1 + y2) / 2; //平行向下移
-            if (x2 - x1 < 0)
-            {
-                edge = -edge;
-                deltaWidth = -deltaWidth;
-            }
-            float deltaHeight = height / 2;
-            DrawLineFrame(x1, y1, x1 + deltaWidth, y1 + deltaHeight);
-            DrawLineFrame(x1, y1, x1 + deltaWidth, y1 - deltaHeight);
-            DrawLineFrame(x1 + deltaWidth, y1 + deltaHeight, x1 + deltaWidth + edge, y1 + deltaHeight);
-            DrawLineFrame(x1 + deltaWidth, y1 - deltaHeight, x1 + deltaWidth + edge, y1 - deltaHeight);
-            DrawLineFrame(x1 + deltaWidth + edge, y1 + deltaHeight, x2, y1);
-            DrawLineFrame(x1 + deltaWidth + edge, y1 - deltaHeight, x2, y1);
+            Pen pen = new Pen(Color.Red);
+            pen.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            _graphics.DrawRectangle(pen, (float)x1, (float)y1, width, height);
         }
     }
 }

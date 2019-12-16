@@ -79,18 +79,20 @@ namespace DrawingForm.PresentationModel
             float height = (float)Math.Abs(y2 - y1);
             float edge = width / 13 * 5;
             float deltaWidth = (width - edge) / 2;
+            double initialY = (y1 + y2) / 2; //平行向下移
             if (x2 - x1 < 0)
             {
                 edge = -edge;
                 deltaWidth = -deltaWidth;
             }
             float deltaHeight = height / 2;
-            return x > Math.Min(x1, x2) && x < Math.Max(x1, x2) && y > Math.Min(y1, y2) && y < Math.Max(y1, y2);
+            return x > Math.Min(x1, x2) && x < Math.Max(x1, x2) && y > Math.Min(y1, y2) && y < Math.Max(y1, y2) && !IsLeft(new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY - deltaHeight)), new Point((int)x, (int)y)) && !IsLeft(new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY + deltaHeight)), new Point((int)x, (int)y)) && !IsLeft(new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY - deltaHeight)), new Point((int)x, (int)y)) && IsLeft(new Point((int)(x1 + deltaWidth + edge), (int)(initialY + deltaHeight)), new Point((int)x2, (int)initialY), new Point((int)x, (int)y)) && IsLeft(new Point((int)(x1 + deltaWidth + edge), (int)(initialY - deltaHeight)), new Point((int)x2, (int)initialY), new Point((int)x, (int)y));
         }
 
-        private static double DistanceFromPointToLine(Point point1, Point point2, double x, double y)
+        // 在線的左邊
+        private static bool IsLeft(PointF linePointA, PointF linePointB, PointF targetPoint)
         {
-            return Math.Abs((point2.X - point1.X) * (point1.Y - y) - (point1.X - x) * (point2.Y - point1.Y)) / Math.Sqrt(Math.Pow(point2.X - point1.X, 2) + Math.Pow(point2.Y - point1.Y, 2));
+            return (targetPoint.Y - linePointA.Y) / (linePointB.Y - linePointA.Y) * (linePointB.X - linePointA.X) + linePointA.X > targetPoint.X;
         }
 
         // 取得選取圖形的詳細資料
