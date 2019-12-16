@@ -125,7 +125,7 @@ namespace DrawingForm
         // 選擇形狀
         private void SelectShape(object sender, EventArgs e)
         {
-            _shapePositionTextLabel.Text = _presentationModel.SelectShape(PointToClient(MousePosition).X, PointToClient(MousePosition).Y);
+            _shapePositionTextLabel.Text = _presentationModel.SelectShape(PointToClient(MousePosition));
         }
 
         // 回到上一步

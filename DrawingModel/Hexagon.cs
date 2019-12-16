@@ -21,25 +21,27 @@ namespace DrawingModel
             graphics.DrawHexagonFrame(X1, Y1, X2, Y2);
         }
 
-        //public override bool IsSelect(Point point)
-        //{
-        //    float width = (float)Math.Abs(x2 - x1);
-        //    float height = (float)Math.Abs(y2 - y1);
-        //    float edge = width / 13 * 5;
-        //    float deltaWidth = (width - edge) / 2;
-        //    double initialY = (y1 + y2) / 2; //平行向下移
-        //    if (x2 - x1 < 0)
-        //    {
-        //        edge = -edge;
-        //        deltaWidth = -deltaWidth;
-        //    }
-        //    float deltaHeight = height / 2;
-        //    return x > Math.Min(x1, x2) && x < Math.Max(x1, x2) && y > Math.Min(y1, y2) && y < Math.Max(y1, y2) && !IsLeft(new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY - deltaHeight)), new Point((int)x, (int)y)) && !IsLeft(new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY + deltaHeight)), new Point((int)x, (int)y)) && !IsLeft(new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY - deltaHeight)), new Point((int)x, (int)y)) && IsLeft(new Point((int)(x1 + deltaWidth + edge), (int)(initialY + deltaHeight)), new Point((int)x2, (int)initialY), new Point((int)x, (int)y)) && IsLeft(new Point((int)(x1 + deltaWidth + edge), (int)(initialY - deltaHeight)), new Point((int)x2, (int)initialY), new Point((int)x, (int)y));
-        //}
+        // 被選取
+        public override bool IsSelect(Point point)
+        {
+            float width = (float)Math.Abs(X2 - X1);
+            float height = (float)Math.Abs(Y2 - Y1);
+            float edge = width / 13 * 5;
+            float deltaWidth = (width - edge) / 2;
+            double initialY = (Y1 + Y2) / 2; //平行向下移
+            if (X2 - X1 < 0)
+            {
+                edge = -edge;
+                deltaWidth = -deltaWidth;
+            }
+            float deltaHeight = height / 2;
+            return point.X > Math.Min(X1, X2) && point.X < Math.Max(X1, X2) && point.Y > Math.Min(Y1, Y2) && point.Y < Math.Max(Y1, Y2) && !IsLeft(new Point((int)X1, (int)initialY), new Point((int)(X1 + deltaWidth), (int)(initialY - deltaHeight)), new Point((int)point.X, (int)point.Y)) && !IsLeft(new Point((int)X1, (int)initialY), new Point((int)(X1 + deltaWidth), (int)(initialY + deltaHeight)), new Point((int)point.X, (int)point.Y)) && !IsLeft(new Point((int)X1, (int)initialY), new Point((int)(X1 + deltaWidth), (int)(initialY - deltaHeight)), new Point((int)point.X, (int)point.Y)) && IsLeft(new Point((int)(X1 + deltaWidth + edge), (int)(initialY + deltaHeight)), new Point((int)X2, (int)initialY), new Point((int)point.X, (int)point.Y)) && IsLeft(new Point((int)(X1 + deltaWidth + edge), (int)(initialY - deltaHeight)), new Point((int)X2, (int)initialY), new Point((int)point.X, (int)point.Y));
+        }
 
-        //private static bool IsLeft(PointF linePointA, PointF linePointB, PointF targetPoint)
-        //{
-        //    return (targetPoint.Y - linePointA.Y) / (linePointB.Y - linePointA.Y) * (linePointB.X - linePointA.X) + linePointA.X > targetPoint.X;
-        //}
+        // 在線的左邊
+        private static bool IsLeft(PointF linePointA, PointF linePointB, PointF targetPoint)
+        {
+            return (targetPoint.Y - linePointA.Y) / (linePointB.Y - linePointA.Y) * (linePointB.X - linePointA.X) + linePointA.X > targetPoint.X;
+        }
     }
 }

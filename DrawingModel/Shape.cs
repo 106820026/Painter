@@ -35,7 +35,7 @@ namespace DrawingModel
         // 畫紅框
         public abstract void DrawFrame(IGraphics graphics);
 
-        //// 被選取
-        //public abstract bool IsSelect(Point point);
+        // 被選取
+        public abstract bool IsSelect(Point point);
     }
 }

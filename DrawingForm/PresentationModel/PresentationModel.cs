@@ -23,76 +23,14 @@ namespace DrawingForm.PresentationModel
         }
 
         // 選取形狀
-        public string SelectShape(double x, double y)
+        public string SelectShape(Point point)
         {
             List<Shape> shape = _model.GetTotalShapes();
             for (int i = shape.Count - 1; i >= 0; i--)
-            {
-                if (shape[i].GetType() == Type.GetType("DrawingModel.Rectangle"))
-                    if (SelectRectangle(shape[i], x, y))
-                        return GetDetail(shape[i]);
-                if (shape[i].GetType() == Type.GetType("DrawingModel.Line"))
-                    if (SelectLine(shape[i], x, y))
-                        return GetDetail(shape[i]);
-                if (shape[i].GetType() == Type.GetType("DrawingModel.Hexagon"))
-                    if (SelectHexagon(shape[i], x, y))
-                        return GetDetail(shape[i]);
-            }
+                if(shape[i].IsSelect(point))
+                    return GetDetail(shape[i]);
             _model.IsSelected = false;
             return "Null";
-        }
-
-        // 選到矩形
-        private bool SelectRectangle(Shape shape, double x, double y)
-        {
-            double x1 = shape.X1;
-            double y1 = shape.Y1;
-            double x2 = shape.X2;
-            double y2 = shape.Y2;
-            return x > Math.Min(x1, x2) && x < Math.Max(x1, x2) && y > Math.Min(y1, y2) && y < Math.Max(y1, y2);
-        }
-
-        // 選到線
-        private bool SelectLine(Shape shape, double x, double y)
-        {
-            double x1 = shape.X1;
-            double y1 = shape.Y1;
-            double x2 = shape.X2;
-            double y2 = shape.Y2;
-            return DistanceFromPointToLine(shape, x, y) < 3 && x >= Math.Min(x1, x2) && x <= Math.Max(x1, x2) && y >= Math.Min(y1, y2) && y <= Math.Max(y1, y2);
-        }
-
-        // 點到線的距離
-        private static double DistanceFromPointToLine(Shape shape, double x, double y)
-        {
-            return Math.Abs((shape.X2 - shape.X1) * (shape.Y1 - y) - (shape.X1 - x) * (shape.Y2 - shape.Y1)) / Math.Sqrt(Math.Pow(shape.X2 - shape.X1, 2) + Math.Pow(shape.Y2 - shape.Y1, 2));
-        }
-
-        // 選到六邊形
-        private bool SelectHexagon(Shape shape, double x, double y)
-        {
-            double x1 = shape.X1;
-            double y1 = shape.Y1;
-            double x2 = shape.X2;
-            double y2 = shape.Y2;
-            float width = (float)Math.Abs(x2 - x1);
-            float height = (float)Math.Abs(y2 - y1);
-            float edge = width / 13 * 5;
-            float deltaWidth = (width - edge) / 2;
-            double initialY = (y1 + y2) / 2; //平行向下移
-            if (x2 - x1 < 0)
-            {
-                edge = -edge;
-                deltaWidth = -deltaWidth;
-            }
-            float deltaHeight = height / 2;
-            return x > Math.Min(x1, x2) && x < Math.Max(x1, x2) && y > Math.Min(y1, y2) && y < Math.Max(y1, y2) && !IsLeft(new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY - deltaHeight)), new Point((int)x, (int)y)) && !IsLeft(new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY + deltaHeight)), new Point((int)x, (int)y)) && !IsLeft(new Point((int)x1, (int)initialY), new Point((int)(x1 + deltaWidth), (int)(initialY - deltaHeight)), new Point((int)x, (int)y)) && IsLeft(new Point((int)(x1 + deltaWidth + edge), (int)(initialY + deltaHeight)), new Point((int)x2, (int)initialY), new Point((int)x, (int)y)) && IsLeft(new Point((int)(x1 + deltaWidth + edge), (int)(initialY - deltaHeight)), new Point((int)x2, (int)initialY), new Point((int)x, (int)y));
-        }
-
-        // 在線的左邊
-        private static bool IsLeft(PointF linePointA, PointF linePointB, PointF targetPoint)
-        {
-            return (targetPoint.Y - linePointA.Y) / (linePointB.Y - linePointA.Y) * (linePointB.X - linePointA.X) + linePointA.X > targetPoint.X;
         }
 
         // 取得選取圖形的詳細資料
