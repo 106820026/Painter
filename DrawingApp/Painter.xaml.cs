@@ -27,7 +27,10 @@ namespace DrawingApp
             _rectangle.Click += HandleRectangleButtonClick;
             _line.Click += HandleLineButtonClick;
             _hexagon.Click += HandleHexagonButtonClick;
+            _undo.Click += UndoHandler;
+            _redo.Click += RedoHandler;
             _model._modelChanged += HandleModelChanged;
+            _model._modelChanged += RefreshUserInterface;
         }
 
         //protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -40,6 +43,7 @@ namespace DrawingApp
             _model.Clear();
             _model.CurrentMode = -1;
             SetButtonIsEnabled((Button)sender);
+            RefreshUserInterface();
         }
 
         // 畫矩形
@@ -59,7 +63,7 @@ namespace DrawingApp
         // 畫六角形
         private void HandleHexagonButtonClick(object sender, RoutedEventArgs e)
         {
-            _model.CurrentMode = 2;
+            _model.CurrentMode = (int)2m;
             SetButtonIsEnabled((Button)sender);
         }
 
@@ -67,18 +71,21 @@ namespace DrawingApp
         public void HandleCanvasPressed(object sender, PointerRoutedEventArgs e)
         {
             _model.PressPointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+            RefreshUserInterface();
         }
 
         // 釋放滑鼠
         public void HandleCanvasReleased(object sender, PointerRoutedEventArgs e)
         {
             _model.ReleasePointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+            RefreshUserInterface();
         }
 
         // 滑鼠移動偵測
         public void HandleCanvasMoved(object sender, PointerRoutedEventArgs e)
         {
             _model.MovePointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+            RefreshUserInterface();
         }
 
         // 偵測改變
@@ -94,6 +101,34 @@ namespace DrawingApp
                 button.IsEnabled = true;
             if (_model.CurrentMode != -1)
                 pressedButton.IsEnabled = false;
+        }
+
+        // 回到上一步
+        void UndoHandler(object sender, RoutedEventArgs e)
+        {
+            _model.IsSelected = false;
+            _model.Undo();
+            RefreshUserInterface();
+        }
+
+        // 取消回到上一步
+        void RedoHandler(object sender, RoutedEventArgs e)
+        {
+            _model.IsSelected = false;
+            _model.Redo();
+            RefreshUserInterface();
+        }
+
+        // 更新redo與undo是否為enabled
+        void RefreshUserInterface()
+        {
+            _redo.IsEnabled = _model.IsRedoEnabled;
+            _undo.IsEnabled = _model.IsUndoEnabled;
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

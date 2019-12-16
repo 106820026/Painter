@@ -7,10 +7,10 @@ namespace DrawingModel
     {
         Shape _shape;
         Model _model;
-        public DrawCommand(Model m, Shape shape)
+        public DrawCommand(Model model, Shape shape)
         {
             _shape = shape;
-            _model = m;
+            _model = model;
         }
 
         // 執行
@@ -20,7 +20,7 @@ namespace DrawingModel
         }
 
         // 取消執行
-        public void UnExecute()
+        public void CancelExecute()
         {
             _model.DeleteShape();
         }

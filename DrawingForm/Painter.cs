@@ -47,7 +47,7 @@ namespace DrawingForm
             _model.CurrentMode = -1;
             _model.IsSelected = false;
             SetButtonEnable((Button)sender);
-            RefreshUI();
+            RefreshUserInterface();
         }
 
         // 畫矩形
@@ -67,7 +67,7 @@ namespace DrawingForm
         // 畫六角形
         private void HandleHexagonButtonClick(object sender, EventArgs e)
         {
-            _model.CurrentMode = 2;
+            _model.CurrentMode = (int)2m;
             SetButtonEnable((Button)sender);
         }
 
@@ -75,7 +75,7 @@ namespace DrawingForm
         public void HandleCanvasPressed(object sender, MouseEventArgs e)
         {
             _model.PressPointer(e.X, e.Y);
-            RefreshUI();
+            RefreshUserInterface();
         }
 
         // 釋放滑鼠
@@ -83,14 +83,14 @@ namespace DrawingForm
         {
             _model.ReleasePointer(e.X, e.Y);
             SetButtonEnable();
-            RefreshUI();
+            RefreshUserInterface();
         }
 
         // 偵測滑鼠移動
         public void HandleCanvasMoved(object sender, MouseEventArgs e)
         {
             _model.MovePointer(e.X, e.Y);
-            RefreshUI();
+            RefreshUserInterface();
         }
 
         // 畫圖
@@ -112,6 +112,7 @@ namespace DrawingForm
                 button.Enabled = true;
             if (_model.CurrentMode != -1)
                 pressedButton.Enabled = false;
+            _model.IsSelected = false;
         }
 
         // 修改Button的Enabled
@@ -133,7 +134,7 @@ namespace DrawingForm
         {
             _model.IsSelected = false;
             _model.Undo();
-            RefreshUI();
+            RefreshUserInterface();
         }
 
         // 取消回到上一步
@@ -141,11 +142,11 @@ namespace DrawingForm
         {
             _model.IsSelected = false;
             _model.Redo();
-            RefreshUI();
+            RefreshUserInterface();
         }
 
         // 更新redo與undo是否為enabled
-        void RefreshUI()    
+        void RefreshUserInterface()    
         {
             _redo.Enabled = _model.IsRedoEnabled;
             _undo.Enabled = _model.IsUndoEnabled;

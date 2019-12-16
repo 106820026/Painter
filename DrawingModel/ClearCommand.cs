@@ -26,7 +26,7 @@ namespace DrawingModel
         }
 
         // 取消執行
-        public void UnExecute()
+        public void CancelExecute()
         {
             foreach (Shape shape in _shapes)
                 _model.DrawShape(shape);

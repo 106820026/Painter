@@ -86,31 +86,26 @@ namespace DrawingApp.PresentationModel
         // 連六角形點
         private Polygon LinkPointToHexagon(double x1, double y1, double x2, double y2)
         {
-            float height = (float)Math.Abs(y2 - y1);
-            float width = (float)Math.Abs(x2 - x1);
-            float deltaHeight = height / 2;
-            float edge = width / 13 * 5;
-            float deltaWidth = (width - edge) / 2;
+            float height = (float)Math.Abs(y2 - y1) / (int)2m;
+            float width = (float)Math.Abs(x2 - x1) / (int)4m;
+            double initialY = (y1 + y2) / (int)2m;
             if (x2 - x1 < 0)
-            {
-                edge = -edge;
-                deltaWidth = -deltaWidth;
-            }
+                width = -width;
             Polygon hexagon = new Polygon();
             PointCollection points = new PointCollection();
-            points.Add(new Point(x1, y1));
-            points.Add(new Point(x1 + deltaWidth, y1 + deltaHeight));
-            points.Add(new Point(x1 + deltaWidth + edge, y1 + deltaHeight));
-            points.Add(new Point(x2, y1));
-            points.Add(new Point(x1 + deltaWidth + edge, y1 - deltaHeight));
-            points.Add(new Point(x1 + deltaWidth, y1 - deltaHeight));
+            points.Add(new Point(x1, initialY));
+            points.Add(new Point(x1 + width, initialY + height));
+            points.Add(new Point(x1 + width * (int)3m, initialY + height));
+            points.Add(new Point(x2, initialY));
+            points.Add(new Point(x1 + width * (int)3m, initialY - height));
+            points.Add(new Point(x1 + width, initialY - height));
             hexagon.Points = points;
             return hexagon;
         }
 
+        // 畫矩形框
         public void DrawRectangleFrame(double x1, double y1, double x2, double y2)
         {
-            //Windows.UI.Xaml.Shapes.Rectangle rectangle = LinkPointToRectangle(x1, y1, x2, y2);
 
         }
 

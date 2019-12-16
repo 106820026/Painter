@@ -11,6 +11,7 @@ namespace DrawingModel
         const int RECTANGLE = 0;
         const int LINE = 1;
         const int HEXAGON = 2;
+        const String WARNING = "Parameter index is out of range.";
 
         // 新增一個形狀
         public Shape CreateShape(int shapeType)
@@ -22,7 +23,7 @@ namespace DrawingModel
             else if (shapeType == HEXAGON)
                 return new Hexagon();
             else
-                throw new System.ArgumentOutOfRangeException("Parameter index is out of range.");
+                throw new System.ArgumentOutOfRangeException(WARNING);
         }
     }
 }

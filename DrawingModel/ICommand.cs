@@ -11,6 +11,6 @@ namespace DrawingModel
         void Execute();
 
         // 取消執行
-        void UnExecute();
+        void CancelExecute();
     }
 }

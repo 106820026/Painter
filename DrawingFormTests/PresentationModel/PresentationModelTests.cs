@@ -28,8 +28,32 @@ namespace DrawingForm.FakeAdapter
 
         }
 
+        // 畫線外框
+        public void DrawLineFrame(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
         // 畫矩形
         public void DrawRectangle(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
+        // 畫矩形外框
+        public void DrawRectangleFrame(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
+        // 畫六角形
+        public void DrawHexagon(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
+        // 畫六角形外框
+        public void DrawHexagonFrame(double x1, double y1, double x2, double y2)
         {
 
         }

@@ -74,7 +74,7 @@ namespace DrawingModel
         // 釋放滑鼠
         public void ReleasePointer(double x, double y)
         {
-            if(CurrentMode == -1)
+            if (CurrentMode == -1)
             {
                 _isPressed = false;
                 NotifyModelChanged();
@@ -85,7 +85,10 @@ namespace DrawingModel
                 _lastPointX = x;
                 _lastPointY = y;
                 if ( _lastPointX - _firstPointX != 0 || _lastPointY - _firstPointY != 0)
+                {
+                    IsSelected = false;
                     SaveDrawing();
+                }
                 NotifyModelChanged();
             }
         }

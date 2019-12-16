@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this._tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this._selectTextLabel = new System.Windows.Forms.Label();
             this._shapePositionTextLabel = new System.Windows.Forms.Label();
             this._line = new System.Windows.Forms.Button();
@@ -38,27 +38,27 @@
             this._tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this._undo = new System.Windows.Forms.ToolStripLabel();
             this._redo = new System.Windows.Forms.ToolStripLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tableLayoutPanel1.SuspendLayout();
+            this._toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this._tableLayoutPanel1.SuspendLayout();
             this._tableLayoutPanel.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this._toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.Controls.Add(this._selectTextLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this._shapePositionTextLabel, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1307, 881);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(493, 26);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this._tableLayoutPanel1.ColumnCount = 2;
+            this._tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this._tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this._tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this._tableLayoutPanel1.Controls.Add(this._selectTextLabel, 0, 0);
+            this._tableLayoutPanel1.Controls.Add(this._shapePositionTextLabel, 1, 0);
+            this._tableLayoutPanel1.Location = new System.Drawing.Point(1307, 881);
+            this._tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this._tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this._tableLayoutPanel1.RowCount = 1;
+            this._tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this._tableLayoutPanel1.Size = new System.Drawing.Size(493, 26);
+            this._tableLayoutPanel1.TabIndex = 1;
             // 
             // _selectTextLabel
             // 
@@ -182,15 +182,15 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this._toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._undo,
             this._redo});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1800, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
+            this._toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this._toolStrip1.Name = "toolStrip1";
+            this._toolStrip1.Size = new System.Drawing.Size(1800, 25);
+            this._toolStrip1.TabIndex = 2;
+            this._toolStrip1.Text = "toolStrip1";
             // 
             // Form
             // 
@@ -198,23 +198,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1800, 911);
             this.Controls.Add(this._tableLayoutPanel);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this._toolStrip1);
+            this.Controls.Add(this._tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form";
             this.Text = "Form1";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this._tableLayoutPanel1.ResumeLayout(false);
+            this._tableLayoutPanel1.PerformLayout();
             this._tableLayoutPanel.ResumeLayout(false);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this._toolStrip1.ResumeLayout(false);
+            this._toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel _tableLayoutPanel1;
         private System.Windows.Forms.Label _selectTextLabel;
         private System.Windows.Forms.Label _shapePositionTextLabel;
         private System.Windows.Forms.Button _line;
@@ -224,7 +224,7 @@
         private System.Windows.Forms.TableLayoutPanel _tableLayoutPanel;
         private System.Windows.Forms.ToolStripLabel _undo;
         private System.Windows.Forms.ToolStripLabel _redo;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip _toolStrip1;
     }
 }
 

@@ -8,6 +8,11 @@ namespace DrawingForm.PresentationModel
     public class PresentationModel
     {
         Model _model;
+        const string USELESS_PART = "DrawingModel.";
+        const string COMMA = ",";
+        const string LEFT_PARENTHESES = "(";
+        const string RIGHT_PARENTHESES = ")";
+
         public PresentationModel(Model model)
         {
             this._model = model;
@@ -27,10 +32,10 @@ namespace DrawingForm.PresentationModel
         {
             List<Shape> shape = _model.GetTotalShapes();
             for (int i = shape.Count - 1; i >= 0; i--)
-                if(shape[i].IsSelect(point))
+                if (shape[i].IsSelect(point.X, point.Y))
                     return GetDetail(shape[i]);
             _model.IsSelected = false;
-            return "Null";
+            return String.Empty;
         }
 
         // 取得選取圖形的詳細資料
@@ -38,7 +43,7 @@ namespace DrawingForm.PresentationModel
         {
             _model.IsSelected = true;
             _model.SelectedShape = shape;
-            return shape.GetType().ToString().Replace("DrawingModel.", "") + " ( " + shape.X1 + ", " + shape.Y1 + "," + shape.X2 + "," + shape.Y2 + ")";
+            return shape.GetType().ToString().Replace(USELESS_PART, String.Empty) + LEFT_PARENTHESES + shape.X1 + COMMA + shape.Y1 + COMMA + shape.X2 + COMMA + shape.Y2 + RIGHT_PARENTHESES;
         }
     }
 }

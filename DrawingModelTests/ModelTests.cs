@@ -7,33 +7,55 @@ using System.Text;
 using System.Threading.Tasks;
 using DrawingModelTest.FakeAdaptor;
 
-namespace DrawingModelTest.FakeAdaptor
+public class FakeAdapter : IGraphics
 {
-    public class FakeAdaptor : IGraphics
+    public FakeAdapter()
     {
-        public FakeAdaptor()
-        {
 
-        }
-
-        // 清除畫面
-        public void ClearAll()
-        {
-
-        }
-
-        // 畫線
-        public void DrawLine(double x1, double y1, double x2, double y2)
-        {
-
-        }
-
-        // 畫矩形
-        public void DrawRectangle(double x1, double y1, double x2, double y2)
-        {
-
-        }
     }
+
+    // 清除畫面
+    public void ClearAll()
+    {
+
+    }
+
+    // 畫線
+    public void DrawLine(double x1, double y1, double x2, double y2)
+    {
+
+    }
+
+    // 畫線外框
+    public void DrawLineFrame(double x1, double y1, double x2, double y2)
+    {
+
+    }
+
+    // 畫矩形
+    public void DrawRectangle(double x1, double y1, double x2, double y2)
+    {
+
+    }
+
+    // 畫矩形外框
+    public void DrawRectangleFrame(double x1, double y1, double x2, double y2)
+    {
+
+    }
+
+    // 畫六角形
+    public void DrawHexagon(double x1, double y1, double x2, double y2)
+    {
+
+    }
+
+    // 畫六角形外框
+    public void DrawHexagonFrame(double x1, double y1, double x2, double y2)
+    {
+
+    }
+}
 }
 
 

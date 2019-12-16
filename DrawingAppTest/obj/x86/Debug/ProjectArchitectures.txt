@@ -1,2 +1,0 @@
-C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\DrawingApp.csproj;x86
-C:\Users\Rosie\source\repos\DrawingModel\DrawingAppTest\DrawingAppTest.csproj;x86
