@@ -45,7 +45,7 @@ namespace DrawingModel.Tests
         public void DrawTest()
         {
             Line line = new Line();
-            line.Draw(new FakeAdaptor());
+            line.Draw(new DrawingModelLineTest.FakeAdaptor.FakeAdaptor());
             Assert.IsNotNull(line);
         }
     }

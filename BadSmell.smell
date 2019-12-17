@@ -194,7 +194,7 @@
               <Weight>1</Weight>
               <Project>DrawingModel</Project>
               <File>Hexagon.cs</File>
-              <Line>10</Line>
+              <Line>9</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -204,6 +204,70 @@
             </Smell>
             <Smell>
               <Id>2</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Hexagon.IsSelect.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Hexagon.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>3</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Hexagon.IsSelect.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Hexagon.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>4</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Hexagon.IsInside.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Hexagon.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>5</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Hexagon.IsInside.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Hexagon.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>6</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.IGraphics.DrawHexagon.DrawHexagon</HashCode>
               <Severity>Red</Severity>
@@ -219,7 +283,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>3</Id>
+              <Id>7</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagonFrame(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.IGraphics.DrawHexagonFrame.DrawHexagonFrame</HashCode>
               <Severity>Red</Severity>
@@ -235,78 +299,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>4</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Line.GetDistanceFromPointToLine.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Line.cs</File>
-              <Line>31</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>5</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Line.GetDistanceFromPointToLine.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Line.cs</File>
-              <Line>31</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>6</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.PressPointer.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>51</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>7</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.PressPointer.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>51</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
               <Id>8</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.MovePointer.x</HashCode>
+              <HashCode>UnsuitableNaming.Line.IsSelect.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>65</Line>
+              <File>Line.cs</File>
+              <Line>44</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -317,12 +317,12 @@
             <Smell>
               <Id>9</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.MovePointer.y</HashCode>
+              <HashCode>UnsuitableNaming.Line.IsSelect.y</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>65</Line>
+              <File>Line.cs</File>
+              <Line>44</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -333,12 +333,12 @@
             <Smell>
               <Id>10</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.ReleasePointer.x</HashCode>
+              <HashCode>UnsuitableNaming.Line.GetDistanceFromPointToLine.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>75</Line>
+              <File>Line.cs</File>
+              <Line>50</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -349,12 +349,12 @@
             <Smell>
               <Id>11</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.ReleasePointer.y</HashCode>
+              <HashCode>UnsuitableNaming.Line.GetDistanceFromPointToLine.y</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingModel</Project>
-              <File>Model.cs</File>
-              <Line>75</Line>
+              <File>Line.cs</File>
+              <Line>50</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -364,6 +364,166 @@
             </Smell>
             <Smell>
               <Id>12</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Model.PressPointer.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Model.cs</File>
+              <Line>54</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>13</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Model.PressPointer.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Model.cs</File>
+              <Line>54</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>14</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Model.MovePointer.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Model.cs</File>
+              <Line>68</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>15</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Model.MovePointer.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Model.cs</File>
+              <Line>68</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>16</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Model.ReleasePointer.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Model.cs</File>
+              <Line>78</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>17</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Model.ReleasePointer.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Model.cs</File>
+              <Line>78</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>18</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Rectangle.IsSelect.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Rectangle.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>19</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Rectangle.IsSelect.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Rectangle.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>20</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Shape.IsSelect.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Shape.cs</File>
+              <Line>38</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>21</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Shape.IsSelect.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingModel</Project>
+              <File>Shape.cs</File>
+              <Line>38</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>22</Id>
               <SmellType>Unsuitable naming(名不符實)-HEXAGON(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.ShapeFactory.HEXAGON.HEXAGON</HashCode>
               <Severity>Red</Severity>
@@ -379,7 +539,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>13</Id>
+              <Id>23</Id>
               <SmellType>Unsuitable naming(名不符實)-HandleHexagonButtonClick(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.Form.HandleHexagonButtonClick.HandleHexagonButtonClick</HashCode>
               <Severity>Red</Severity>
@@ -395,7 +555,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>14</Id>
+              <Id>24</Id>
               <SmellType>Unsuitable naming(名不符實)-_hexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.Form._hexagon._hexagon</HashCode>
               <Severity>Red</Severity>
@@ -411,7 +571,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>15</Id>
+              <Id>25</Id>
               <SmellType>Unsuitable naming(名不符實)-USELESS_PART(useless)</SmellType>
               <HashCode>UnsuitableNaming.PresentationModel.USELESS_PART.USELESS_PART</HashCode>
               <Severity>Red</Severity>
@@ -427,7 +587,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>16</Id>
+              <Id>26</Id>
               <SmellType>Unsuitable naming(名不符實)-LEFT_PARENTHESES(parentheses)</SmellType>
               <HashCode>UnsuitableNaming.PresentationModel.LEFT_PARENTHESES.LEFT_PARENTHESES</HashCode>
               <Severity>Red</Severity>
@@ -443,7 +603,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>17</Id>
+              <Id>27</Id>
               <SmellType>Unsuitable naming(名不符實)-RIGHT_PARENTHESES(parentheses)</SmellType>
               <HashCode>UnsuitableNaming.PresentationModel.RIGHT_PARENTHESES.RIGHT_PARENTHESES</HashCode>
               <Severity>Red</Severity>
@@ -459,7 +619,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>18</Id>
+              <Id>28</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawAndFillRectangle.x</HashCode>
               <Severity>Warning</Severity>
@@ -475,7 +635,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>19</Id>
+              <Id>29</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawAndFillRectangle.y</HashCode>
               <Severity>Warning</Severity>
@@ -491,7 +651,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>20</Id>
+              <Id>30</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawHexagon.DrawHexagon</HashCode>
               <Severity>Red</Severity>
@@ -507,14 +667,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>21</Id>
+              <Id>31</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagonFrame(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawHexagonFrame.DrawHexagonFrame</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>WindowsFormsGraphicsAdaptor.cs</File>
-              <Line>91</Line>
+              <Line>100</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -523,14 +683,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>22</Id>
+              <Id>32</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawAnglePoint.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>WindowsFormsGraphicsAdaptor.cs</File>
-              <Line>105</Line>
+              <Line>106</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -539,14 +699,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>23</Id>
+              <Id>33</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawAnglePoint.y</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>WindowsFormsGraphicsAdaptor.cs</File>
-              <Line>105</Line>
+              <Line>106</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -555,14 +715,62 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>24</Id>
+              <Id>34</Id>
+              <SmellType>ICS(空白與空行-3)</SmellType>
+              <HashCode>SpacingAndNewLine3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>Painter.xaml.cs</File>
+              <Line>113</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-3) for, foreach, while, switch, if 等關鍵字與左括號之間加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>35</Id>
+              <SmellType>Literal constants(字面常數)-"_undo"</SmellType>
+              <HashCode>LiteralConstants.SetButtonEnable."_undo"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>Painter.xaml.cs</File>
+              <Line>113</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>36</Id>
+              <SmellType>Literal constants(字面常數)-"_redo"</SmellType>
+              <HashCode>LiteralConstants.SetButtonEnable."_redo"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>Painter.xaml.cs</File>
+              <Line>113</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>37</Id>
               <SmellType>Unsuitable naming(名不符實)-HandleHexagonButtonClick(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.MainPage.HandleHexagonButtonClick.HandleHexagonButtonClick</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingApp</Project>
               <File>Painter.xaml.cs</File>
-              <Line>60</Line>
+              <Line>65</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -571,7 +779,311 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>25</Id>
+              <Id>38</Id>
+              <SmellType>Unsuitable naming(名不符實)-USELESS_PART(useless)</SmellType>
+              <HashCode>UnsuitableNaming.PresentationModel.USELESS_PART.USELESS_PART</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>PresentationModel.cs</File>
+              <Line>10</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>39</Id>
+              <SmellType>Unsuitable naming(名不符實)-LEFT_PARENTHESES(parentheses)</SmellType>
+              <HashCode>UnsuitableNaming.PresentationModel.LEFT_PARENTHESES.LEFT_PARENTHESES</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>PresentationModel.cs</File>
+              <Line>12</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>40</Id>
+              <SmellType>Unsuitable naming(名不符實)-RIGHT_PARENTHESES(parentheses)</SmellType>
+              <HashCode>UnsuitableNaming.PresentationModel.RIGHT_PARENTHESES.RIGHT_PARENTHESES</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>PresentationModel.cs</File>
+              <Line>13</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>41</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.PresentationModel.SelectShape.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>PresentationModel.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>42</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.PresentationModel.SelectShape.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>PresentationModel.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>43</Id>
+              <SmellType>ICS(縮排與換行-1)</SmellType>
+              <HashCode>IndentAndNewLine1.DrawRectangleFrame.            rectangle.StrokeDashArray = new DoubleCollection() { 1, 2 };</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>114</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-1) 左大括號一律換行</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>44</Id>
+              <SmellType>ICS(縮排與換行-1)</SmellType>
+              <HashCode>IndentAndNewLine1.DrawLineFrame.            line.StrokeDashArray = new DoubleCollection() { 1, 2 };</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>128</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-1) 左大括號一律換行</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>45</Id>
+              <SmellType>ICS(縮排與換行-1)</SmellType>
+              <HashCode>IndentAndNewLine1.DrawAnglePoint.            ellipse.RenderTransform = new TranslateTransform() { X = x - 5, Y = y - 5 };</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>148</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-1) 左大括號一律換行</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>46</Id>
+              <SmellType>ICS(縮排與換行-3)</SmellType>
+              <HashCode>IndentAndNewLine3.DrawRectangleFrame.            rectangle.StrokeDashArray = new DoubleCollection() { 1, 2 };</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>114</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-3) 左大括號後，一律換行撰寫程式碼</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>47</Id>
+              <SmellType>ICS(縮排與換行-3)</SmellType>
+              <HashCode>IndentAndNewLine3.DrawLineFrame.            line.StrokeDashArray = new DoubleCollection() { 1, 2 };</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>128</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-3) 左大括號後，一律換行撰寫程式碼</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>48</Id>
+              <SmellType>ICS(縮排與換行-3)</SmellType>
+              <HashCode>IndentAndNewLine3.DrawAnglePoint.            ellipse.RenderTransform = new TranslateTransform() { X = x - 5, Y = y - 5 };</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>148</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-3) 左大括號後，一律換行撰寫程式碼</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>49</Id>
+              <SmellType>Literal constants(字面常數)-3</SmellType>
+              <HashCode>LiteralConstants.DrawRectangleFrame.3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>113</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>50</Id>
+              <SmellType>Literal constants(字面常數)-3</SmellType>
+              <HashCode>LiteralConstants.DrawLineFrame.3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>127</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>51</Id>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.DrawRectangleFrame.2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>114</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>52</Id>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.DrawLineFrame.2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>128</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>53</Id>
+              <SmellType>Literal constants(字面常數)-10f</SmellType>
+              <HashCode>LiteralConstants.DrawAnglePoint.10f</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>146</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>54</Id>
+              <SmellType>Literal constants(字面常數)-10f</SmellType>
+              <HashCode>LiteralConstants.DrawAnglePoint.10f</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>147</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>55</Id>
+              <SmellType>Literal constants(字面常數)-5</SmellType>
+              <HashCode>LiteralConstants.DrawAnglePoint.5</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>148</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>56</Id>
+              <SmellType>Literal constants(字面常數)-5</SmellType>
+              <HashCode>LiteralConstants.DrawAnglePoint.5</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>148</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>57</Id>
               <SmellType>Unsuitable naming(名不符實)-hexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawHexagon.hexagon</HashCode>
               <Severity>Red</Severity>
@@ -587,7 +1099,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>26</Id>
+              <Id>58</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawHexagon.DrawHexagon</HashCode>
               <Severity>Red</Severity>
@@ -603,14 +1115,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>27</Id>
+              <Id>59</Id>
               <SmellType>Unsuitable naming(名不符實)-hexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.LinkPointToHexagon.hexagon</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingApp</Project>
               <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>94</Line>
+              <Line>96</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -619,7 +1131,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>28</Id>
+              <Id>60</Id>
               <SmellType>Unsuitable naming(名不符實)-LinkPointToHexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.LinkPointToHexagon.LinkPointToHexagon</HashCode>
               <Severity>Red</Severity>
@@ -635,14 +1147,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>29</Id>
+              <Id>61</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagonFrame(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawHexagonFrame.DrawHexagonFrame</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingApp</Project>
               <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>116</Line>
+              <Line>135</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -651,7 +1163,71 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>30</Id>
+              <Id>62</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawAnglePoint.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>141</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>63</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawAnglePoint.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>WindowsStoreGraphicsAdaptor.cs</File>
+              <Line>141</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>64</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>129 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByType(System.Type)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>XamlTypeInfo.g.cs</File>
+              <Line>129</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByType(System.Type)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>65</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>134 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByName(string)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>XamlTypeInfo.g.cs</File>
+              <Line>134</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByName(string)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>66</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>20 DrawingApp.Program.Main(string[])</HashCode>
               <Severity>Red</Severity>
@@ -667,14 +1243,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>31</Id>
+              <Id>67</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>52 DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</HashCode>
+              <HashCode>60 DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingApp</Project>
               <File>Painter.g.i.cs</File>
-              <Line>52</Line>
+              <Line>60</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -683,195 +1259,131 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>32</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>106 DrawingApp.PresentationModel.WindowsStoreGraphicsAdaptor.DrawRectangleFrame(double, double, double, double)</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>106</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>DrawingApp.PresentationModel.WindowsStoreGraphicsAdaptor.DrawRectangleFrame(double, double, double, double)</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>33</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>111 DrawingApp.PresentationModel.WindowsStoreGraphicsAdaptor.DrawLineFrame(double, double, double, double)</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>111</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>DrawingApp.PresentationModel.WindowsStoreGraphicsAdaptor.DrawLineFrame(double, double, double, double)</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>34</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>116 DrawingApp.PresentationModel.WindowsStoreGraphicsAdaptor.DrawHexagonFrame(double, double, double, double)</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>WindowsStoreGraphicsAdaptor.cs</File>
-              <Line>116</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>DrawingApp.PresentationModel.WindowsStoreGraphicsAdaptor.DrawHexagonFrame(double, double, double, double)</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>35</Id>
+              <Id>68</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>33 目前物件 DrawingModel.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：10次，使用到的方法或屬性為以下：DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingModel\Line.cs</File>
-              <Line>33</Line>
-              <StartLine>32</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>33</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 DrawingModel.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：10次，使用到的方法或屬性為以下：DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>36</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>26 目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1</HashCode>
+              <HashCode>34 目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</HashCode>
               <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingModel\Hexagon.cs</File>
-              <Line>26</Line>
-              <StartLine>26</StartLine>
-              <StartCol>18</StartCol>
-              <EndLine>26</EndLine>
-              <EndCol>61</EndCol>
-              <Comment>目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>37</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>27 目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingModel\Hexagon.cs</File>
-              <Line>27</Line>
-              <StartLine>27</StartLine>
-              <StartCol>18</StartCol>
-              <EndLine>27</EndLine>
-              <EndCol>60</EndCol>
-              <Comment>目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>38</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>28 目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingModel\Hexagon.cs</File>
-              <Line>28</Line>
-              <StartLine>28</StartLine>
-              <StartCol>19</StartCol>
-              <EndLine>28</EndLine>
-              <EndCol>49</EndCol>
-              <Comment>目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>39</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>29 目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingModel\Hexagon.cs</File>
-              <Line>29</Line>
-              <StartLine>29</StartLine>
-              <StartCol>16</StartCol>
-              <EndLine>29</EndLine>
-              <EndCol>27</EndCol>
-              <Comment>目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>40</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>31 目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingModel\Hexagon.cs</File>
-              <Line>31</Line>
-              <StartLine>30</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>31</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>41</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>32 目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：5次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：35次，使用到的方法或屬性為以下：DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingApp</Project>
-              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingModel\Hexagon.cs</File>
-              <Line>32</Line>
-              <StartLine>31</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>32</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 DrawingModel.Hexagon，使用物件的方法或屬性次數：5次，Envy到對象物件 DrawingModel.Shape，使用物件方法或屬性次數：35次，使用到的方法或屬性為以下：DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.X2 以及 DrawingModel.Shape.X1 以及 DrawingModel.Shape.Y1 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y2 以及 DrawingModel.Shape.Y1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>42</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>34 目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes()</HashCode>
-              <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\PresentationModel\PresentationModel.cs</File>
               <Line>34</Line>
               <StartLine>34</StartLine>
-              <StartCol>20</StartCol>
+              <StartCol>25</StartCol>
               <EndLine>34</EndLine>
               <EndCol>44</EndCol>
-              <Comment>目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes()</Comment>
+              <Comment>目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>43</Id>
+              <Id>69</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>36 目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：1次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes()</HashCode>
+              <HashCode>34 目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingForm</Project>
+              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\PresentationModel\PresentationModel.cs</File>
+              <Line>34</Line>
+              <StartLine>34</StartLine>
+              <StartCol>46</StartCol>
+              <EndLine>34</EndLine>
+              <EndCol>52</EndCol>
+              <Comment>目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>70</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>35 目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\PresentationModel\PresentationModel.cs</File>
-              <Line>36</Line>
+              <Line>35</Line>
               <StartLine>35</StartLine>
+              <StartCol>24</StartCol>
+              <EndLine>35</EndLine>
+              <EndCol>59</EndCol>
+              <Comment>目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>71</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>37 目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：1次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingForm</Project>
+              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\PresentationModel\PresentationModel.cs</File>
+              <Line>37</Line>
+              <StartLine>36</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>36</EndLine>
+              <EndLine>37</EndLine>
               <EndCol>0</EndCol>
-              <Comment>目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：1次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes() 以及 DrawingModel.Model.GetTotalShapes()</Comment>
+              <Comment>目前物件 DrawingForm.PresentationModel.PresentationModel，使用物件的方法或屬性次數：1次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>72</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>31 目前物件 DrawingApp.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\PresentationModel\PresentationModel.cs</File>
+              <Line>31</Line>
+              <StartLine>31</StartLine>
+              <StartCol>25</StartCol>
+              <EndLine>31</EndLine>
+              <EndCol>44</EndCol>
+              <Comment>目前物件 DrawingApp.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>73</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>31 目前物件 DrawingApp.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\PresentationModel\PresentationModel.cs</File>
+              <Line>31</Line>
+              <StartLine>31</StartLine>
+              <StartCol>46</StartCol>
+              <EndLine>31</EndLine>
+              <EndCol>52</EndCol>
+              <Comment>目前物件 DrawingApp.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>74</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>32 目前物件 DrawingApp.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\PresentationModel\PresentationModel.cs</File>
+              <Line>32</Line>
+              <StartLine>32</StartLine>
+              <StartCol>24</StartCol>
+              <EndLine>32</EndLine>
+              <EndCol>47</EndCol>
+              <Comment>目前物件 DrawingApp.PresentationModel.PresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>75</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>34 目前物件 DrawingApp.PresentationModel.PresentationModel，使用物件的方法或屬性次數：1次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingApp</Project>
+              <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\PresentationModel\PresentationModel.cs</File>
+              <Line>34</Line>
+              <StartLine>33</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>34</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 DrawingApp.PresentationModel.PresentationModel，使用物件的方法或屬性次數：1次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.GetTotalShapes 以及 DrawingModel.Model.CurrentMode</Comment>
               <Auto>false</Auto>
             </Smell>
           </Reviews>
@@ -1071,8 +1583,8 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1433</ProductionLoc>
-          <TestLoc>1068</TestLoc>
+          <ProductionLoc>1585</ProductionLoc>
+          <TestLoc>1162</TestLoc>
         </CodeReview>
       </Data>
     </div>

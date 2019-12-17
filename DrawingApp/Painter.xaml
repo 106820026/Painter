@@ -7,18 +7,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Canvas x:Name="_canvas" Margin="10,140,11,11" Background="#FFFFFFA0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <TextBlock x:Name="_selectTextLabel" Canvas.Left="1125" Canvas.Top="828" Text="Selected : " TextWrapping="Wrap" SelectionChanged="TextBlock_SelectionChanged"/>
-        </Canvas>
-        <Grid x:Name="_grid" HorizontalAlignment="Center" Height="70" VerticalAlignment="Top" Width="1480" Margin="0,60,0,0">
+        <Canvas x:Name="_canvas" Margin="10,10,11,10" Background="#FFFFFFA0"/>
+        <Grid x:Name="_selectGrid"  HorizontalAlignment="Left" Height="50" Margin="1050,725,0,0" VerticalAlignment="Top" Width="419" Canvas.ZIndex="5">
+            <TextBlock x:Name="_selectLabel" HorizontalAlignment="Left" Margin="32,10,0,0" Text="Select : " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
+            <TextBlock x:Name="_shapePositionTextLabel" HorizontalAlignment="Left" Margin="125,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" RenderTransformOrigin="0.555,0.474" Width="200"/>
+        </Grid>
+        <Grid x:Name="_shapeGrid" HorizontalAlignment="Center" Height="70" VerticalAlignment="Top" Width="1480" Margin="0,60,0,0">
             <Button x:Name="_rectangle" Content="Rectangle" HorizontalAlignment="Left" Height="44" VerticalAlignment="Center" Width="200" Margin="50,0,0,0"/>
             <Button x:Name="_line" Content="Line" HorizontalAlignment="Left" Height="44" Margin="455,0,0,0" VerticalAlignment="Center" Width="200"/>
             <Button x:Name="_hexagon" Content="Hexagon" HorizontalAlignment="Left" Margin="855,0,0,0" VerticalAlignment="Center" Height="44" Width="200"/>
             <Button x:Name="_clear" Content="Clear" HorizontalAlignment="Left" Height="44" Margin="1255,0,0,0" VerticalAlignment="Center" Width="200"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="250">
-            <Button x:Name="_undo" Content="Undo" HorizontalAlignment="Left" Margin="23,0,0,0" VerticalAlignment="Center" Width="87"/>
-            <Button x:Name="_redo" Content="Redo" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Center" Width="87"/>
+        <Grid x:Name="_undoRedoGrid" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="250">
+            <Button x:Name="_undo" Content="Undo" HorizontalAlignment="Left" Margin="23,0,0,0" VerticalAlignment="Center" Width="87" IsEnabled="False"/>
+            <Button x:Name="_redo" Content="Redo" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Center" Width="87" IsEnabled="False"/>
         </Grid>
     </Grid>
 </Page>

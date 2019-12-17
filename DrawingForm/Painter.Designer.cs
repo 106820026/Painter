@@ -44,7 +44,7 @@
             this._toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // _tableLayoutPanel1
             // 
             this._tableLayoutPanel1.ColumnCount = 2;
             this._tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -54,7 +54,7 @@
             this._tableLayoutPanel1.Controls.Add(this._shapePositionTextLabel, 1, 0);
             this._tableLayoutPanel1.Location = new System.Drawing.Point(1307, 881);
             this._tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this._tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this._tableLayoutPanel1.Name = "_tableLayoutPanel1";
             this._tableLayoutPanel1.RowCount = 1;
             this._tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this._tableLayoutPanel1.Size = new System.Drawing.Size(493, 26);
@@ -94,6 +94,7 @@
             this._line.Name = "_line";
             this._line.Size = new System.Drawing.Size(152, 38);
             this._line.TabIndex = 3;
+            this._line.Tag = "1";
             this._line.Text = "Line";
             this._line.UseVisualStyleBackColor = true;
             this._line.Click += new System.EventHandler(this.HandleLineButtonClick);
@@ -109,6 +110,7 @@
             this._hexagon.Name = "_hexagon";
             this._hexagon.Size = new System.Drawing.Size(152, 38);
             this._hexagon.TabIndex = 1;
+            this._hexagon.Tag = "2";
             this._hexagon.Text = "Hexagon";
             this._hexagon.UseVisualStyleBackColor = true;
             this._hexagon.Click += new System.EventHandler(this.HandleHexagonButtonClick);
@@ -121,6 +123,7 @@
             this._rectangle.Name = "_rectangle";
             this._rectangle.Size = new System.Drawing.Size(152, 38);
             this._rectangle.TabIndex = 0;
+            this._rectangle.Tag = "0";
             this._rectangle.Text = "Rectangle";
             this._rectangle.UseVisualStyleBackColor = true;
             this._rectangle.Click += new System.EventHandler(this.HandleRectangleButtonClick);
@@ -180,14 +183,14 @@
             this._redo.Text = "Redo";
             this._redo.Click += new System.EventHandler(this.RedoHandler);
             // 
-            // toolStrip1
+            // _toolStrip1
             // 
             this._toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this._toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._undo,
             this._redo});
             this._toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this._toolStrip1.Name = "toolStrip1";
+            this._toolStrip1.Name = "_toolStrip1";
             this._toolStrip1.Size = new System.Drawing.Size(1800, 25);
             this._toolStrip1.TabIndex = 2;
             this._toolStrip1.Text = "toolStrip1";
@@ -202,7 +205,7 @@
             this.Controls.Add(this._tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form";
-            this.Text = "Form1";
+            this.Text = "Painter";
             this._tableLayoutPanel1.ResumeLayout(false);
             this._tableLayoutPanel1.PerformLayout();
             this._tableLayoutPanel.ResumeLayout(false);

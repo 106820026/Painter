@@ -57,6 +57,8 @@ namespace DrawingForm.PresentationModel
             double initialY = (y1 + y2) / (int)2m;
             if (x2 - x1 < 0)
                 width = -width;
+            if (y2 - y1 < 0)
+                height = -height;
             SolidBrush myBrush = new SolidBrush(Color.Tomato);
             Point[] points = new Point[(int)6m] { new Point((int)x1, (int)initialY), new Point((int)(x1 + width), (int)(initialY + height)), new Point((int)(x1 + width * (int)3m), (int)(initialY + height)), new Point((int)x2, (int)initialY), new Point((int)(x1 + width * (int)3m), (int)(initialY - height)), new Point((int)(x1 + width), (int)(initialY - height)) };
             _graphics.FillPolygon(myBrush, points);
@@ -97,15 +99,7 @@ namespace DrawingForm.PresentationModel
         // 畫六角形框
         public void DrawHexagonFrame(double x1, double y1, double x2, double y2)
         {
-            float width = (float)Math.Abs(x2 - x1);
-            float height = (float)Math.Abs(y2 - y1);
-            Pen pen = new Pen(Color.Red);
-            pen.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            _graphics.DrawRectangle(pen, (float)x1, (float)y1, width, height);
-            DrawAnglePoint(x1, y1);
-            DrawAnglePoint(x2, y2);
-            DrawAnglePoint(x1, y2);
-            DrawAnglePoint(x2, y1);
+            DrawRectangleFrame(x1, y1, x2, y2);
         }
 
         // 畫白點

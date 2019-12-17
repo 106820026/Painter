@@ -45,6 +45,7 @@ namespace DrawingApp.PresentationModel
         public void DrawRectangle(double x1, double y1, double x2, double y2)
         {
             Windows.UI.Xaml.Shapes.Rectangle rectangle = LinkPointToRectangle(x1, y1, x2, y2);
+            rectangle.Stroke = new SolidColorBrush(Colors.Black);
             rectangle.Fill = new SolidColorBrush(Windows.UI.Colors.Aqua);
             _canvas.Children.Add(rectangle);
         }
@@ -55,7 +56,6 @@ namespace DrawingApp.PresentationModel
             Windows.UI.Xaml.Shapes.Rectangle rectangle = new Windows.UI.Xaml.Shapes.Rectangle();
             rectangle.Width = Math.Abs(x2 - x1);
             rectangle.Height = Math.Abs(y2 - y1);
-            rectangle.Stroke = new SolidColorBrush(Colors.Black);
             if (x2 > x1 && y2 > y1)
                 this.SetTopLeft(rectangle, y1, x1);
             if (x2 < x1 && y2 > y1)
@@ -91,6 +91,8 @@ namespace DrawingApp.PresentationModel
             double initialY = (y1 + y2) / (int)2m;
             if (x2 - x1 < 0)
                 width = -width;
+            if (y2 - y1 < 0)
+                height = -height;
             Polygon hexagon = new Polygon();
             PointCollection points = new PointCollection();
             points.Add(new Point(x1, initialY));
@@ -106,17 +108,45 @@ namespace DrawingApp.PresentationModel
         // 畫矩形框
         public void DrawRectangleFrame(double x1, double y1, double x2, double y2)
         {
-
+            Windows.UI.Xaml.Shapes.Rectangle rectangle = LinkPointToRectangle(x1, y1, x2, y2);
+            rectangle.Stroke = new SolidColorBrush(Colors.Red);
+            rectangle.StrokeThickness = 3;
+            rectangle.StrokeDashArray = new DoubleCollection() { 1, 2 };
+            _canvas.Children.Add(rectangle);
+            DrawAnglePoint(x1, y1);
+            DrawAnglePoint(x2, y1);
+            DrawAnglePoint(x1, y2);
+            DrawAnglePoint(x2, y2);
         }
 
+        // 畫線框
         public void DrawLineFrame(double x1, double y1, double x2, double y2)
         {
-
+            Windows.UI.Xaml.Shapes.Line line = LinkPointToLine(x1, y1, x2, y2);
+            line.Stroke = new SolidColorBrush(Colors.Red);
+            line.StrokeThickness = 3;
+            line.StrokeDashArray = new DoubleCollection() { 1, 2 };
+            DrawAnglePoint(x1, y1);
+            DrawAnglePoint(x2, y2);
+            _canvas.Children.Add(line);
         }
 
+        // 畫六角形框
         public void DrawHexagonFrame(double x1, double y1, double x2, double y2)
         {
+            DrawRectangleFrame(x1, y1, x2, y2);
+        }
 
+        // 畫白點
+        private void DrawAnglePoint(double x, double y)
+        {
+            Ellipse ellipse = new Ellipse();
+            ellipse.Fill = new SolidColorBrush(Colors.White);
+            ellipse.Stroke = new SolidColorBrush(Colors.Black);
+            ellipse.Width = (float)10f;
+            ellipse.Height = (float)10f;
+            ellipse.RenderTransform = new TranslateTransform() { X = x - 5, Y = y - 5 };
+            _canvas.Children.Add(ellipse);
         }
     }
 }

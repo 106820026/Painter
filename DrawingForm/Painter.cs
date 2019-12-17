@@ -47,6 +47,7 @@ namespace DrawingForm
             _model.CurrentMode = -1;
             _model.IsSelected = false;
             SetButtonEnable((Button)sender);
+            //_presentationModel.SetButtonEnable(int.Parse(((Button)sender).Tag.ToString()));
             RefreshUserInterface();
         }
 
@@ -123,10 +124,18 @@ namespace DrawingForm
                     button.Enabled = true;
         }
 
+        //////////////////////////////////////////
+        //private void SetButtonStatus(int buttonTag)
+        //{
+        //    foreach (Button button in _tableLayoutPanel.Controls)
+        //        if(_model.CurrentMode != -1)
+        //            button.Enabled = _presentationModel.SetButtonEnable(buttonTag)[int.Parse(button.Tag.ToString())];
+        //}
+
         // 選擇形狀
         private void SelectShape(object sender, EventArgs e)
         {
-            _shapePositionTextLabel.Text = _presentationModel.SelectShape(PointToClient(MousePosition));
+            _shapePositionTextLabel.Text = _model.SelectShape(PointToClient(MousePosition).X, PointToClient(MousePosition).Y);
         }
 
         // 回到上一步

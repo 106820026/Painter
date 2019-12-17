@@ -5,11 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DrawingModelTest.FakeAdaptor;
 
-public class FakeAdapter : IGraphics
+public class FakeAdaptor : IGraphics
 {
-    public FakeAdapter()
+    public FakeAdaptor()
     {
 
     }
@@ -55,7 +54,6 @@ public class FakeAdapter : IGraphics
     {
 
     }
-}
 }
 
 

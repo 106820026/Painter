@@ -40,7 +40,7 @@ namespace DrawingModel.Tests
         public void DrawTest()
         {
             Rectangle rectangle = new Rectangle();
-            rectangle.Draw(new FakeAdaptor());
+            rectangle.Draw(new DrawingModelRectangleTest.FakeAdaptor.FakeAdaptor());
             Assert.IsNotNull(rectangle);
         }
     }

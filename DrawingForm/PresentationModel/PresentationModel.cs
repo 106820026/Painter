@@ -8,14 +8,21 @@ namespace DrawingForm.PresentationModel
     public class PresentationModel
     {
         Model _model;
-        const string USELESS_PART = "DrawingModel.";
-        const string COMMA = ",";
-        const string LEFT_PARENTHESES = "(";
-        const string RIGHT_PARENTHESES = ")";
+        bool _rectangleButtonEnable;
+        bool _lineButtonEnable;
+        bool _hexagoButtonEnable;
+        List<bool> _buttonStatus = new List<bool>();
+
 
         public PresentationModel(Model model)
         {
             this._model = model;
+            _rectangleButtonEnable = true;
+            _lineButtonEnable = true;
+            _hexagoButtonEnable = true;
+            _buttonStatus.Add(_rectangleButtonEnable);
+            _buttonStatus.Add(_lineButtonEnable);
+            _buttonStatus.Add(_hexagoButtonEnable);
         }
 
         // 畫圖
@@ -27,23 +34,23 @@ namespace DrawingForm.PresentationModel
             _model.Draw(adaptor);
         }
 
-        // 選取形狀
-        public string SelectShape(Point point)
+        // 修改Button的Enabled
+        public List<bool> SetButtonEnable(int buttonTag)
         {
-            List<Shape> shape = _model.GetTotalShapes();
-            for (int i = shape.Count - 1; i >= 0; i--)
-                if (shape[i].IsSelect(point.X, point.Y))
-                    return GetDetail(shape[i]);
+            for (int i = 0; i < _buttonStatus.Count; i++)
+                _buttonStatus[i] = true;
+            if (_model.CurrentMode != -1)
+                _buttonStatus[buttonTag] = false;
             _model.IsSelected = false;
-            return String.Empty;
+            return _buttonStatus;
         }
 
-        // 取得選取圖形的詳細資料
-        private String GetDetail(Shape shape)
-        {
-            _model.IsSelected = true;
-            _model.SelectedShape = shape;
-            return shape.GetType().ToString().Replace(USELESS_PART, String.Empty) + LEFT_PARENTHESES + shape.X1 + COMMA + shape.Y1 + COMMA + shape.X2 + COMMA + shape.Y2 + RIGHT_PARENTHESES;
-        }
+        //// 修改Button的Enabled
+        //public void SetButtonEnable()
+        //{
+        //    if (_model.CurrentMode == -1)
+        //        for (int i = 0; i < _buttonEnable.Count; i++)
+        //            _buttonEnable[i] = true;
+        //}
     }
 }

@@ -42,6 +42,7 @@ namespace DrawingApp
         {
             _model.Clear();
             _model.CurrentMode = -1;
+            _model.IsSelected = false;
             SetButtonIsEnabled((Button)sender);
             RefreshUserInterface();
         }
@@ -71,13 +72,14 @@ namespace DrawingApp
         public void HandleCanvasPressed(object sender, PointerRoutedEventArgs e)
         {
             _model.PressPointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
-            RefreshUserInterface();
         }
 
         // 釋放滑鼠
         public void HandleCanvasReleased(object sender, PointerRoutedEventArgs e)
         {
+            _shapePositionTextLabel.Text = _model.SelectShape(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
             _model.ReleasePointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+            SetButtonEnable();
             RefreshUserInterface();
         }
 
@@ -85,10 +87,9 @@ namespace DrawingApp
         public void HandleCanvasMoved(object sender, PointerRoutedEventArgs e)
         {
             _model.MovePointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
-            RefreshUserInterface();
         }
 
-        // 偵測改變
+        // 畫圖
         public void HandleModelChanged()
         {
             _presentationModel.Draw(_interfaceGraphics);
@@ -97,10 +98,20 @@ namespace DrawingApp
         // 設定Button的IsEnabled
         private void SetButtonIsEnabled(Button pressedButton)
         {
-            foreach (Button button in _grid.Children)
+            foreach (Button button in _shapeGrid.Children)
                 button.IsEnabled = true;
             if (_model.CurrentMode != -1)
                 pressedButton.IsEnabled = false;
+            _model.IsSelected = false;
+        }
+
+        // 修改Button的Enabled
+        private void SetButtonEnable()
+        {
+            if (_model.CurrentMode == -1)
+                foreach (Button button in _shapeGrid.Children)
+                    if(button.Name != "_undo" && button.Name != "_redo")
+                        button.IsEnabled = true;
         }
 
         // 回到上一步
@@ -124,11 +135,6 @@ namespace DrawingApp
         {
             _redo.IsEnabled = _model.IsRedoEnabled;
             _undo.IsEnabled = _model.IsUndoEnabled;
-        }
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

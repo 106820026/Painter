@@ -20,6 +20,10 @@ namespace DrawingModel
         bool _isPressed = false;
         List<Shape> _shapes = new List<Shape>();
         Shape _shapeHint;
+        const string USELESS_PART = "DrawingModel.";
+        const string COMMA = ",";
+        const string LEFT_PARENTHESES = "(";
+        const string RIGHT_PARENTHESES = ")";
 
         public Model()
         {
@@ -42,9 +46,12 @@ namespace DrawingModel
         }
 
         // 取得所有形狀
-        public List<Shape> GetTotalShapes()
+        public List<Shape> GetTotalShapes
         {
-            return _shapes;
+            get
+            {
+                return _shapes;
+            }
         }
 
         // 按下滑鼠
@@ -85,10 +92,7 @@ namespace DrawingModel
                 _lastPointX = x;
                 _lastPointY = y;
                 if ( _lastPointX - _firstPointX != 0 || _lastPointY - _firstPointY != 0)
-                {
-                    IsSelected = false;
                     SaveDrawing();
-                }
                 NotifyModelChanged();
             }
         }
@@ -107,11 +111,10 @@ namespace DrawingModel
         public void Clear()
         {
             _isPressed = false;
+            IsSelected = false;
             if (_shapes.Count != 0)
-            {
                 _commandManager.Execute(new ClearCommand(this, _shapes));
-                NotifyModelChanged();
-            }
+            NotifyModelChanged();
         }
 
         // 畫圖
@@ -162,6 +165,25 @@ namespace DrawingModel
         {
             _commandManager.Redo();
             NotifyModelChanged();
+        }
+        
+        // 選取形狀
+        public string SelectShape(double x, double y)
+        {
+            if (CurrentMode == -1)
+                for (int i = _shapes.Count - 1; i >= 0; i--)
+                    if (_shapes[i].IsSelect(x, y))
+                        return GetDetail(_shapes[i]);
+            IsSelected = false;
+            return String.Empty;
+        }
+
+        // 取得選取圖形的詳細資料
+        private String GetDetail(Shape shape)
+        {
+            IsSelected = true;
+            SelectedShape = shape;
+            return shape.GetType().ToString().Replace(USELESS_PART, String.Empty) + LEFT_PARENTHESES + (int)shape.X1 + COMMA + (int)shape.Y1 + COMMA + (int)shape.X2 + COMMA + (int)shape.Y2 + RIGHT_PARENTHESES;
         }
 
         public bool IsRedoEnabled

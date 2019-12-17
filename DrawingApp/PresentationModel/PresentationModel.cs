@@ -1,10 +1,13 @@
 ﻿using DrawingModel;
+using System;
+using System.Collections.Generic;
 
 namespace DrawingApp.PresentationModel
 {
     public class PresentationModel
     {
         Model _model;
+
         public PresentationModel(Model model)
         {
             this._model = model;
