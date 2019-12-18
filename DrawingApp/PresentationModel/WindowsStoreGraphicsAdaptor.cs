@@ -110,8 +110,10 @@ namespace DrawingApp.PresentationModel
         {
             Windows.UI.Xaml.Shapes.Rectangle rectangle = LinkPointToRectangle(x1, y1, x2, y2);
             rectangle.Stroke = new SolidColorBrush(Colors.Red);
-            rectangle.StrokeThickness = 3;
-            rectangle.StrokeDashArray = new DoubleCollection() { 1, 2 };
+            rectangle.StrokeThickness = (int)3m;
+            rectangle.StrokeDashArray = new DoubleCollection();
+            rectangle.StrokeDashArray.Add(1);
+            rectangle.StrokeDashArray.Add((int)2m);
             _canvas.Children.Add(rectangle);
             DrawAnglePoint(x1, y1);
             DrawAnglePoint(x2, y1);
@@ -124,8 +126,10 @@ namespace DrawingApp.PresentationModel
         {
             Windows.UI.Xaml.Shapes.Line line = LinkPointToLine(x1, y1, x2, y2);
             line.Stroke = new SolidColorBrush(Colors.Red);
-            line.StrokeThickness = 3;
-            line.StrokeDashArray = new DoubleCollection() { 1, 2 };
+            line.StrokeThickness = (int)3m;
+            line.StrokeDashArray = new DoubleCollection();
+            line.StrokeDashArray.Add(1);
+            line.StrokeDashArray.Add((int)2m);
             DrawAnglePoint(x1, y1);
             DrawAnglePoint(x2, y2);
             _canvas.Children.Add(line);
@@ -143,9 +147,9 @@ namespace DrawingApp.PresentationModel
             Ellipse ellipse = new Ellipse();
             ellipse.Fill = new SolidColorBrush(Colors.White);
             ellipse.Stroke = new SolidColorBrush(Colors.Black);
-            ellipse.Width = (float)10f;
-            ellipse.Height = (float)10f;
-            ellipse.RenderTransform = new TranslateTransform() { X = x - 5, Y = y - 5 };
+            ellipse.Width = (int)10m;
+            ellipse.Height = (int)10m;
+            ellipse.RenderTransform = new TranslateTransform() { X = x - (int)5m, Y = y - (int)5m };
             _canvas.Children.Add(ellipse);
         }
     }

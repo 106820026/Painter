@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-18T04:50:13.064</Modified>
+      <Modified>2019-12-18T05:26:30.731</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\DrawingApp.exe">
       <PackagePath>entrypoint\DrawingApp.exe</PackagePath>
-      <Modified>2019-12-18T04:50:12.820</Modified>
+      <Modified>2019-12-18T05:26:29.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -542,11 +542,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-18T04:27:36.114</Modified>
+      <Modified>2019-12-18T05:26:29.705</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\Painter.xbf">
       <PackagePath>Painter.xbf</PackagePath>
-      <Modified>2019-12-18T04:27:36.114</Modified>
+      <Modified>2019-12-18T05:26:29.705</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -558,7 +558,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Rosie\source\repos\DrawingModel\DrawingApp\bin\x86\Debug\Core\DrawingApp.exe">
       <PackagePath>DrawingApp.exe</PackagePath>
-      <Modified>2019-12-18T04:50:13.053</Modified>
+      <Modified>2019-12-18T05:26:30.699</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

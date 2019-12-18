@@ -12,7 +12,6 @@ namespace DrawingForm.PresentationModel
         bool _hexagoButtonEnable;
         List<bool> _buttonStatus = new List<bool>();
 
-
         public PresentationModel(Model model)
         {
             this._model = model;

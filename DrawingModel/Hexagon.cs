@@ -46,7 +46,7 @@ namespace DrawingModel
             return x > Math.Min(X1, X2) && x < Math.Max(X1, X2) && y > Math.Min(Y1, Y2) && y < Math.Max(Y1, Y2) && IsInside(x, y);
         }
 
-        // 在線的左邊
+        // 在四條斜線內
         private bool IsInside(double x, double y)
         {
             float height = (float)Math.Abs(Y2 - Y1) / (int)2m;

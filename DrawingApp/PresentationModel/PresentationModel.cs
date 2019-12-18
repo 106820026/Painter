@@ -9,7 +9,7 @@ namespace DrawingApp.PresentationModel
         Model _model;
         bool _rectangleButtonEnable;
         bool _lineButtonEnable;
-        bool _hexagoButtonEnable;
+        bool _hexagonButtonEnable;
         List<bool> _buttonStatus = new List<bool>();
 
         public PresentationModel(Model model)
@@ -17,10 +17,10 @@ namespace DrawingApp.PresentationModel
             this._model = model;
             _rectangleButtonEnable = true;
             _lineButtonEnable = true;
-            _hexagoButtonEnable = true;
+            _hexagonButtonEnable = true;
             _buttonStatus.Add(_rectangleButtonEnable);
             _buttonStatus.Add(_lineButtonEnable);
-            _buttonStatus.Add(_hexagoButtonEnable);
+            _buttonStatus.Add(_hexagonButtonEnable);
         }
 
         // 畫圖
