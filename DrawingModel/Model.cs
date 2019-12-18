@@ -183,7 +183,7 @@ namespace DrawingModel
         {
             IsSelected = true;
             SelectedShape = shape;
-            return shape.GetType().ToString().Replace(USELESS_PART, String.Empty) + LEFT_PARENTHESES + (int)shape.X1 + COMMA + (int)shape.Y1 + COMMA + (int)shape.X2 + COMMA + (int)shape.Y2 + RIGHT_PARENTHESES;
+            return shape.GetType().ToString().Replace(USELESS_PART, String.Empty) + LEFT_PARENTHESES + (int)Math.Min(shape.X1, shape.X2) + COMMA + (int)Math.Min(shape.Y1, shape.Y2) + COMMA + (int)Math.Max(shape.X1, shape.X2) + COMMA + (int)Math.Max(shape.Y1, shape.Y2) + RIGHT_PARENTHESES;
         }
 
         public bool IsRedoEnabled

@@ -1,5 +1,6 @@
 ﻿using DrawingApp.PresentationModel;
 using DrawingModel;
+using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -14,12 +15,18 @@ namespace DrawingApp
         Model _model;
         PresentationModel.PresentationModel _presentationModel;
         IGraphics _interfaceGraphics;
+        List<Button> _shapeButtons;
+
         public MainPage()
         {
             this.InitializeComponent();
             _model = new DrawingModel.Model();
             _presentationModel = new PresentationModel.PresentationModel(_model);
             _interfaceGraphics = new WindowsStoreGraphicsAdaptor(_canvas);
+            _shapeButtons = new List<Button>();
+            _shapeButtons.Add(_rectangle);
+            _shapeButtons.Add(_line);
+            _shapeButtons.Add(_hexagon);
             _canvas.PointerPressed += HandleCanvasPressed;
             _canvas.PointerReleased += HandleCanvasReleased;
             _canvas.PointerMoved += HandleCanvasMoved;
@@ -43,7 +50,7 @@ namespace DrawingApp
             _model.Clear();
             _model.CurrentMode = -1;
             _model.IsSelected = false;
-            SetButtonIsEnabled((Button)sender);
+            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
             RefreshUserInterface();
         }
 
@@ -51,21 +58,21 @@ namespace DrawingApp
         private void HandleRectangleButtonClick(object sender, RoutedEventArgs e)
         {
             _model.CurrentMode = 0;
-            SetButtonIsEnabled((Button)sender);
+            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
         }
 
         // 畫線
         private void HandleLineButtonClick(object sender, RoutedEventArgs e)
         {
             _model.CurrentMode = 1;
-            SetButtonIsEnabled((Button)sender);
+            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
         }
 
         // 畫六角形
         private void HandleHexagonButtonClick(object sender, RoutedEventArgs e)
         {
             _model.CurrentMode = (int)2m;
-            SetButtonIsEnabled((Button)sender);
+            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
         }
 
         // 按下滑鼠
@@ -79,7 +86,7 @@ namespace DrawingApp
         {
             _shapePositionTextLabel.Text = _model.SelectShape(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
             _model.ReleasePointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
-            SetButtonEnable();
+            SetAllButtonEnable();
             RefreshUserInterface();
         }
 
@@ -95,23 +102,19 @@ namespace DrawingApp
             _presentationModel.Draw(_interfaceGraphics);
         }
 
-        // 設定Button的IsEnabled
-        private void SetButtonIsEnabled(Button pressedButton)
+        // 修改Button的Enabled 畫完全部按鈕要跳起來
+        private void SetAllButtonEnable()
         {
-            foreach (Button button in _shapeGrid.Children)
+            foreach (Button button in _shapeButtons)
                 button.IsEnabled = true;
-            if (_model.CurrentMode != -1)
-                pressedButton.IsEnabled = false;
-            _model.IsSelected = false;
         }
 
-        // 修改Button的Enabled
-        private void SetButtonEnable()
+        // 修改Button的Enabled 把按下的Disable掉
+        private void SetButtonDisable(int buttonTag)
         {
-            if (_model.CurrentMode == -1)
-                foreach (Button button in _shapeGrid.Children)
-                    if(button.Name != "_undo" && button.Name != "_redo")
-                        button.IsEnabled = true;
+            for (int i = 0; i < _shapeButtons.Count; i++)
+                _shapeButtons[i].IsEnabled = (_presentationModel.SetButtonDisable(buttonTag))[i];
+            HandleModelChanged();
         }
 
         // 回到上一步

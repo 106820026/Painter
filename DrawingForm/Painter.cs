@@ -17,6 +17,7 @@ namespace DrawingForm
         PresentationModel.PresentationModel _presentationModel;
         Panel _canvas = new DoubleBufferedPanel();
         const String CANVAS = "canvas";
+        List<Button> _shapeButtons;
 
         public Form()
         {
@@ -37,6 +38,10 @@ namespace DrawingForm
             // prepare presentation model and model
             _model = new DrawingModel.Model();
             _presentationModel = new PresentationModel.PresentationModel(_model);
+            _shapeButtons = new List<Button>();
+            _shapeButtons.Add(_rectangle);
+            _shapeButtons.Add(_line);
+            _shapeButtons.Add(_hexagon);
             _model._modelChanged += HandleModelChanged;
         }
 
@@ -44,10 +49,9 @@ namespace DrawingForm
         public void HandleClearButtonClick(object sender, System.EventArgs e)
         {
             _model.Clear();
+            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
             _model.CurrentMode = -1;
             _model.IsSelected = false;
-            SetButtonEnable((Button)sender);
-            //_presentationModel.SetButtonEnable(int.Parse(((Button)sender).Tag.ToString()));
             RefreshUserInterface();
         }
 
@@ -55,21 +59,21 @@ namespace DrawingForm
         public void HandleRectangleButtonClick(object sender, System.EventArgs e)
         {
             _model.CurrentMode = 0;
-            SetButtonEnable((Button)sender);
+            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
         }
 
         // 畫線
         public void HandleLineButtonClick(object sender, System.EventArgs e)
         {
             _model.CurrentMode = 1;
-            SetButtonEnable((Button)sender);
+            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
         }
 
         // 畫六角形
         private void HandleHexagonButtonClick(object sender, EventArgs e)
         {
             _model.CurrentMode = (int)2m;
-            SetButtonEnable((Button)sender);
+            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
         }
 
         // 按下滑鼠
@@ -83,7 +87,7 @@ namespace DrawingForm
         public void HandleCanvasReleased(object sender, MouseEventArgs e)
         {
             _model.ReleasePointer(e.X, e.Y);
-            SetButtonEnable();
+            SetAllButtonEnable();
             RefreshUserInterface();
         }
 
@@ -106,31 +110,20 @@ namespace DrawingForm
             Invalidate(true);
         }
 
-        // 修改Button的Enabled
-        private void SetButtonEnable(Button pressedButton)
+        // 修改Button的Enabled 畫完全部按鈕要跳起來
+        private void SetAllButtonEnable()
         {
             foreach (Button button in _tableLayoutPanel.Controls)
                 button.Enabled = true;
-            if (_model.CurrentMode != -1)
-                pressedButton.Enabled = false;
-            _model.IsSelected = false;
         }
 
-        // 修改Button的Enabled
-        private void SetButtonEnable()
+        // 修改Button的Enabled 把按下的Disable掉
+        private void SetButtonDisable(int buttonTag)
         {
-            if (_model.CurrentMode == -1)
-                foreach (Button button in _tableLayoutPanel.Controls)
-                    button.Enabled = true;
+            for (int i = 0; i < _shapeButtons.Count; i++)
+                _shapeButtons[i].Enabled = (_presentationModel.SetButtonDisable(buttonTag))[i];
+            HandleModelChanged();
         }
-
-        //////////////////////////////////////////
-        //private void SetButtonStatus(int buttonTag)
-        //{
-        //    foreach (Button button in _tableLayoutPanel.Controls)
-        //        if(_model.CurrentMode != -1)
-        //            button.Enabled = _presentationModel.SetButtonEnable(buttonTag)[int.Parse(button.Tag.ToString())];
-        //}
 
         // 選擇形狀
         private void SelectShape(object sender, EventArgs e)

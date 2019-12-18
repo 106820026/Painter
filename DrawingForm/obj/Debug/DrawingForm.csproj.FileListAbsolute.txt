@@ -21,10 +21,9 @@ D:\source\repos\DrawingModel\DrawingForm\obj\Debug\DrawingForm.pdb
 C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\bin\Debug\DrawingForm.exe.config
 C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\bin\Debug\DrawingForm.exe
 C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\bin\Debug\DrawingForm.pdb
+C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\obj\Debug\DrawingForm.Form.resources
 C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\obj\Debug\DrawingForm.Properties.Resources.resources
 C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\obj\Debug\DrawingForm.csproj.GenerateResource.cache
 C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\obj\Debug\DrawingForm.csproj.CoreCompileInputs.cache
 C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\obj\Debug\DrawingForm.exe
 C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\obj\Debug\DrawingForm.pdb
-C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\obj\Debug\DrawingForm.Form.resources
-C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\obj\Debug\DrawingForm.csprojAssemblyReference.cache

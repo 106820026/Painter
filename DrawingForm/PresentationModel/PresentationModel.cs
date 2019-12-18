@@ -1,7 +1,6 @@
 ﻿using DrawingModel;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace DrawingForm.PresentationModel
 {
@@ -35,22 +34,16 @@ namespace DrawingForm.PresentationModel
         }
 
         // 修改Button的Enabled
-        public List<bool> SetButtonEnable(int buttonTag)
+        public List<bool> SetButtonDisable(int buttonTag)
         {
             for (int i = 0; i < _buttonStatus.Count; i++)
                 _buttonStatus[i] = true;
             if (_model.CurrentMode != -1)
+            {
                 _buttonStatus[buttonTag] = false;
-            _model.IsSelected = false;
+                _model.IsSelected = false;
+            }
             return _buttonStatus;
         }
-
-        //// 修改Button的Enabled
-        //public void SetButtonEnable()
-        //{
-        //    if (_model.CurrentMode == -1)
-        //        for (int i = 0; i < _buttonEnable.Count; i++)
-        //            _buttonEnable[i] = true;
-        //}
     }
 }

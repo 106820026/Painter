@@ -93,7 +93,7 @@
             this._line.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
             this._line.Name = "_line";
             this._line.Size = new System.Drawing.Size(152, 38);
-            this._line.TabIndex = 3;
+            this._line.TabIndex = 1;
             this._line.Tag = "1";
             this._line.Text = "Line";
             this._line.UseVisualStyleBackColor = true;
@@ -109,7 +109,7 @@
             this._hexagon.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
             this._hexagon.Name = "_hexagon";
             this._hexagon.Size = new System.Drawing.Size(152, 38);
-            this._hexagon.TabIndex = 1;
+            this._hexagon.TabIndex = 2;
             this._hexagon.Tag = "2";
             this._hexagon.Text = "Hexagon";
             this._hexagon.UseVisualStyleBackColor = true;
@@ -138,7 +138,8 @@
             this._clear.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
             this._clear.Name = "_clear";
             this._clear.Size = new System.Drawing.Size(152, 38);
-            this._clear.TabIndex = 2;
+            this._clear.TabIndex = 3;
+            this._clear.Tag = "3";
             this._clear.Text = "Clear";
             this._clear.UseVisualStyleBackColor = true;
             this._clear.Click += new System.EventHandler(this.HandleClearButtonClick);

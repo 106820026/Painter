@@ -29,6 +29,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Tag" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
