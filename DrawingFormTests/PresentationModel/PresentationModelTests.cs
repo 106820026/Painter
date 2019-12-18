@@ -87,5 +87,19 @@ namespace DrawingForm.PresentationModel.Tests
             presentationModel.Draw(new FakeAdapter.FakeAdapter());
             Assert.IsNotNull(presentationModel);
         }
+
+        [TestMethod()]
+        public void SetButtonDisableTest()
+        {
+            List<bool> list = new List<bool>() { false, true, true };
+            List<bool> list2 = new List<bool>() { true, true, true };
+            model.CurrentMode = 1;
+            for (int i = 0; i < presentationModel.SetButtonDisable(0).Count; i++)
+                Assert.AreEqual(list[i], presentationModel.SetButtonDisable(0)[i]);
+            model.CurrentMode = -1;
+            for (int i = 0; i < presentationModel.SetButtonDisable(0).Count; i++)
+                Assert.AreEqual(list2[i], presentationModel.SetButtonDisable(0)[i]);
+
+        }
     }
 }

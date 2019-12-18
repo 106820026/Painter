@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DrawingModel
 {
-    interface ICommand
+    public interface ICommand
     {
         // 執行
         void Execute();

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DrawingModel
 {
-    class CommandManager
+    public class CommandManager
     {
         const string UNDO_WARNING = "Cannot Undo exception\n";
         const string REDO_WARNING = "Cannot Redo exception\n";

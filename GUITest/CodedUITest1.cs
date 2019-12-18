@@ -25,7 +25,7 @@ namespace GUITest
         [TestInitialize]
         public void Initialize()
         {
-            Robot.Initialize(@"..\..\..\DrawingForm\bin\Debug\DrawingForm.exe", "Form1");
+            Robot.Initialize(@"..\..\..\DrawingForm\bin\Debug\DrawingForm.exe", "Painter");
         }
 
         [TestMethod]
@@ -39,6 +39,12 @@ namespace GUITest
         public void DrawLineTest()
         {
             DrawingToolTest.DrawLine("canvas", 200, 200, 300, 300);
+        }
+
+        [TestMethod]
+        public void DrawHexagonTest()
+        {
+            DrawingToolTest.DrawHexagon("canvas", 200, 200, 300, 300);
         }
 
         [TestMethod]

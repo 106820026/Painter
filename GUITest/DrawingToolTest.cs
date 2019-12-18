@@ -27,6 +27,14 @@ namespace GUITest
             Mouse.StopDragging(canvas, new Point(x2, y2));
         }
 
+        public static void DrawHexagon(string name, int x1, int y1, int x2, int y2)
+        {
+            ClickButton("Hexagon");
+            UITestControl canvas = Robot.FindPanel(name);
+            Mouse.StartDragging(canvas, new Point(x1, y1));
+            Mouse.StopDragging(canvas, new Point(x2, y2));
+        }
+
         public static void ClickClear()
         {
             ClickButton("Clear");

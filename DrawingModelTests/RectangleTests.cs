@@ -23,8 +23,32 @@ namespace DrawingModelRectangleTest.FakeAdaptor
 
         }
 
+        // 畫線外框
+        public void DrawLineFrame(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
         // 畫矩形
         public void DrawRectangle(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
+        // 畫矩形外框
+        public void DrawRectangleFrame(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
+        // 畫六角形
+        public void DrawHexagon(double x1, double y1, double x2, double y2)
+        {
+
+        }
+
+        // 畫六角形外框
+        public void DrawHexagonFrame(double x1, double y1, double x2, double y2)
         {
 
         }
@@ -42,6 +66,33 @@ namespace DrawingModel.Tests
             Rectangle rectangle = new Rectangle();
             rectangle.Draw(new DrawingModelRectangleTest.FakeAdaptor.FakeAdaptor());
             Assert.IsNotNull(rectangle);
+        }
+
+        [TestMethod()]
+        public void DrawFrameTest()
+        {
+            Rectangle rectangle = new Rectangle();
+            rectangle.DrawFrame(new DrawingModelRectangleTest.FakeAdaptor.FakeAdaptor());
+            Assert.IsNotNull(rectangle);
+        }
+
+        [TestMethod()]
+        public void IsSelectTest()
+        {
+            Rectangle rectangle = new Rectangle();
+            Assert.IsFalse(rectangle.IsSelect(150, 450));
+            rectangle.X1 = 100;
+            rectangle.Y1 = 100;
+            rectangle.X2 = 200;
+            rectangle.Y2 = 200;
+            Assert.IsTrue(rectangle.IsSelect(150, 150));
+            Assert.IsFalse(rectangle.IsSelect(400, 550));
+            rectangle.X2 = 100;
+            rectangle.Y2 = 200;
+            rectangle.X1 = 200;
+            rectangle.Y1 = 100;
+            Assert.IsTrue(rectangle.IsSelect(150, 150));
+            Assert.IsFalse(rectangle.IsSelect(400, 550));
         }
     }
 }

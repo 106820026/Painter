@@ -3,7 +3,7 @@
 
 namespace DrawingModel
 {
-    class DrawCommand : ICommand
+    public class DrawCommand : ICommand
     {
         Shape _shape;
         Model _model;

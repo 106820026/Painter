@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DrawingModel
 {
-    class ShapeFactory
+    public class ShapeFactory
     {
         const int RECTANGLE = 0;
         const int LINE = 1;

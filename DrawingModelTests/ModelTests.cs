@@ -92,8 +92,7 @@ namespace DrawingModel.Tests
         [TestMethod()]
         public void MovePointerTest()
         {
-            model.CurrentMode = 1;
-            model.PressPointer(90, 150);
+            model.CurrentMode = -1;
             model.MovePointer(180, 300);
             model.CurrentMode = 0;
             model.PressPointer(90, 150);
@@ -105,14 +104,19 @@ namespace DrawingModel.Tests
         [TestMethod()]
         public void ReleasePointerTest()
         {
-            model.CurrentMode = 0;
+            model.CurrentMode = -1;
             model.PressPointer(90, 150);
             model.ReleasePointer(180, 300);
+
+            model.CurrentMode = 0;
+            model.PressPointer(90, 150);
+            model.ReleasePointer(90, 150);
             Assert.AreEqual(model.CurrentMode, 0);
+
             model.CurrentMode = 1;
             model.PressPointer(90, 150);
             model.ReleasePointer(180, 300);
-            Assert.AreEqual(model.CurrentMode, 1);
+            Assert.AreEqual(model.CurrentMode, -1);
         }
 
         [TestMethod()]
@@ -126,8 +130,10 @@ namespace DrawingModel.Tests
         [TestMethod()]
         public void ClearTest()
         {
+            model.GetTotalShapes.Add(new Line());
             model.Clear();
             Assert.AreEqual(model.CurrentMode, -1);
+            model.Clear();
         }
 
         [TestMethod()]
@@ -136,13 +142,60 @@ namespace DrawingModel.Tests
             model.CurrentMode = 0;
             model.PressPointer(90, 150);
             model.ReleasePointer(180, 300);
-            Assert.AreEqual(model.CurrentMode, 0);
+            Assert.AreEqual(model.CurrentMode, -1);
             model.CurrentMode = 1;
             model.PressPointer(90, 150);
             model.ReleasePointer(180, 300);
-            Assert.AreEqual(model.CurrentMode, 1);
+            Assert.AreEqual(model.CurrentMode, -1);
+            model.SelectShape(150, 200);
             model.Draw(new FakeAdaptor());
 
+        }
+
+        [TestMethod()]
+        public void DrawShapeTest()
+        {
+            model.DrawShape(new Line());
+            Assert.AreEqual(1, model.GetTotalShapes.Count);
+        }
+
+        [TestMethod()]
+        public void DeleteShapeTest()
+        {
+            model.DrawShape(new Line());
+            model.DeleteShape();
+            Assert.AreEqual(0, model.GetTotalShapes.Count);
+        }
+
+        [TestMethod()]
+        public void UndoTest()
+        {
+            Assert.IsFalse(model.IsUndoEnabled);
+            model.CurrentMode = 1;
+            model.PressPointer(90, 150);
+            model.ReleasePointer(180, 300);
+            model.Undo();
+            Assert.AreEqual(0, model.GetTotalShapes.Count);
+        }
+
+        [TestMethod()]
+        public void RedoTest()
+        {
+            Assert.IsFalse(model.IsRedoEnabled);
+            model.CurrentMode = 1;
+            model.PressPointer(90, 150);
+            model.ReleasePointer(180, 300);
+            model.Undo();
+            model.Redo();
+            Assert.AreEqual(1, model.GetTotalShapes.Count);
+        }
+
+        [TestMethod()]
+        public void SelectShapeTest()
+        {
+            model.CurrentMode = 1;
+            model.SelectShape(100,100);
+            Assert.AreEqual(1, model.CurrentMode);
         }
 
         public void EventHandler()
