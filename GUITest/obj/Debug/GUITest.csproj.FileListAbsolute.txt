@@ -10,3 +10,5 @@ C:\Users\Rosie\source\repos\DrawingModel\GUITest\obj\Debug\GUITest.csproj.CoreCo
 C:\Users\Rosie\source\repos\DrawingModel\GUITest\obj\Debug\GUITest.dll
 C:\Users\Rosie\source\repos\DrawingModel\GUITest\obj\Debug\GUITest.pdb
 C:\Users\Rosie\source\repos\DrawingModel\GUITest\obj\Debug\GUITest.csprojAssemblyReference.cache
+C:\Users\Rosie\source\repos\DrawingModel\GUITest\bin\Debug\Windows.Foundation.UniversalApiContract.winmd
+C:\Users\Rosie\source\repos\DrawingModel\GUITest\obj\Debug\GUITest.csproj.CopyComplete

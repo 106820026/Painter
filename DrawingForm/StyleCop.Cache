@@ -93,7 +93,7 @@
     <timestamps>
       <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/18 12:49:33.358</sourceFile>
+      <sourceFile>2019/12/20 01:40:03.834</sourceFile>
       <parser>2019/12/05 18:55:05.506</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -116,7 +116,7 @@
     <timestamps>
       <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/18 11:54:44.726</sourceFile>
+      <sourceFile>2019/12/20 01:40:03.741</sourceFile>
       <parser>2019/12/05 18:55:05.506</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -124,12 +124,12 @@
     <violations>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-_hexagon(hexagon)</context>
-        <line>225</line>
-        <index>12783</index>
-        <endIndex>12827</endIndex>
-        <startLine>225</startLine>
+        <line>230</line>
+        <index>13170</index>
+        <endIndex>13214</endIndex>
+        <startLine>230</startLine>
         <startColumn>9</startColumn>
-        <endLine>225</endLine>
+        <endLine>230</endLine>
         <endColumn>53</endColumn>
         <warning>False</warning>
       </violation>
@@ -139,21 +139,21 @@
     <timestamps>
       <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/18 12:58:18.168</sourceFile>
+      <sourceFile>2019/12/19 01:20:29.329</sourceFile>
       <parser>2019/12/05 18:55:05.506</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
-        <context>Unsuitable naming(名不符實)-_hexagoButtonEnable(hexago)</context>
+        <context>Unsuitable naming(名不符實)-_hexagonButtonEnable(hexagon)</context>
         <line>12</line>
         <index>262</index>
-        <endIndex>286</endIndex>
+        <endIndex>287</endIndex>
         <startLine>12</startLine>
         <startColumn>9</startColumn>
         <endLine>12</endLine>
-        <endColumn>33</endColumn>
+        <endColumn>34</endColumn>
         <warning>False</warning>
       </violation>
     </violations>

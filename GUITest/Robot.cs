@@ -125,7 +125,7 @@ namespace GUITest
             Mouse.Click((WinTabPage)Robot.FindWinControl(typeof(WinTabPage), name, _root));
         }
 
-		/// <summary>
+        /// <summary>
         /// 使用OpenFileDialog選取檔案
         /// </summary>
         /// <param name="formName">OpenFileDialog Window的名稱</param>

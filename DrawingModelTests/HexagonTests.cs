@@ -100,7 +100,7 @@ namespace DrawingModel.Tests
             hexagon.X1 = 200;
             hexagon.Y1 = 200;
             hexagon.X2 = 200;
-            hexagon.Y2 = 100;
+            hexagon.Y2 = 200;
         }
     }
 }

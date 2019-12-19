@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UITest.Extension;
 using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
-
+using Windows.UI.Xaml.Controls;
 
 namespace GUITest
 {
@@ -56,6 +56,7 @@ namespace GUITest
         [TestMethod]
         public void DrawHouse()
         {
+            DrawingToolTest.DrawHexagon("canvas", 600, 200, 700, 250);
             DrawingToolTest.DrawLine("canvas", 475, 200, 350, 350);
             DrawingToolTest.DrawLine("canvas", 475, 200, 600, 350);
             DrawingToolTest.DrawRectangle("canvas", 350, 350, 600, 550);
@@ -66,7 +67,34 @@ namespace GUITest
             DrawingToolTest.DrawRectangle("canvas", 510, 390, 520, 435);
             DrawingToolTest.DrawRectangle("canvas", 530, 375, 540, 430);
             DrawingToolTest.DrawRectangle("canvas", 550, 395, 565, 460);
+            UITestControl canvas = Robot.FindPanel("canvas");
+            Mouse.Click(canvas, new Point(650, 225));
+            Robot.AssertText("_shapePositionTextLabel", "Hexagon(600,200,700,250)");
             DrawingToolTest.ClickClear();
+        }
+
+        [TestMethod]
+        public void UndoTest()
+        {
+            DrawingToolTest.DrawHexagon("canvas", 250, 250, 600, 600);
+            Robot.ClickButton("Undo");
+        }
+
+        [TestMethod]
+        public void RedoTest()
+        {
+            DrawingToolTest.DrawHexagon("canvas", 250, 250, 600, 600);
+            Robot.ClickButton("Undo");
+            Robot.ClickButton("Redo");
+        }
+
+        [TestMethod]
+        public void SelectShapeTest()
+        {
+            DrawingToolTest.DrawHexagon("canvas", 250, 250, 600, 600);
+            UITestControl canvas = Robot.FindPanel("canvas");
+            Mouse.Click(canvas, new Point(500, 500));
+            Robot.AssertText("_shapePositionTextLabel", "Hexagon(250,250,600,600)");
         }
 
         #region 其他測試屬性

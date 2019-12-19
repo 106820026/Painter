@@ -642,7 +642,7 @@
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>Painter.Designer.cs</File>
-              <Line>225</Line>
+              <Line>230</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -652,8 +652,8 @@
             </Smell>
             <Smell>
               <Id>30</Id>
-              <SmellType>Unsuitable naming(名不符實)-_hexagoButtonEnable(hexago)</SmellType>
-              <HashCode>UnsuitableNaming.PresentationModel._hexagoButtonEnable._hexagoButtonEnable</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-_hexagonButtonEnable(hexagon)</SmellType>
+              <HashCode>UnsuitableNaming.PresentationModel._hexagonButtonEnable._hexagonButtonEnable</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
@@ -940,13 +940,13 @@
             </Smell>
             <Smell>
               <Id>48</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 DrawFrameTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.HexagonTests.cs.Unresolved warnings(忽視警告)-函式 DrawFrameTest 缺乏註解.75</HashCode>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertButtonEnable 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertButtonEnable 缺乏註解.383</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>HexagonTests.cs</File>
-              <Line>75</Line>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>383</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -956,13 +956,13 @@
             </Smell>
             <Smell>
               <Id>49</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.HexagonTests.cs.Unresolved warnings(忽視警告)-函式 DrawTest 缺乏註解.67</HashCode>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertCheckBox 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertCheckBox 缺乏註解.327</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>HexagonTests.cs</File>
-              <Line>67</Line>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>327</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -972,13 +972,13 @@
             </Smell>
             <Smell>
               <Id>50</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 IsSelectTest 缺乏註解</SmellType>
-              <HashCode>DrawingModelTests\DrawingModelTests.HexagonTests.cs.Unresolved warnings(忽視警告)-函式 IsSelectTest 缺乏註解.83</HashCode>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertComboBox 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertComboBox 缺乏註解.344</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project>DrawingModelTests\DrawingModelTests</Project>
-              <File>HexagonTests.cs</File>
-              <Line>83</Line>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>344</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -988,6 +988,758 @@
             </Smell>
             <Smell>
               <Id>51</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertDataGridViewByIndex 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertDataGridViewByIndex 缺乏註解.363</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>363</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>52</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertDataItemsInDataGridView 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertDataItemsInDataGridView 缺乏註解.377</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>377</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>53</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertDateTimePicker 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertDateTimePicker 缺乏註解.337</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>337</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>54</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertEdit 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertEdit 缺乏註解.315</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>315</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>55</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertListViewByValue 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertListViewByValue 缺乏註解.350</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>350</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>56</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertNumericUpDown 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertNumericUpDown 缺乏註解.332</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>332</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>57</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertOtherFormButtonEnable 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertOtherFormButtonEnable 缺乏註解.199</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>199</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>58</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertOtherFormEdit 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertOtherFormEdit 缺乏註解.156</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>156</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>59</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertText 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertText 缺乏註解.321</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>321</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>60</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AssertWindow 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 AssertWindow 缺乏註解.389</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>389</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>61</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 CacheComponentFound 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 CacheComponentFound 缺乏註解.93</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>93</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>62</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 CacheFound 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 CacheFound 缺乏註解.87</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>87</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>63</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 CleanUp 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 CleanUp 缺乏註解.41</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>41</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>64</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickButton 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 ClickButton 缺乏註解.117</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>117</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>65</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickClear 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.DrawingToolTest.cs.Unresolved warnings(忽視警告)-函式 ClickClear 缺乏註解.38</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>DrawingToolTest.cs</File>
+              <Line>38</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>66</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickClearTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 ClickClearTest 缺乏註解.50</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>67</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickDateTimePicker 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 ClickDateTimePicker 缺乏註解.111</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>111</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>68</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickHyperlink 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 ClickHyperlink 缺乏註解.408</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>408</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>69</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickListViewByValue 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 ClickListViewByValue 缺乏註解.248</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>248</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>70</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickListViewToEmpty 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 ClickListViewToEmpty 缺乏註解.265</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>265</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>71</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickMenuItem 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 ClickMenuItem 缺乏註解.103</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>103</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>72</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickOtherFormButton 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 ClickOtherFormButton 缺乏註解.177</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>177</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>73</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickRadioButton 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 ClickRadioButton 缺乏註解.402</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>402</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>74</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickTabControl 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 ClickTabControl 缺乏註解.123</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>123</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>75</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 CloseWindow 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 CloseWindow 缺乏註解.187</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>187</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>76</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DeleteDataGridViewByIndex 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 DeleteDataGridViewByIndex 缺乏註解.224</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>224</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>77</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawHexagon 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.DrawingToolTest.cs.Unresolved warnings(忽視警告)-函式 DrawHexagon 缺乏註解.30</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>DrawingToolTest.cs</File>
+              <Line>30</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>78</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawHexagonTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 DrawHexagonTest 缺乏註解.44</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>79</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawHouse 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 DrawHouse 缺乏註解.56</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>56</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>80</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawLine 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.DrawingToolTest.cs.Unresolved warnings(忽視警告)-函式 DrawLine 缺乏註解.22</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>DrawingToolTest.cs</File>
+              <Line>22</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>81</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawLineTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 DrawLineTest 缺乏註解.38</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>38</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>82</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawRectangleTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 DrawRectangleTest 缺乏註解.31</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>31</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>83</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 FindPanel 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 FindPanel 缺乏註解.72</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>72</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>84</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 FindWinControl 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 FindWinControl 缺乏註解.57</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>57</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>85</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解.25</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>25</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>86</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解.25</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>25</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>87</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 RedoTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 RedoTest 缺乏註解.83</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>83</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>88</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SelectShapeTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 SelectShapeTest 缺乏註解.91</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>91</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>89</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SendKeyEnterToMessageBox 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 SendKeyEnterToMessageBox 缺乏註解.396</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>396</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>90</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SetCheckBox 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 SetCheckBox 缺乏註解.289</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>289</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>91</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SetComboBox 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 SetComboBox 缺乏註解.282</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>282</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>92</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SetDelayBetweenActions 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 SetDelayBetweenActions 缺乏註解.20</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>20</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>93</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SetEdit 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 SetEdit 缺乏註解.149</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>149</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>94</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SetForm 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 SetForm 缺乏註解.48</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>48</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>95</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SetNumericUpDown 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 SetNumericUpDown 缺乏註解.274</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>274</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>96</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SetOtherFormEdit 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.Robot.cs.Unresolved warnings(忽視警告)-函式 SetOtherFormEdit 缺乏註解.166</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>Robot.cs</File>
+              <Line>166</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>97</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 UndoTest 缺乏註解</SmellType>
+              <HashCode>GUITest\GUITest.CodedUITest1.cs.Unresolved warnings(忽視警告)-函式 UndoTest 缺乏註解.76</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>GUITest\GUITest</Project>
+              <File>CodedUITest1.cs</File>
+              <Line>76</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>98</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>129 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByType(System.Type)</HashCode>
               <Severity>Red</Severity>
@@ -1003,7 +1755,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>52</Id>
+              <Id>99</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>134 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByName(string)</HashCode>
               <Severity>Red</Severity>
@@ -1019,7 +1771,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>53</Id>
+              <Id>100</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>20 DrawingApp.Program.Main(string[])</HashCode>
               <Severity>Red</Severity>
@@ -1035,7 +1787,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>54</Id>
+              <Id>101</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>60 DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</HashCode>
               <Severity>Red</Severity>
@@ -1061,6 +1813,7 @@
             <string>UnsuitableNaming.Model.LEFT_PARENTHESES.LEFT_PARENTHESES</string>
             <string>IndentAndNewLine3.DrawAnglePoint.            ellipse.RenderTransform = new TranslateTransform() { X = x - (int)5m, Y = y - (int)5m };</string>
             <string>IndentAndNewLine1.DrawAnglePoint.            ellipse.RenderTransform = new TranslateTransform() { X = x - (int)5m, Y = y - (int)5m };</string>
+            <string>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawAndFillRectangle.y</string>
           </HashCodeRequestIgnoreList>
           <AnalysisFileManager>
             <AnalysisFiles>
@@ -1107,7 +1860,7 @@
               <AnalysisFile>
                 <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
                 <ProjectName>DrawingModel</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Test</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Rectangle.cs</RelativePath>
@@ -1276,8 +2029,8 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1618</ProductionLoc>
-          <TestLoc>1704</TestLoc>
+          <ProductionLoc>1587</ProductionLoc>
+          <TestLoc>1768</TestLoc>
         </CodeReview>
       </Data>
     </div>

@@ -121,10 +121,10 @@ namespace DrawingModel
         public void Draw(IGraphics graphics)
         {
             graphics.ClearAll();
-            if (_isPressed)
-                _shapeHint.Draw(graphics);
             foreach (Shape aShape in _shapes)
                 aShape.Draw(graphics);
+            if (_isPressed)
+                _shapeHint.Draw(graphics);
             if (IsSelected)
                 SelectedShape.DrawFrame(graphics);
         }
