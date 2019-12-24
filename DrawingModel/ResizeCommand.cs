@@ -1,28 +1,32 @@
 ﻿using System;
-//using System.Drawing;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DrawingModel
 {
-    public class DrawCommand : ICommand
+    public class ResizeCommand : ICommand
     {
         IShape _shape;
+        IShape _originalShape;
         Model _model;
-        public DrawCommand(Model model, IShape shape)
+
+        public ResizeCommand(Model model, IShape shape)
         {
             _shape = shape;
             _model = model;
         }
 
-        // 執行
         public void Execute()
         {
-            _model.DrawShape(_shape);
+            
         }
 
         // 取消執行
         public void CancelExecute()
         {
-            _model.DeleteShape();
+           
         }
     }
 }

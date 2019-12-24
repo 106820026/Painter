@@ -18,8 +18,8 @@ namespace DrawingModel
         double _lastPointX;
         double _lastPointY;
         bool _isPressed = false;
-        List<Shape> _shapes = new List<Shape>();
-        Shape _shapeHint;
+        List<IShape> _shapes = new List<IShape>();
+        IShape _shapeHint;
         const string USELESS_PART = "DrawingModel.";
         const string COMMA = ",";
         const string LEFT_PARENTHESES = "(";
@@ -35,7 +35,7 @@ namespace DrawingModel
             get; set;
         }
 
-        public Shape SelectedShape
+        public IShape SelectedShape
         {
             get; set;
         }
@@ -46,7 +46,7 @@ namespace DrawingModel
         }
 
         // 取得所有形狀
-        public List<Shape> GetTotalShapes
+        public List<IShape> GetTotalShapes
         {
             get
             {
@@ -121,7 +121,7 @@ namespace DrawingModel
         public void Draw(IGraphics graphics)
         {
             graphics.ClearAll();
-            foreach (Shape aShape in _shapes)
+            foreach (IShape aShape in _shapes)
                 aShape.Draw(graphics);
             if (_isPressed)
                 _shapeHint.Draw(graphics);
@@ -132,7 +132,7 @@ namespace DrawingModel
         // 存圖
         private void SaveDrawing()
         {
-            Shape shape = _shapeFactory.CreateShape(CurrentMode);
+            IShape shape = _shapeFactory.CreateShape(CurrentMode);
             shape.X1 = _firstPointX;
             shape.Y1 = _firstPointY;
             shape.X2 = _lastPointX;
@@ -142,7 +142,7 @@ namespace DrawingModel
         }
 
         // 畫在畫布上
-        public void DrawShape(Shape shape)
+        public void DrawShape(IShape shape)
         {
             _shapes.Add(shape);
         }
@@ -179,7 +179,7 @@ namespace DrawingModel
         }
 
         // 取得選取圖形的詳細資料
-        private String GetDetail(Shape shape)
+        private String GetDetail(IShape shape)
         {
             IsSelected = true;
             SelectedShape = shape;

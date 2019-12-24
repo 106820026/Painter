@@ -14,7 +14,7 @@ namespace DrawingModel
         const String WARNING = "Parameter index is out of range.";
 
         // 新增一個形狀
-        public Shape CreateShape(int shapeType)
+        public IShape CreateShape(int shapeType)
         {
             if (shapeType == RECTANGLE)
                 return new Rectangle();

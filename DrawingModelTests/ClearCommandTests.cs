@@ -12,14 +12,14 @@ namespace DrawingModel.Tests
     public class ClearCommandTests
     {
         Model model;
-        List<Shape> shape;
+        List<IShape> shape;
         ClearCommand clearCommand;
 
         [TestInitialize]
         public void Initialize()
         {
             model = new Model();
-            shape = new List<Shape>();
+            shape = new List<IShape>();
         }
 
         [TestMethod()]

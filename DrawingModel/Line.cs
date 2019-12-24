@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DrawingModel
 {
-    public class Line : Shape
+    public class Line : IShape
     {
         public double X1
         {
