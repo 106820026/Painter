@@ -17,7 +17,7 @@ namespace DrawingModel
         double _firstPointY;
         double _lastPointX;
         double _lastPointY;
-        bool _isPressed = false;
+        //bool _isPressed = false;
         List<IShape> _shapes = new List<IShape>();
         IShape _shapeHint;
         const string USELESS_PART = "DrawingModel.";
@@ -35,9 +35,19 @@ namespace DrawingModel
             get; set;
         }
 
+        public IState CurrentState
+        {
+            get;set;
+        }
+
         public IShape SelectedShape
         {
             get; set;
+        }
+
+        public bool IsPressed
+        {
+            get;set;
         }
 
         public bool IsSelected
@@ -58,20 +68,20 @@ namespace DrawingModel
         public void PressPointer(double x, double y)
         {
             if (CurrentMode == -1)
-                _isPressed = true;
+                IsPressed = true;
             if (x > 0 && y > 0 && CurrentMode != -1)
             {
                 _firstPointX = x;
                 _firstPointY = y;
                 this.DrawHint(_firstPointX, _firstPointY, _firstPointX, _firstPointY);
-                _isPressed = true;
+                IsPressed = true;
             }
         }
 
         // 滑鼠移動偵測
         public void MovePointer(double x, double y)
         {
-            if (_isPressed && CurrentMode != -1)
+            if (IsPressed && CurrentMode != -1)
             {
                 this.DrawHint(_firstPointX, _firstPointY, x, y);
                 NotifyModelChanged();
@@ -83,12 +93,12 @@ namespace DrawingModel
         {
             if (CurrentMode == -1)
             {
-                _isPressed = false;
+                IsPressed = false;
                 NotifyModelChanged();
             }
-            if (_isPressed && CurrentMode != -1)
+            if (IsPressed && CurrentMode != -1)
             {
-                _isPressed = false;
+                IsPressed = false;
                 _lastPointX = x;
                 _lastPointY = y;
                 if ( _lastPointX - _firstPointX != 0 || _lastPointY - _firstPointY != 0)
@@ -110,7 +120,7 @@ namespace DrawingModel
         // 清空畫布
         public void Clear()
         {
-            _isPressed = false;
+            IsPressed = false;
             IsSelected = false;
             if (_shapes.Count != 0)
                 _commandManager.Execute(new ClearCommand(this, _shapes));
@@ -123,9 +133,9 @@ namespace DrawingModel
             graphics.ClearAll();
             foreach (IShape aShape in _shapes)
                 aShape.Draw(graphics);
-            if (_isPressed)
+            if (IsPressed && CurrentMode != -1)
                 _shapeHint.Draw(graphics);
-            if (IsSelected)
+            if (IsSelected && CurrentMode == -1)
                 SelectedShape.DrawFrame(graphics);
         }
 

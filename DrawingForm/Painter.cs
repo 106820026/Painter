@@ -1,19 +1,15 @@
 ﻿using DrawingForm.PresentationModel;
+using DrawingModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DrawingForm
 {
     public partial class Form : System.Windows.Forms.Form
     {
-        DrawingModel.Model _model;
+        Model _model;
         PresentationModel.PresentationModel _presentationModel;
         Panel _canvas = new DoubleBufferedPanel();
         const String CANVAS = "canvas";
@@ -21,6 +17,7 @@ namespace DrawingForm
 
         public Form()
         {
+            #region initialization
             InitializeComponent();
             // prepare canvas
             _canvas.Dock = DockStyle.Fill;
@@ -38,11 +35,15 @@ namespace DrawingForm
             // prepare presentation model and model
             _model = new DrawingModel.Model();
             _presentationModel = new PresentationModel.PresentationModel(_model);
+            _model._modelChanged += HandleModelChanged;
+            // prepare buttons
             _shapeButtons = new List<Button>();
             _shapeButtons.Add(_rectangle);
             _shapeButtons.Add(_line);
             _shapeButtons.Add(_hexagon);
-            _model._modelChanged += HandleModelChanged;
+            // prepare state
+
+            #endregion
         }
 
         // 清除畫面
@@ -86,6 +87,8 @@ namespace DrawingForm
         // 釋放滑鼠
         public void HandleCanvasReleased(object sender, MouseEventArgs e)
         {
+            if (_model.CurrentMode == -1)
+                _shapePositionTextLabel.Text = _model.SelectShape(e.X, e.Y);
             _model.ReleasePointer(e.X, e.Y);
             SetAllButtonEnable();
             RefreshUserInterface();
@@ -113,8 +116,9 @@ namespace DrawingForm
         // 修改Button的Enabled 畫完全部按鈕要跳起來
         private void SetAllButtonEnable()
         {
-            foreach (Button button in _tableLayoutPanel.Controls)
-                button.Enabled = true;
+            if(_model.CurrentMode == -1)
+                foreach (Button button in _tableLayoutPanel.Controls)
+                    button.Enabled = true;
         }
 
         // 修改Button的Enabled 把按下的Disable掉
@@ -128,7 +132,7 @@ namespace DrawingForm
         // 選擇形狀
         private void SelectShape(object sender, EventArgs e)
         {
-            _shapePositionTextLabel.Text = _model.SelectShape(PointToClient(MousePosition).X, PointToClient(MousePosition).Y);
+            //_shapePositionTextLabel.Text = _model.SelectShape(PointToClient(MousePosition).X, PointToClient(MousePosition).Y);
         }
 
         // 回到上一步
