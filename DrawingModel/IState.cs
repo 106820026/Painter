@@ -8,6 +8,26 @@ namespace DrawingModel
 {
     public interface IState
     {
+        double FirstPointX
+        {
+            get; set;
+        }
+
+        double FirstPointY
+        {
+            get; set;
+        }
+
+        double LastPointX
+        {
+            get; set;
+        }
+
+        double LastPointY
+        {
+            get; set;
+        }
+
         // 按下滑鼠
         void PressPointer(double x, double y);
 

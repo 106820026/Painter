@@ -10,6 +10,26 @@ namespace DrawingModel
     {
         Model _model;
 
+        public double FirstPointX
+        {
+            get; set;
+        }
+
+        public double FirstPointY
+        {
+            get; set;
+        }
+
+        public double LastPointX
+        {
+            get; set;
+        }
+
+        public double LastPointY
+        {
+            get; set;
+        }
+
         public PointerState(Model model)
         {
             _model = model;
@@ -18,7 +38,8 @@ namespace DrawingModel
         // 按下滑鼠
         public void PressPointer(double x, double y)
         {
-            _model.IsPressed = true;
+            if (_model.CurrentMode == -1)
+                _model.IsPressed = true;
         }
 
         // 滑鼠移動偵測
@@ -30,7 +51,8 @@ namespace DrawingModel
         // 釋放滑鼠
         public void ReleasePointer(double x, double y)
         {
-            _model.IsPressed = false;
+            if (_model.CurrentMode == -1)
+                _model.IsPressed = false;
         }
     }
 }

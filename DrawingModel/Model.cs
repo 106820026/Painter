@@ -13,11 +13,10 @@ namespace DrawingModel
         public delegate void ModelChangedEventHandler();
         CommandManager _commandManager = new CommandManager();
         ShapeFactory _shapeFactory = new ShapeFactory();
-        double _firstPointX;
-        double _firstPointY;
-        double _lastPointX;
-        double _lastPointY;
-        //bool _isPressed = false;
+        //double _firstPointX;
+        //double _firstPointY;
+        //double _lastPointX;
+        //double _lastPointY;
         List<IShape> _shapes = new List<IShape>();
         IShape _shapeHint;
         const string USELESS_PART = "DrawingModel.";
@@ -67,44 +66,22 @@ namespace DrawingModel
         // 按下滑鼠
         public void PressPointer(double x, double y)
         {
-            if (CurrentMode == -1)
-                IsPressed = true;
-            if (x > 0 && y > 0 && CurrentMode != -1)
-            {
-                _firstPointX = x;
-                _firstPointY = y;
-                this.DrawHint(_firstPointX, _firstPointY, _firstPointX, _firstPointY);
-                IsPressed = true;
-            }
+            CurrentState.PressPointer(x, y);
+            NotifyModelChanged();
         }
 
         // 滑鼠移動偵測
         public void MovePointer(double x, double y)
         {
-            if (IsPressed && CurrentMode != -1)
-            {
-                this.DrawHint(_firstPointX, _firstPointY, x, y);
-                NotifyModelChanged();
-            }
+            CurrentState.MovePointer(x, y);
+            NotifyModelChanged();
         }
 
         // 釋放滑鼠
         public void ReleasePointer(double x, double y)
         {
-            if (CurrentMode == -1)
-            {
-                IsPressed = false;
-                NotifyModelChanged();
-            }
-            if (IsPressed && CurrentMode != -1)
-            {
-                IsPressed = false;
-                _lastPointX = x;
-                _lastPointY = y;
-                if ( _lastPointX - _firstPointX != 0 || _lastPointY - _firstPointY != 0)
-                    SaveDrawing();
-                NotifyModelChanged();
-            }
+            CurrentState.ReleasePointer(x, y);
+            NotifyModelChanged();
         }
 
         // 畫預覽圖
@@ -140,13 +117,13 @@ namespace DrawingModel
         }
 
         // 存圖
-        private void SaveDrawing()
+        public  void SaveDrawing()
         {
             IShape shape = _shapeFactory.CreateShape(CurrentMode);
-            shape.X1 = _firstPointX;
-            shape.Y1 = _firstPointY;
-            shape.X2 = _lastPointX;
-            shape.Y2 = _lastPointY;
+            shape.X1 = CurrentState.FirstPointX;
+            shape.Y1 = CurrentState.FirstPointY;
+            shape.X2 = CurrentState.LastPointX;
+            shape.Y2 = CurrentState.LastPointY;
             _commandManager.Execute(new DrawCommand(this, shape));
             CurrentMode = -1;
         }

@@ -16,17 +16,22 @@ namespace DrawingApp
         PresentationModel.PresentationModel _presentationModel;
         IGraphics _interfaceGraphics;
         List<Button> _shapeButtons;
+        DrawingState _drawingState;
+        PointerState _pointerState;
 
         public MainPage()
         {
+            #region initialization
             this.InitializeComponent();
-            _model = new DrawingModel.Model();
+            _model = new Model();
             _presentationModel = new PresentationModel.PresentationModel(_model);
             _interfaceGraphics = new WindowsStoreGraphicsAdaptor(_canvas);
+            // prepare buttons
             _shapeButtons = new List<Button>();
             _shapeButtons.Add(_rectangle);
             _shapeButtons.Add(_line);
             _shapeButtons.Add(_hexagon);
+            // prepare events
             _canvas.PointerPressed += HandleCanvasPressed;
             _canvas.PointerReleased += HandleCanvasReleased;
             _canvas.PointerMoved += HandleCanvasMoved;
@@ -38,6 +43,11 @@ namespace DrawingApp
             _redo.Click += RedoHandler;
             _model._modelChanged += HandleModelChanged;
             _model._modelChanged += RefreshUserInterface;
+            // prepare state
+            _drawingState = new DrawingState(_model);
+            _pointerState = new PointerState(_model);
+            _model.CurrentState = _pointerState;
+            #endregion
         }
 
         //protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -48,9 +58,10 @@ namespace DrawingApp
         private void HandleClearButtonClick(object sender, RoutedEventArgs e)
         {
             _model.Clear();
+            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
             _model.CurrentMode = -1;
             _model.IsSelected = false;
-            SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
+            _model.CurrentState = _pointerState;
             RefreshUserInterface();
         }
 
@@ -108,6 +119,7 @@ namespace DrawingApp
             if(_model.CurrentMode == -1)
                 foreach (Button button in _shapeButtons)
                     button.IsEnabled = true;
+            _model.CurrentState = _pointerState;
         }
 
         // 修改Button的Enabled 把按下的Disable掉
@@ -115,6 +127,7 @@ namespace DrawingApp
         {
             for (int i = 0; i < _shapeButtons.Count; i++)
                 _shapeButtons[i].IsEnabled = (_presentationModel.SetButtonDisable(buttonTag))[i];
+            _model.CurrentState = _drawingState;
             HandleModelChanged();
         }
 

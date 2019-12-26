@@ -9,10 +9,26 @@ namespace DrawingModel
     public class DrawingState : IState
     {
         Model _model;
-        double _firstPointX;
-        double _firstPointY;
-        double _lastPointX;
-        double _lastPointY;
+
+        public double FirstPointX
+        {
+            get;set;
+        }
+
+        public double FirstPointY
+        {
+            get; set;
+        }
+
+        public double LastPointX
+        {
+            get; set;
+        }
+
+        public double LastPointY
+        {
+            get; set;
+        }
 
         public DrawingState(Model model)
         {
@@ -22,22 +38,26 @@ namespace DrawingModel
         // 按下滑鼠
         public void PressPointer(double x, double y)
         {
+            FirstPointX = x;
+            FirstPointY = y;
+            _model.DrawHint(FirstPointX, FirstPointY, FirstPointX, FirstPointY);
             _model.IsPressed = true;
-            _firstPointX = x;
-            _firstPointY = y;
         }
 
         // 滑鼠移動偵測
         public void MovePointer(double x, double y)
         {
-            if (_model.IsPressed)
-                _model.DrawHint(_firstPointX, _firstPointY, x, y);
+            _model.DrawHint(FirstPointX, FirstPointY, x, y);
         }
 
         // 釋放滑鼠
         public void ReleasePointer(double x, double y)
         {
-
+            _model.IsPressed = false;
+            LastPointX = x;
+            LastPointY = y;
+            if (LastPointX - FirstPointX != 0 || LastPointY - FirstPointY != 0)
+                _model.SaveDrawing();
         }
     }
 }

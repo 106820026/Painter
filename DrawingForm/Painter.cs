@@ -14,6 +14,8 @@ namespace DrawingForm
         Panel _canvas = new DoubleBufferedPanel();
         const String CANVAS = "canvas";
         List<Button> _shapeButtons;
+        DrawingState _drawingState;
+        PointerState _pointerState;
 
         public Form()
         {
@@ -27,22 +29,23 @@ namespace DrawingForm
             _canvas.MouseMove += HandleCanvasMoved;
             _canvas.Paint += HandleCanvasPaint;
             _canvas.AccessibleName = CANVAS;
-            _canvas.Click += SelectShape;
             Controls.Add(_canvas);
             // prepare clear button
             _clear.AutoSize = true;
             _clear.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             // prepare presentation model and model
-            _model = new DrawingModel.Model();
+            _model = new Model();
             _presentationModel = new PresentationModel.PresentationModel(_model);
             _model._modelChanged += HandleModelChanged;
+            // prepare state
+            _drawingState = new DrawingState(_model);
+            _pointerState = new PointerState(_model);
+            _model.CurrentState = _pointerState;
             // prepare buttons
             _shapeButtons = new List<Button>();
             _shapeButtons.Add(_rectangle);
             _shapeButtons.Add(_line);
             _shapeButtons.Add(_hexagon);
-            // prepare state
-
             #endregion
         }
 
@@ -53,6 +56,7 @@ namespace DrawingForm
             SetButtonDisable(int.Parse(((Button)sender).Tag.ToString()));
             _model.CurrentMode = -1;
             _model.IsSelected = false;
+            _model.CurrentState = _pointerState;
             RefreshUserInterface();
         }
 
@@ -81,14 +85,12 @@ namespace DrawingForm
         public void HandleCanvasPressed(object sender, MouseEventArgs e)
         {
             _model.PressPointer(e.X, e.Y);
-            RefreshUserInterface();
         }
 
         // 釋放滑鼠
         public void HandleCanvasReleased(object sender, MouseEventArgs e)
         {
-            if (_model.CurrentMode == -1)
-                _shapePositionTextLabel.Text = _model.SelectShape(e.X, e.Y);
+            _shapePositionTextLabel.Text = _model.SelectShape(e.X, e.Y);
             _model.ReleasePointer(e.X, e.Y);
             SetAllButtonEnable();
             RefreshUserInterface();
@@ -98,7 +100,6 @@ namespace DrawingForm
         public void HandleCanvasMoved(object sender, MouseEventArgs e)
         {
             _model.MovePointer(e.X, e.Y);
-            RefreshUserInterface();
         }
 
         // 畫圖
@@ -119,6 +120,7 @@ namespace DrawingForm
             if(_model.CurrentMode == -1)
                 foreach (Button button in _tableLayoutPanel.Controls)
                     button.Enabled = true;
+            _model.CurrentState = _pointerState;
         }
 
         // 修改Button的Enabled 把按下的Disable掉
@@ -126,13 +128,8 @@ namespace DrawingForm
         {
             for (int i = 0; i < _shapeButtons.Count; i++)
                 _shapeButtons[i].Enabled = (_presentationModel.SetButtonDisable(buttonTag))[i];
+            _model.CurrentState = _drawingState;
             HandleModelChanged();
-        }
-
-        // 選擇形狀
-        private void SelectShape(object sender, EventArgs e)
-        {
-            //_shapePositionTextLabel.Text = _model.SelectShape(PointToClient(MousePosition).X, PointToClient(MousePosition).Y);
         }
 
         // 回到上一步
@@ -156,7 +153,6 @@ namespace DrawingForm
         {
             _redo.Enabled = _model.IsRedoEnabled;
             _undo.Enabled = _model.IsUndoEnabled;
-            Invalidate();
         }
     }
 }
