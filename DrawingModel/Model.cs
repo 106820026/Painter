@@ -117,7 +117,7 @@ namespace DrawingModel
             if (IsSelected && CurrentMode == -1) // resize & select shape
             {
                 _shapeHint.Draw(graphics);
-                _shapeHint.DrawFrame(graphics);
+                SelectedShape.DrawFrame(graphics);
             }
         }
 
@@ -142,7 +142,7 @@ namespace DrawingModel
         // 修改原本的形狀
         public void ResizeOriginalShape(IShape originalShape, int index)
         {
-            //Console.WriteLine(index);
+            RefractorCoordinate(originalShape);
             GetTotalShapes.RemoveAt(index);
             GetTotalShapes.Insert(index, originalShape);
         }
@@ -150,6 +150,7 @@ namespace DrawingModel
         // 復原原本的形狀
         public void RecoverOriginalShape(IShape resizedShape, int index)
         {
+            RefractorCoordinate(resizedShape);
             GetTotalShapes.RemoveAt(index);
             GetTotalShapes.Insert(index, resizedShape);
         }
@@ -157,6 +158,7 @@ namespace DrawingModel
         // 畫在畫布上
         public void DrawShape(IShape shape)
         {
+            RefractorCoordinate(shape);
             _shapes.Add(shape);
         }
 
@@ -212,6 +214,22 @@ namespace DrawingModel
             get
             {
                 return _commandManager.IsUndoEnabled;
+            }
+        }
+
+        // 調整座標位置
+        private void RefractorCoordinate(IShape shape)
+        {
+            double x1 = Math.Min(shape.X1, shape.X2);
+            double y1 = Math.Min(shape.Y1, shape.Y2);
+            double x2 = Math.Max(shape.X1, shape.X2);
+            double y2 = Math.Max(shape.Y1, shape.Y2);
+            if (CurrentMode != 1)
+            {
+                shape.X1 = x1;
+                shape.Y1 = y1;
+                shape.X2 = x2;
+                shape.Y2 = y2;
             }
         }
 
