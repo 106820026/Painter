@@ -13,10 +13,6 @@ namespace DrawingModel
         public delegate void ModelChangedEventHandler();
         CommandManager _commandManager = new CommandManager();
         ShapeFactory _shapeFactory = new ShapeFactory();
-        //double _firstPointX;
-        //double _firstPointY;
-        //double _lastPointX;
-        //double _lastPointY;
         List<IShape> _shapes = new List<IShape>();
         IShape _shapeHint;
         const string USELESS_PART = "DrawingModel.";
@@ -87,7 +83,13 @@ namespace DrawingModel
         // 畫預覽圖
         public void DrawHint(double x1, double y1, double x2, double y2)
         {
-            _shapeHint = _shapeFactory.CreateShape(CurrentMode);
+            if (CurrentMode == -1)
+            {
+                _shapeHint = _shapeFactory.CreateShape(SelectedShape);
+                SelectedShape = _shapeHint;
+            }
+            else
+                _shapeHint = _shapeFactory.CreateShape(CurrentMode);
             _shapeHint.X1 = x1;
             _shapeHint.Y1 = y1;
             _shapeHint.X2 = x2;
@@ -110,10 +112,13 @@ namespace DrawingModel
             graphics.ClearAll();
             foreach (IShape aShape in _shapes)
                 aShape.Draw(graphics);
-            if (IsPressed && CurrentMode != -1)
+            if (IsPressed && CurrentMode != -1) // default drawing
                 _shapeHint.Draw(graphics);
-            if (IsSelected && CurrentMode == -1)
-                SelectedShape.DrawFrame(graphics);
+            if (IsSelected && CurrentMode == -1) // resize & select shape
+            {
+                _shapeHint.Draw(graphics);
+                _shapeHint.DrawFrame(graphics);
+            }
         }
 
         // 存圖
@@ -126,6 +131,27 @@ namespace DrawingModel
             shape.Y2 = CurrentState.LastPointY;
             _commandManager.Execute(new DrawCommand(this, shape));
             CurrentMode = -1;
+        }
+
+        // 更改大小
+        public void ResizeShape(IShape originalShape, IShape resizedShape, int index)
+        {
+            _commandManager.Execute(new ResizeCommand(this, originalShape, resizedShape, index));
+        }
+
+        // 修改原本的形狀
+        public void ResizeOriginalShape(IShape originalShape, int index)
+        {
+            //Console.WriteLine(index);
+            GetTotalShapes.RemoveAt(index);
+            GetTotalShapes.Insert(index, originalShape);
+        }
+
+        // 復原原本的形狀
+        public void RecoverOriginalShape(IShape resizedShape, int index)
+        {
+            GetTotalShapes.RemoveAt(index);
+            GetTotalShapes.Insert(index, resizedShape);
         }
 
         // 畫在畫布上

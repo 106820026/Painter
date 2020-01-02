@@ -28,6 +28,19 @@ namespace DrawingModel
             get; set;
         }
 
+        public Rectangle()
+        {
+
+        }
+
+        public Rectangle(double x1, double y1, double x2, double y2)
+        {
+            X1 = x1;
+            Y1 = y1;
+            X2 = x2;
+            Y2 = y2;
+        }
+
         // 畫矩形
         public void Draw(IGraphics graphics)
         {
@@ -44,6 +57,15 @@ namespace DrawingModel
         public bool IsSelect(double x, double y)
         {
             return x > Math.Min(X1, X2) && x < Math.Max(X1, X2) && y > Math.Min(Y1, Y2) && y < Math.Max(Y1, Y2);
+        }
+
+        // 初始化圖形
+        public void InitialShape()
+        {
+            X1 = X1;
+            Y1 = Y1;
+            X2 = X1;
+            Y2 = Y1;
         }
     }
 }

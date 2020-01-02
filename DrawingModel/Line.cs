@@ -28,6 +28,19 @@ namespace DrawingModel
             get; set;
         }
 
+        public Line()
+        {
+
+        }
+
+        public Line(double x1, double y1, double x2, double y2)
+        {
+            X1 = x1;
+            Y1 = y1;
+            X2 = x2;
+            Y2 = y2;
+        }
+
         // 畫線
         public void Draw(IGraphics graphics)
         {
@@ -50,6 +63,15 @@ namespace DrawingModel
         private double GetDistanceFromPointToLine(double x, double y)
         {
             return Math.Abs((X2 - X1) * (Y1 - y) - (X1 - x) * (Y2 - Y1)) / Math.Sqrt(Math.Pow(X2 - X1, (int)2m) + Math.Pow(Y2 - Y1, (int)2m));
+        }
+
+        // 初始化圖形
+        public void InitialShape()
+        {
+            X1 = X1;
+            Y1 = Y1;
+            X2 = X1;
+            Y2 = Y1;
         }
     }
 }

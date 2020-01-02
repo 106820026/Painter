@@ -36,5 +36,8 @@ namespace DrawingModel
 
         // 被選取
         bool IsSelect(double x, double y);
+
+        // 初始化圖形
+        void InitialShape();
     }
 }

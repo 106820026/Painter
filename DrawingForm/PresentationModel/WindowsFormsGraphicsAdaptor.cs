@@ -89,11 +89,12 @@ namespace DrawingForm.PresentationModel
         // 畫線框
         public void DrawLineFrame(double x1, double y1, double x2, double y2)
         {
-            Pen pen = new Pen(Color.Red);
-            pen.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            _graphics.DrawLine(pen, (float)x1, (float)y1, (float)x2, (float)y2);
-            DrawAnglePoint(x1, y1);
-            DrawAnglePoint(x2, y2);
+            //Pen pen = new Pen(Color.Red);
+            //pen.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            //_graphics.DrawLine(pen, (float)x1, (float)y1, (float)x2, (float)y2);
+            //DrawAnglePoint(x1, y1);
+            //DrawAnglePoint(x2, y2);
+            DrawRectangleFrame(x1, y1, x2, y2);
         }
 
         // 畫六角形框
@@ -105,8 +106,8 @@ namespace DrawingForm.PresentationModel
         // 畫白點
         private void DrawAnglePoint(double x, double y)
         {
-            _graphics.FillEllipse(new SolidBrush(Color.White), (float)(x - 2.5d), (float)(y - 2.5d), (int)5m, (int)5m);
-            _graphics.DrawEllipse(new Pen(Color.Black), (float)(x - 2.5d), (float)(y - 2.5d), (int)5m, (int)5m);
+            _graphics.FillEllipse(new SolidBrush(Color.White), (float)(x - 5d), (float)(y - 5d), (int)10m, (int)10m);
+            _graphics.DrawEllipse(new Pen(Color.Black), (float)(x - 5d), (float)(y - 5d), (int)10m, (int)10m);
         }
     }
 }
