@@ -28,6 +28,11 @@ namespace DrawingModel
             get; set;
         }
 
+        public double Slope
+        {
+            get;set;
+        }
+
         public Line()
         {
 
@@ -45,12 +50,19 @@ namespace DrawingModel
         public void Draw(IGraphics graphics)
         {
             graphics.DrawLine(X1, Y1, X2, Y2);
+            if ((X2 - X1) != 0 && (Y2 - Y1) != 0)
+                Slope = (Y2 - Y1) / (X2 - X1);
+            else
+                Slope = 0;
         }
 
         // 畫線框
         public void DrawFrame(IGraphics graphics)
         {
-            graphics.DrawLineFrame(X1, Y1, X2, Y2);
+            if ((X1 - X2 == 0) || (Y1 - Y2 == 0))
+                graphics.DrawLineFrame(X1, Y1, X2, Y2);
+            else
+                graphics.DrawRectangleFrame(X1, Y1, X2, Y2);
         }
 
         // 被選取

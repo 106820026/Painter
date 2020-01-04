@@ -38,11 +38,15 @@
             this._clear = new System.Windows.Forms.Button();
             this._tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this._toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this._redo = new System.Windows.Forms.ToolStripButton();
             this._undo = new System.Windows.Forms.ToolStripButton();
+            this._redo = new System.Windows.Forms.ToolStripButton();
+            this._saveAndLoadTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this._load = new System.Windows.Forms.Button();
+            this._save = new System.Windows.Forms.Button();
             this._tableLayoutPanel1.SuspendLayout();
             this._tableLayoutPanel.SuspendLayout();
             this._toolStrip1.SuspendLayout();
+            this._saveAndLoadTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // _tableLayoutPanel1
@@ -50,14 +54,15 @@
             this._tableLayoutPanel1.ColumnCount = 2;
             this._tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this._tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this._tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this._tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this._tableLayoutPanel1.Controls.Add(this._selectTextLabel, 0, 0);
             this._tableLayoutPanel1.Controls.Add(this._shapePositionTextLabel, 1, 0);
-            this._tableLayoutPanel1.Location = new System.Drawing.Point(980, 705);
+            this._tableLayoutPanel1.Location = new System.Drawing.Point(1307, 881);
+            this._tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this._tableLayoutPanel1.Name = "_tableLayoutPanel1";
             this._tableLayoutPanel1.RowCount = 1;
             this._tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this._tableLayoutPanel1.Size = new System.Drawing.Size(370, 21);
+            this._tableLayoutPanel1.Size = new System.Drawing.Size(493, 26);
             this._tableLayoutPanel1.TabIndex = 1;
             // 
             // _selectTextLabel
@@ -65,9 +70,10 @@
             this._selectTextLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this._selectTextLabel.AutoSize = true;
             this._selectTextLabel.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._selectTextLabel.Location = new System.Drawing.Point(20, 2);
+            this._selectTextLabel.Location = new System.Drawing.Point(31, 3);
+            this._selectTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._selectTextLabel.Name = "_selectTextLabel";
-            this._selectTextLabel.Size = new System.Drawing.Size(51, 16);
+            this._selectTextLabel.Size = new System.Drawing.Size(61, 19);
             this._selectTextLabel.TabIndex = 0;
             this._selectTextLabel.Text = "Select : ";
             // 
@@ -77,9 +83,10 @@
             this._shapePositionTextLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this._shapePositionTextLabel.AutoSize = true;
             this._shapePositionTextLabel.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._shapePositionTextLabel.Location = new System.Drawing.Point(231, 2);
+            this._shapePositionTextLabel.Location = new System.Drawing.Point(308, 3);
+            this._shapePositionTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._shapePositionTextLabel.Name = "_shapePositionTextLabel";
-            this._shapePositionTextLabel.Size = new System.Drawing.Size(0, 16);
+            this._shapePositionTextLabel.Size = new System.Drawing.Size(0, 19);
             this._shapePositionTextLabel.TabIndex = 4;
             // 
             // _line
@@ -88,10 +95,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._line.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._line.Location = new System.Drawing.Point(449, 2);
-            this._line.Margin = new System.Windows.Forms.Padding(112, 2, 112, 2);
+            this._line.Location = new System.Drawing.Point(599, 2);
+            this._line.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
             this._line.Name = "_line";
-            this._line.Size = new System.Drawing.Size(113, 30);
+            this._line.Size = new System.Drawing.Size(152, 38);
             this._line.TabIndex = 1;
             this._line.Tag = "1";
             this._line.Text = "Line";
@@ -104,10 +111,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._hexagon.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._hexagon.Location = new System.Drawing.Point(786, 2);
-            this._hexagon.Margin = new System.Windows.Forms.Padding(112, 2, 112, 2);
+            this._hexagon.Location = new System.Drawing.Point(1049, 2);
+            this._hexagon.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
             this._hexagon.Name = "_hexagon";
-            this._hexagon.Size = new System.Drawing.Size(113, 30);
+            this._hexagon.Size = new System.Drawing.Size(152, 38);
             this._hexagon.TabIndex = 2;
             this._hexagon.Tag = "2";
             this._hexagon.Text = "Hexagon";
@@ -117,10 +124,10 @@
             // _rectangle
             // 
             this._rectangle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._rectangle.Location = new System.Drawing.Point(112, 2);
-            this._rectangle.Margin = new System.Windows.Forms.Padding(112, 2, 112, 2);
+            this._rectangle.Location = new System.Drawing.Point(149, 2);
+            this._rectangle.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
             this._rectangle.Name = "_rectangle";
-            this._rectangle.Size = new System.Drawing.Size(113, 30);
+            this._rectangle.Size = new System.Drawing.Size(151, 38);
             this._rectangle.TabIndex = 0;
             this._rectangle.Tag = "0";
             this._rectangle.Text = "Rectangle";
@@ -133,10 +140,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._clear.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._clear.Location = new System.Drawing.Point(1123, 2);
-            this._clear.Margin = new System.Windows.Forms.Padding(112, 2, 112, 2);
+            this._clear.Location = new System.Drawing.Point(1499, 2);
+            this._clear.Margin = new System.Windows.Forms.Padding(149, 2, 149, 2);
             this._clear.Name = "_clear";
-            this._clear.Size = new System.Drawing.Size(115, 30);
+            this._clear.Size = new System.Drawing.Size(152, 38);
             this._clear.TabIndex = 3;
             this._clear.Tag = "3";
             this._clear.Text = "Clear";
@@ -157,12 +164,12 @@
             this._tableLayoutPanel.Controls.Add(this._rectangle, 0, 0);
             this._tableLayoutPanel.Controls.Add(this._clear, 3, 0);
             this._tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this._tableLayoutPanel.Location = new System.Drawing.Point(0, 25);
+            this._tableLayoutPanel.Location = new System.Drawing.Point(0, 26);
             this._tableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this._tableLayoutPanel.Name = "_tableLayoutPanel";
             this._tableLayoutPanel.RowCount = 1;
             this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this._tableLayoutPanel.Size = new System.Drawing.Size(1350, 34);
+            this._tableLayoutPanel.Size = new System.Drawing.Size(1800, 42);
             this._tableLayoutPanel.TabIndex = 3;
             // 
             // _toolStrip1
@@ -173,21 +180,9 @@
             this._redo});
             this._toolStrip1.Location = new System.Drawing.Point(0, 0);
             this._toolStrip1.Name = "_toolStrip1";
-            this._toolStrip1.Size = new System.Drawing.Size(1350, 25);
+            this._toolStrip1.Size = new System.Drawing.Size(1800, 26);
             this._toolStrip1.TabIndex = 2;
             this._toolStrip1.Text = "toolStrip1";
-            // 
-            // _redo
-            // 
-            this._redo.AccessibleName = "Redo";
-            this._redo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this._redo.Enabled = false;
-            this._redo.Image = ((System.Drawing.Image)(resources.GetObject("_redo.Image")));
-            this._redo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._redo.Name = "_redo";
-            this._redo.Size = new System.Drawing.Size(42, 22);
-            this._redo.Text = "Redo";
-            this._redo.Click += new System.EventHandler(this.RedoHandler);
             // 
             // _undo
             // 
@@ -197,19 +192,67 @@
             this._undo.Image = ((System.Drawing.Image)(resources.GetObject("_undo.Image")));
             this._undo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._undo.Name = "_undo";
-            this._undo.Size = new System.Drawing.Size(43, 22);
+            this._undo.Size = new System.Drawing.Size(52, 23);
             this._undo.Text = "Undo";
             this._undo.Click += new System.EventHandler(this.UndoHandler);
             // 
+            // _redo
+            // 
+            this._redo.AccessibleName = "Redo";
+            this._redo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._redo.Enabled = false;
+            this._redo.Image = ((System.Drawing.Image)(resources.GetObject("_redo.Image")));
+            this._redo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._redo.Name = "_redo";
+            this._redo.Size = new System.Drawing.Size(50, 23);
+            this._redo.Text = "Redo";
+            this._redo.Click += new System.EventHandler(this.RedoHandler);
+            // 
+            // _saveAndLoadTableLayoutPanel
+            // 
+            this._saveAndLoadTableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._saveAndLoadTableLayoutPanel.ColumnCount = 2;
+            this._saveAndLoadTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this._saveAndLoadTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this._saveAndLoadTableLayoutPanel.Controls.Add(this._load, 1, 0);
+            this._saveAndLoadTableLayoutPanel.Controls.Add(this._save, 0, 0);
+            this._saveAndLoadTableLayoutPanel.Location = new System.Drawing.Point(0, 749);
+            this._saveAndLoadTableLayoutPanel.Name = "_saveAndLoadTableLayoutPanel";
+            this._saveAndLoadTableLayoutPanel.RowCount = 1;
+            this._saveAndLoadTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this._saveAndLoadTableLayoutPanel.Size = new System.Drawing.Size(317, 56);
+            this._saveAndLoadTableLayoutPanel.TabIndex = 4;
+            // 
+            // _load
+            // 
+            this._load.Location = new System.Drawing.Point(161, 3);
+            this._load.Name = "_load";
+            this._load.Size = new System.Drawing.Size(152, 50);
+            this._load.TabIndex = 1;
+            this._load.Text = "Load";
+            this._load.UseVisualStyleBackColor = true;
+            this._load.Click += new System.EventHandler(this.ClickLoad);
+            // 
+            // _save
+            // 
+            this._save.Location = new System.Drawing.Point(3, 3);
+            this._save.Name = "_save";
+            this._save.Size = new System.Drawing.Size(152, 50);
+            this._save.TabIndex = 0;
+            this._save.Text = "Save";
+            this._save.UseVisualStyleBackColor = true;
+            this._save.Click += new System.EventHandler(this.ClickSave);
+            // 
             // Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.ClientSize = new System.Drawing.Size(1800, 911);
+            this.Controls.Add(this._saveAndLoadTableLayoutPanel);
             this.Controls.Add(this._tableLayoutPanel);
             this.Controls.Add(this._toolStrip1);
             this.Controls.Add(this._tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form";
             this.Text = "Painter";
             this._tableLayoutPanel1.ResumeLayout(false);
@@ -217,6 +260,7 @@
             this._tableLayoutPanel.ResumeLayout(false);
             this._toolStrip1.ResumeLayout(false);
             this._toolStrip1.PerformLayout();
+            this._saveAndLoadTableLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,6 +278,9 @@
         private System.Windows.Forms.ToolStrip _toolStrip1;
         private System.Windows.Forms.ToolStripButton _undo;
         private System.Windows.Forms.ToolStripButton _redo;
+        private System.Windows.Forms.TableLayoutPanel _saveAndLoadTableLayoutPanel;
+        private System.Windows.Forms.Button _load;
+        private System.Windows.Forms.Button _save;
     }
 }
 

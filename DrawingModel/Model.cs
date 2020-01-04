@@ -16,6 +16,7 @@ namespace DrawingModel
         List<IShape> _shapes = new List<IShape>();
         IShape _shapeHint;
         const string USELESS_PART = "DrawingModel.";
+        const string LINE_TYPE = "DrawingModel.Line";
         const string COMMA = ",";
         const string LEFT_PARENTHESES = "(";
         const string RIGHT_PARENTHESES = ")";
@@ -198,7 +199,7 @@ namespace DrawingModel
         {
             IsSelected = true;
             SelectedShape = shape;
-            return shape.GetType().ToString().Replace(USELESS_PART, String.Empty) + LEFT_PARENTHESES + (int)Math.Min(shape.X1, shape.X2) + COMMA + (int)Math.Min(shape.Y1, shape.Y2) + COMMA + (int)Math.Max(shape.X1, shape.X2) + COMMA + (int)Math.Max(shape.Y1, shape.Y2) + RIGHT_PARENTHESES;
+            return shape.GetType().ToString().Replace(USELESS_PART, String.Empty) + LEFT_PARENTHESES + (int)shape.X1 + COMMA + (int)shape.Y1 + COMMA + (int)shape.X2 + COMMA + (int)shape.Y2 + RIGHT_PARENTHESES;
         }
 
         public bool IsRedoEnabled
@@ -224,7 +225,7 @@ namespace DrawingModel
             double y1 = Math.Min(shape.Y1, shape.Y2);
             double x2 = Math.Max(shape.X1, shape.X2);
             double y2 = Math.Max(shape.Y1, shape.Y2);
-            if (CurrentMode != 1)
+            if (CurrentMode != 1 && (IsSelected && SelectedShape.GetType().ToString() != LINE_TYPE)) // 線的不能改
             {
                 shape.X1 = x1;
                 shape.Y1 = y1;

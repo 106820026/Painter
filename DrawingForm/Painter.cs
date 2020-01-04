@@ -3,6 +3,8 @@ using DrawingModel;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace DrawingForm
@@ -153,6 +155,26 @@ namespace DrawingForm
         {
             _redo.Enabled = _model.IsRedoEnabled;
             _undo.Enabled = _model.IsUndoEnabled;
+        }
+
+        // 按下儲存按鈕
+        private void ClickSave(object sender, EventArgs e)
+        {
+            FileStream fileStream = new FileStream("AllShapes.dat", FileMode.Create);
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            binaryFormatter.Serialize(fileStream, _model.GetTotalShapes);
+            fileStream.Close();
+        }
+
+        // 按下瀏覽按鈕
+        private void ClickLoad(object sender, EventArgs e)
+        {
+            using (Stream stream = File.Open("AllShapes.dat", FileMode.Open))
+            {
+                var binaryFormatter = new BinaryFormatter();
+
+                List<IShape> items = (List<IShape>)binaryFormatter.Deserialize(stream);
+            }
         }
     }
 }

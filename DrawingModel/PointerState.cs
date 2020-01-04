@@ -14,6 +14,7 @@ namespace DrawingModel
         ShapeFactory _shapeFactory;
         IShape _originalShape;
         IShape _resizedShape;
+        const string LINE_TYPE = "DrawingModel.Line";
 
         public double FirstPointX
         {
