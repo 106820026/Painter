@@ -123,7 +123,7 @@ namespace DrawingModel
         }
 
         // 存圖
-        public  void SaveDrawing()
+        public void SaveDrawing()
         {
             IShape shape = _shapeFactory.CreateShape(CurrentMode);
             shape.X1 = CurrentState.FirstPointX;
@@ -143,7 +143,7 @@ namespace DrawingModel
         // 修改原本的形狀
         public void ResizeOriginalShape(IShape originalShape, int index)
         {
-            RefractorCoordinate(originalShape);
+            RefactorCoordinate(originalShape);
             GetTotalShapes.RemoveAt(index);
             GetTotalShapes.Insert(index, originalShape);
         }
@@ -151,7 +151,7 @@ namespace DrawingModel
         // 復原原本的形狀
         public void RecoverOriginalShape(IShape resizedShape, int index)
         {
-            RefractorCoordinate(resizedShape);
+            RefactorCoordinate(resizedShape);
             GetTotalShapes.RemoveAt(index);
             GetTotalShapes.Insert(index, resizedShape);
         }
@@ -159,7 +159,7 @@ namespace DrawingModel
         // 畫在畫布上
         public void DrawShape(IShape shape)
         {
-            RefractorCoordinate(shape);
+            RefactorCoordinate(shape);
             _shapes.Add(shape);
         }
 
@@ -219,19 +219,38 @@ namespace DrawingModel
         }
 
         // 調整座標位置
-        private void RefractorCoordinate(IShape shape)
+        private void RefactorCoordinate(IShape shape)
         {
             double x1 = Math.Min(shape.X1, shape.X2);
             double y1 = Math.Min(shape.Y1, shape.Y2);
             double x2 = Math.Max(shape.X1, shape.X2);
             double y2 = Math.Max(shape.Y1, shape.Y2);
-            if (CurrentMode != 1 && (IsSelected && SelectedShape.GetType().ToString() != LINE_TYPE)) // 線的不能改
+            if (CurrentMode != 1 || (IsSelected && SelectedShape.GetType().ToString() != LINE_TYPE)) // 線的不能改
             {
                 shape.X1 = x1;
                 shape.Y1 = y1;
                 shape.X2 = x2;
                 shape.Y2 = y2;
             }
+        }
+
+        // 取得選取的形狀的索引
+        public int GetSelectedShapeIndex()
+        {
+            return GetTotalShapes.FindIndex(selectShape => selectShape == SelectedShape);
+        }
+
+        // 從所有形狀中移除選取的
+        public void RemoveSelectedShapeFromTotalShapes()
+        {
+            GetTotalShapes.RemoveAt(GetSelectedShapeIndex());
+        }
+
+        // 從所有形狀中插入選取的
+        public void InsertSelectedShapeFromTotalShapes(int index)
+        {
+            GetTotalShapes.Insert(index, SelectedShape);
+
         }
 
         // 偵測所有動作

@@ -68,16 +68,28 @@ namespace DrawingModel.Tests
         [TestMethod()]
         public void DrawTest()
         {
-            Line line = new Line();
+            Line line = new Line(1, 2, 3, 4);
             line.Draw(new DrawingModelLineTest.FakeAdaptor.FakeAdaptor());
+            Line line2 = new Line(0, 0, 0, 1);
+            line2.Draw(new DrawingModelLineTest.FakeAdaptor.FakeAdaptor());
+            Line line3 = new Line(0, 1, 1, 1);
+            line3.Draw(new DrawingModelLineTest.FakeAdaptor.FakeAdaptor());
+            Line line4 = new Line(1, 1, 1, 1);
+            line4.Draw(new DrawingModelLineTest.FakeAdaptor.FakeAdaptor());
             Assert.IsNotNull(line);
         }
 
         [TestMethod()]
         public void DrawFrameTest()
         {
-            Line line = new Line();
+            Line line = new Line(1, 2, 3, 4);
             line.DrawFrame(new DrawingModelLineTest.FakeAdaptor.FakeAdaptor());
+            Line line2 = new Line(0, 0, 0, 1);
+            line2.DrawFrame(new DrawingModelLineTest.FakeAdaptor.FakeAdaptor());
+            Line line3 = new Line(0, 1, 1, 1);
+            line3.DrawFrame(new DrawingModelLineTest.FakeAdaptor.FakeAdaptor());
+            Line line4 = new Line(1, 1, 1, 1);
+            line4.DrawFrame(new DrawingModelLineTest.FakeAdaptor.FakeAdaptor());
             Assert.IsNotNull(line);
         }
 
@@ -92,6 +104,14 @@ namespace DrawingModel.Tests
             line.Y2 = 200;
             Assert.IsTrue(line.IsSelect(150, 150));
             Assert.IsFalse(line.IsSelect(250, 150));
+        }
+
+        [TestMethod()]
+        public void InitialShapeTest()
+        {
+            Line line = new Line(1, 2, 3, 4);
+            line.InitialShape();
+            Assert.AreEqual(line.X1, line.X2);
         }
     }
 }

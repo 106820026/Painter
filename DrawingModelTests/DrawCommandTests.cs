@@ -33,6 +33,7 @@ namespace DrawingModel.Tests
         public void ExecuteTest()
         {
             model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
             model.PressPointer(90, 150);
             model.ReleasePointer(190, 250);
             drawCommand = new DrawCommand(model, model.GetTotalShapes[0]);
@@ -45,6 +46,7 @@ namespace DrawingModel.Tests
         public void CancelExecuteTest()
         {
             model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
             model.PressPointer(90, 150);
             model.ReleasePointer(190, 250);
             drawCommand = new DrawCommand(model, model.GetTotalShapes[0]);

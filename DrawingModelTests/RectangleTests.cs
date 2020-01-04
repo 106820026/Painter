@@ -94,5 +94,13 @@ namespace DrawingModel.Tests
             Assert.IsTrue(rectangle.IsSelect(150, 150));
             Assert.IsFalse(rectangle.IsSelect(400, 550));
         }
+
+        [TestMethod()]
+        public void RectangleTest()
+        {
+            Rectangle rectangle = new Rectangle(0, 0, 1, 1);
+            rectangle.InitialShape();
+            Assert.AreEqual(rectangle.X1, rectangle.X2);
+        }
     }
 }

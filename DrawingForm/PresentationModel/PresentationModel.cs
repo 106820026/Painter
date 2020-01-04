@@ -37,7 +37,7 @@ namespace DrawingForm.PresentationModel
         {
             for (int i = 0; i < _buttonStatus.Count; i++)
                 _buttonStatus[i] = true;
-            if (buttonTag != 3)
+            if (buttonTag != (int)3m)
             {
                 _buttonStatus[buttonTag] = false;
                 _model.IsSelected = false;

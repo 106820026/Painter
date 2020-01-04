@@ -93,7 +93,7 @@
     <timestamps>
       <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/20 01:40:03.834</sourceFile>
+      <sourceFile>2020/01/04 17:03:02.863</sourceFile>
       <parser>2019/12/05 18:55:05.506</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -101,12 +101,12 @@
     <violations>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-HandleHexagonButtonClick(hexagon)</context>
-        <line>73</line>
-        <index>2517</index>
-        <endIndex>2721</endIndex>
-        <startLine>73</startLine>
+        <line>81</line>
+        <index>2878</index>
+        <endIndex>3082</endIndex>
+        <startLine>81</startLine>
         <startColumn>9</startColumn>
-        <endLine>77</endLine>
+        <endLine>85</endLine>
         <endColumn>9</endColumn>
         <warning>False</warning>
       </violation>
@@ -116,7 +116,7 @@
     <timestamps>
       <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/20 01:40:03.741</sourceFile>
+      <sourceFile>2020/01/04 00:03:41.654</sourceFile>
       <parser>2019/12/05 18:55:05.506</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -124,12 +124,12 @@
     <violations>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-_hexagon(hexagon)</context>
-        <line>230</line>
-        <index>13170</index>
-        <endIndex>13214</endIndex>
-        <startLine>230</startLine>
+        <line>274</line>
+        <index>16043</index>
+        <endIndex>16087</endIndex>
+        <startLine>274</startLine>
         <startColumn>9</startColumn>
-        <endLine>230</endLine>
+        <endLine>274</endLine>
         <endColumn>53</endColumn>
         <warning>False</warning>
       </violation>
@@ -139,7 +139,7 @@
     <timestamps>
       <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/19 01:20:29.329</sourceFile>
+      <sourceFile>2020/01/04 17:03:21.208</sourceFile>
       <parser>2019/12/05 18:55:05.506</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -162,7 +162,7 @@
     <timestamps>
       <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2019/12/17 16:26:32.474</sourceFile>
+      <sourceFile>2020/01/03 10:57:36.384</sourceFile>
       <parser>2019/12/05 18:55:05.506</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>

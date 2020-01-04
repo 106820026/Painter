@@ -89,6 +89,7 @@ namespace DrawingModel.Tests
             Assert.IsFalse(commandManager.IsRedoEnabled);
             Assert.ThrowsException<System.Exception>(() => model.Undo());
             model.CurrentMode = 1;
+            model.CurrentState = new DrawingState(model);
             model.PressPointer(90, 150);
             model.ReleasePointer(180, 300);
             model.Draw(new FakeAdaptor());
@@ -102,6 +103,7 @@ namespace DrawingModel.Tests
             Assert.IsFalse(commandManager.IsUndoEnabled);
             Assert.ThrowsException<System.Exception>(() => model.Redo());
             model.CurrentMode = 1;
+            model.CurrentState = new DrawingState(model);
             model.PressPointer(90, 150);
             model.ReleasePointer(180, 300);
             model.Draw(new FakeAdaptor());

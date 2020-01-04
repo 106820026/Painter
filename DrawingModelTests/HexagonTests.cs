@@ -102,5 +102,20 @@ namespace DrawingModel.Tests
             hexagon.X2 = 200;
             hexagon.Y2 = 200;
         }
+
+        [TestMethod()]
+        public void HexagonTest()
+        {
+            Hexagon hexagon = new Hexagon(0, 0, 1, 1);
+            Assert.IsNotNull(hexagon);
+        }
+
+        [TestMethod()]
+        public void InitialShapeTest()
+        {
+            Hexagon hexagon = new Hexagon(0, 0, 1, 1);
+            hexagon.InitialShape();
+            Assert.AreEqual(hexagon.X1, hexagon.X2);
+        }
     }
 }

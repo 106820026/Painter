@@ -116,7 +116,7 @@ namespace DrawingApp
         // 修改Button的Enabled 畫完全部按鈕要跳起來
         private void SetAllButtonEnable()
         {
-            if(_model.CurrentMode == -1)
+            if (_model.CurrentMode == -1)
                 foreach (Button button in _shapeButtons)
                     button.IsEnabled = true;
             _model.CurrentState = _pointerState;

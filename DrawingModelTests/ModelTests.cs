@@ -79,43 +79,20 @@ namespace DrawingModel.Tests
         }
 
         [TestMethod()]
-        public void PressPointerTest()
+        public void DrawingTest()
         {
-            model.CurrentMode = -1;
-            model.PressPointer(90, 150);
             model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
             model.PressPointer(0, 0);
-            model.PressPointer(90, 150);
-            Assert.AreEqual(model.CurrentMode, 0);
-        }
-
-        [TestMethod()]
-        public void MovePointerTest()
-        {
-            model.CurrentMode = -1;
-            model.MovePointer(180, 300);
-            model.CurrentMode = 0;
-            model.PressPointer(90, 150);
-            model.MovePointer(180, 300);
+            model.MovePointer(90, 150);
             model.Draw(new FakeAdaptor());
-            Assert.AreEqual(model.CurrentMode, 0);
-        }
-
-        [TestMethod()]
-        public void ReleasePointerTest()
-        {
-            model.CurrentMode = -1;
-            model.PressPointer(90, 150);
-            model.ReleasePointer(180, 300);
-
-            model.CurrentMode = 0;
-            model.PressPointer(90, 150);
             model.ReleasePointer(90, 150);
-            Assert.AreEqual(model.CurrentMode, 0);
-
-            model.CurrentMode = 1;
-            model.PressPointer(90, 150);
-            model.ReleasePointer(180, 300);
+            model.Draw(new FakeAdaptor());
+            model.CurrentMode = -1;
+            model.IsSelected = true;
+            model.SelectedShape = model.GetTotalShapes[0];
+            model.CurrentState = new PointerState(model);
+            model.Draw(new FakeAdaptor());
             Assert.AreEqual(model.CurrentMode, -1);
         }
 
@@ -123,7 +100,24 @@ namespace DrawingModel.Tests
         public void DrawHintTest()
         {
             model.CurrentMode = 1;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(0, 0);
+            model.MovePointer(90, 150);
+            model.ReleasePointer(90, 150);
+            model.CurrentMode = 1;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(0, 0);
+            model.MovePointer(0, 0);
+            model.ReleasePointer(0, 0);
+            model.CurrentMode = -1;
+            model.CurrentState = new PointerState(model);
+            model.SelectedShape = model.GetTotalShapes[0];
             model.DrawHint(90, 90, 190, 190);
+            model.Draw(new FakeAdaptor());
+            model.CurrentMode = 1;
+            model.CurrentState = new DrawingState(model);
+            model.DrawHint(90, 90, 190, 190);
+            model.Draw(new FakeAdaptor());
             Assert.AreEqual(model.CurrentMode, 1);
         }
 
@@ -136,21 +130,21 @@ namespace DrawingModel.Tests
             model.Clear();
         }
 
-        [TestMethod()]
-        public void DrawTest()
-        {
-            model.CurrentMode = 0;
-            model.PressPointer(90, 150);
-            model.ReleasePointer(180, 300);
-            Assert.AreEqual(model.CurrentMode, -1);
-            model.CurrentMode = 1;
-            model.PressPointer(90, 150);
-            model.ReleasePointer(180, 300);
-            Assert.AreEqual(model.CurrentMode, -1);
-            model.SelectShape(150, 200);
-            model.Draw(new FakeAdaptor());
+        //[TestMethod()]
+        //public void DrawTest()
+        //{
+        //    model.CurrentMode = 0;
+        //    model.PressPointer(90, 150);
+        //    model.ReleasePointer(180, 300);
+        //    Assert.AreEqual(model.CurrentMode, -1);
+        //    model.CurrentMode = 1;
+        //    model.PressPointer(90, 150);
+        //    model.ReleasePointer(180, 300);
+        //    Assert.AreEqual(model.CurrentMode, -1);
+        //    model.SelectShape(150, 200);
+        //    model.Draw(new FakeAdaptor());
 
-        }
+        //}
 
         [TestMethod()]
         public void DrawShapeTest()
@@ -172,6 +166,7 @@ namespace DrawingModel.Tests
         {
             Assert.IsFalse(model.IsUndoEnabled);
             model.CurrentMode = 1;
+            model.CurrentState = new DrawingState(model);
             model.PressPointer(90, 150);
             model.ReleasePointer(180, 300);
             model.Undo();
@@ -183,6 +178,7 @@ namespace DrawingModel.Tests
         {
             Assert.IsFalse(model.IsRedoEnabled);
             model.CurrentMode = 1;
+            model.CurrentState = new DrawingState(model);
             model.PressPointer(90, 150);
             model.ReleasePointer(180, 300);
             model.Undo();
@@ -194,13 +190,104 @@ namespace DrawingModel.Tests
         public void SelectShapeTest()
         {
             model.CurrentMode = 1;
-            model.SelectShape(100,100);
+            model.SelectShape(100, 100);
             Assert.AreEqual(1, model.CurrentMode);
         }
 
         public void EventHandler()
         {
             Assert.IsTrue(true);
+        }
+
+        [TestMethod()]
+        public void GetSelectedShapeIndexTest()
+        {
+            model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(0, 0);
+            model.MovePointer(90, 150);
+            model.ReleasePointer(90, 150);
+            model.SelectedShape = model.GetTotalShapes[0];
+            Assert.AreEqual(model.GetSelectedShapeIndex(), 0);
+        }
+
+        [TestMethod()]
+        public void RemoveSelectedShapeFromTotalShapesTest()
+        {
+            model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(0, 0);
+            model.MovePointer(90, 150);
+            model.ReleasePointer(90, 150);
+            model.SelectedShape = model.GetTotalShapes[0];
+            model.RemoveSelectedShapeFromTotalShapes();
+            Assert.AreEqual(model.GetTotalShapes.Count, 0);
+        }
+
+        [TestMethod()]
+        public void InsertSelectedShapeFromTotalShapesTest()
+        {
+            model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(0, 0);
+            model.MovePointer(90, 150);
+            model.ReleasePointer(90, 150);
+            model.SelectedShape = model.GetTotalShapes[0];
+            model.InsertSelectedShapeFromTotalShapes(0);
+            Assert.AreEqual(model.GetTotalShapes.Count, 2);
+        }
+
+        [TestMethod()]
+        public void ResizeOriginalShapeTest()
+        {
+            model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(0, 0);
+            model.MovePointer(90, 150);
+            model.ReleasePointer(90, 150);
+            model.ResizeOriginalShape(new Rectangle(0, 0, 200, 200), 0);
+            Assert.AreEqual(model.GetTotalShapes.Count, 1);
+        }
+
+        [TestMethod()]
+        public void RecoverOriginalShapeTest()
+        {
+            model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(0, 0);
+            model.MovePointer(90, 150);
+            model.ReleasePointer(90, 150);
+            model.RecoverOriginalShape(new Rectangle(0, 0, 200, 200), 0);
+            Assert.AreEqual(model.GetTotalShapes.Count, 1);
+        }
+
+        [TestMethod()]
+        public void ResizeShapeTest()
+        {
+            model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(0, 0);
+            model.MovePointer(90, 150);
+            model.ReleasePointer(90, 150);
+            model.ResizeShape(new Rectangle(0, 0, 200, 200), new Rectangle(0, 0, 100, 100), 0);
+            Assert.AreEqual(model.GetTotalShapes.Count, 1);
+        }
+
+        [TestMethod()]
+        public void SelectShapeTest1()
+        {
+            model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(550, 550);
+            model.MovePointer(660, 660);
+            model.ReleasePointer(660, 660);
+            model.CurrentMode = 0;
+            model.CurrentState = new DrawingState(model);
+            model.PressPointer(0, 0);
+            model.MovePointer(90, 150);
+            model.ReleasePointer(90, 150);
+            model.SelectShape(60, 60);
+            Assert.AreEqual(model.SelectShape(60, 60), "Rectangle(0,0,90,150)");
         }
     }
 }

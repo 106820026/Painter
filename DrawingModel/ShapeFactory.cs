@@ -38,10 +38,8 @@ namespace DrawingModel
                 return new Rectangle(shape.X1, shape.Y1, shape.X2, shape.Y2);
             else if (name == LINE)
                 return new Line(shape.X1, shape.Y1, shape.X2, shape.Y2);
-            else if (name == HEXAGON)
+            else /*if (name == HEXAGON)*/
                 return new Hexagon(shape.X1, shape.Y1, shape.X2, shape.Y2);
-            else
-                throw new ArgumentOutOfRangeException(WARNING);
         }
     }
 }

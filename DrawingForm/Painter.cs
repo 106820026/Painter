@@ -15,6 +15,7 @@ namespace DrawingForm
         PresentationModel.PresentationModel _presentationModel;
         Panel _canvas = new DoubleBufferedPanel();
         const String CANVAS = "canvas";
+        const String FILE_NAME = "AllShapes.dat";
         List<Button> _shapeButtons;
         DrawingState _drawingState;
         PointerState _pointerState;
@@ -119,7 +120,7 @@ namespace DrawingForm
         // 修改Button的Enabled 畫完全部按鈕要跳起來
         private void SetAllButtonEnable()
         {
-            if(_model.CurrentMode == -1)
+            if (_model.CurrentMode == -1)
                 foreach (Button button in _tableLayoutPanel.Controls)
                     button.Enabled = true;
             _model.CurrentState = _pointerState;
@@ -160,7 +161,7 @@ namespace DrawingForm
         // 按下儲存按鈕
         private void ClickSave(object sender, EventArgs e)
         {
-            FileStream fileStream = new FileStream("AllShapes.dat", FileMode.Create);
+            FileStream fileStream = new FileStream(FILE_NAME, FileMode.Create);
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             binaryFormatter.Serialize(fileStream, _model.GetTotalShapes);
             fileStream.Close();
@@ -169,10 +170,9 @@ namespace DrawingForm
         // 按下瀏覽按鈕
         private void ClickLoad(object sender, EventArgs e)
         {
-            using (Stream stream = File.Open("AllShapes.dat", FileMode.Open))
+            using (Stream stream = File.Open(FILE_NAME, FileMode.Open))
             {
                 var binaryFormatter = new BinaryFormatter();
-
                 List<IShape> items = (List<IShape>)binaryFormatter.Deserialize(stream);
             }
         }
