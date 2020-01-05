@@ -93,21 +93,54 @@
     <timestamps>
       <styleCop>2019/12/05 18:55:05.506</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2020/01/04 17:03:02.863</sourceFile>
+      <sourceFile>2020/01/05 17:46:45.255</sourceFile>
       <parser>2019/12/05 18:55:05.506</parser>
       <KellyPalRules.KellyPalAnalyzer>2019/12/05 18:55:05.506</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine17" ruleCheckId="SN0017">
+        <context>ICS(空白與空行-17)</context>
+        <line>25</line>
+        <index>819</index>
+        <endIndex>820</endIndex>
+        <startLine>25</startLine>
+        <startColumn>1</startColumn>
+        <endLine>25</endLine>
+        <endColumn>2</endColumn>
+        <warning>False</warning>
+      </violation>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-HandleHexagonButtonClick(hexagon)</context>
-        <line>81</line>
-        <index>2878</index>
-        <endIndex>3082</endIndex>
-        <startLine>81</startLine>
+        <line>97</line>
+        <index>3712</index>
+        <endIndex>3916</endIndex>
+        <startLine>97</startLine>
         <startColumn>9</startColumn>
-        <endLine>85</endLine>
+        <endLine>101</endLine>
         <endColumn>9</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-9</context>
+        <line>192</line>
+        <index>6889</index>
+        <endIndex>6889</endIndex>
+        <startLine>192</startLine>
+        <startColumn>74</startColumn>
+        <endLine>192</endLine>
+        <endColumn>74</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-"./"</context>
+        <line>193</line>
+        <index>6942</index>
+        <endIndex>6945</endIndex>
+        <startLine>193</startLine>
+        <startColumn>49</startColumn>
+        <endLine>193</endLine>
+        <endColumn>52</endColumn>
         <warning>False</warning>
       </violation>
     </violations>

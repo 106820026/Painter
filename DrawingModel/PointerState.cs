@@ -48,11 +48,9 @@ namespace DrawingModel
             _model.IsPressed = true;
             _resizing = WantToResize(x, y);
             _index = _model.GetSelectedShapeIndex();
-            //_index = _model.GetTotalShapes.FindIndex(selectShape => selectShape == _model.SelectedShape);
             if (_resizing)
             {
                 _model.RemoveSelectedShapeFromTotalShapes();
-                //_model.GetTotalShapes.RemoveAt(_index);
                 _originalShape = _shapeFactory.CreateShape(_model.SelectedShape);
             }
         }
@@ -67,13 +65,11 @@ namespace DrawingModel
         // 釋放滑鼠
         public void ReleasePointer(double x, double y)
         {
-            Console.WriteLine(_index);
             _model.IsPressed = false;
             if (_resizing)
             {
                 _resizedShape = _shapeFactory.CreateShape(_model.SelectedShape);
                 _model.InsertSelectedShapeFromTotalShapes(_index);
-                //_model.GetTotalShapes.Insert(_index, _model.SelectedShape);
                 _model.ResizeShape(_originalShape, _resizedShape, _index);
                 _resizing = false;
             }

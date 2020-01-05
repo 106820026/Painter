@@ -19,6 +19,13 @@ namespace DrawingForm
         List<Button> _shapeButtons;
         DrawingState _drawingState;
         PointerState _pointerState;
+        GoogleDriveService _service;
+        OpenFileDialog _uploadFileOpenFileDialog;
+        FolderBrowserDialog _downloadFolderBrowserDialog;
+
+
+        //[Serializable]
+        //public class IShape();
 
         public Form()
         {
@@ -49,6 +56,15 @@ namespace DrawingForm
             _shapeButtons.Add(_rectangle);
             _shapeButtons.Add(_line);
             _shapeButtons.Add(_hexagon);
+            // google drive
+            const String APPLICATION_NAME = "DrawPicture";
+            const String CLIENT_SECRET_FILE_NAME = "clientSecret.json";
+            _uploadFileOpenFileDialog = new OpenFileDialog();
+            _downloadFolderBrowserDialog = new FolderBrowserDialog();
+            _uploadFileOpenFileDialog.FileName = "";
+            _uploadFileOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            _downloadFolderBrowserDialog.SelectedPath = Directory.GetCurrentDirectory();
+            _service = new GoogleDriveService(APPLICATION_NAME, CLIENT_SECRET_FILE_NAME);
             #endregion
         }
 
@@ -161,19 +177,38 @@ namespace DrawingForm
         // 按下儲存按鈕
         private void ClickSave(object sender, EventArgs e)
         {
-            FileStream fileStream = new FileStream(FILE_NAME, FileMode.Create);
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            binaryFormatter.Serialize(fileStream, _model.GetTotalShapes);
-            fileStream.Close();
+            const String UPLOAD_QUESTION = "要上傳嗎";
+            const String QUSETION = "Question";
+            DialogResult dialogResult = MessageBox.Show(UPLOAD_QUESTION, QUSETION, MessageBoxButtons.YesNo);
+            if(dialogResult == DialogResult.Yes)
+            {
+                FileStream fileStream = new FileStream(FILE_NAME, FileMode.Create);
+                BinaryFormatter binaryFormatter = new BinaryFormatter();
+                binaryFormatter.Serialize(fileStream, _model.GetTotalShapes);
+                fileStream.Close();
+                const String CONTENT_TYPE = "application/octet-stream";
+                _service.UploadFile(FILE_NAME, CONTENT_TYPE);
+            }
         }
 
         // 按下瀏覽按鈕
         private void ClickLoad(object sender, EventArgs e)
         {
-            using (Stream stream = File.Open(FILE_NAME, FileMode.Open))
+            const String DOWNLOAD_QUESTION = "要下載嗎";
+            const String QUSETION = "Question";
+            DialogResult dialogResult = MessageBox.Show(DOWNLOAD_QUESTION, QUSETION, MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                var binaryFormatter = new BinaryFormatter();
-                List<IShape> items = (List<IShape>)binaryFormatter.Deserialize(stream);
+                const String PATH = "./";
+                List<Google.Apis.Drive.v2.Data.File> rootFolderFile = _service.ListRootFileAndFolder();
+                Google.Apis.Drive.v2.Data.File selectedFile = rootFolderFile[(int)9m];
+                _service.DownloadFile(selectedFile, PATH);
+                using (Stream stream = File.Open(FILE_NAME, FileMode.Open))
+                {
+                    var binaryFormatter = new BinaryFormatter();
+                    List<IShape> items = (List<IShape>)binaryFormatter.Deserialize(stream);
+                    _model.ReloadAllShapes(items);
+                }
             }
         }
     }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace DrawingModel
 {
+
+    [Serializable]
     public class Hexagon : IShape
     {
         public double X1

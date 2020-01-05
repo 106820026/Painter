@@ -58,6 +58,10 @@ namespace DrawingModel
             {
                 return _shapes;
             }
+            set
+            {
+                value = _shapes;
+            }
         }
 
         // 按下滑鼠
@@ -250,7 +254,18 @@ namespace DrawingModel
         public void InsertSelectedShapeFromTotalShapes(int index)
         {
             GetTotalShapes.Insert(index, SelectedShape);
+        }
 
+        // 重新讀取list
+        public void ReloadAllShapes(List<IShape> shapes)
+        {
+            GetTotalShapes.Clear();
+            Console.WriteLine(shapes.Count);
+            foreach (IShape shape in shapes)
+            {
+                GetTotalShapes.Add(shape);
+            }
+            NotifyModelChanged();
         }
 
         // 偵測所有動作

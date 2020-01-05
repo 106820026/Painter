@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace DrawingModel
 {
+
+    [Serializable]
     public class Rectangle : IShape
     {
         public double X1
