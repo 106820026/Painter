@@ -67,7 +67,17 @@ namespace GUITest
             DrawingToolTest.DrawRectangle("canvas", 510, 390, 520, 435);
             DrawingToolTest.DrawRectangle("canvas", 530, 375, 540, 430);
             DrawingToolTest.DrawRectangle("canvas", 550, 395, 565, 460);
+            DrawingToolTest.MouseDragging("canvas", 565, 460, 570, 465);
+            Robot.ClickButton("Undo");
+            Robot.ClickButton("Redo");
+            Robot.ClickButton("Save");
+            Robot.ClickButton("是(Y)");
             UITestControl canvas = Robot.FindPanel("canvas");
+            Mouse.Click(canvas, new Point(650, 225));
+            Robot.AssertText("_shapePositionTextLabel", "Hexagon(600,200,700,250)");
+            DrawingToolTest.ClickClear();
+            Robot.ClickButton("Load");
+            Robot.ClickButton("是(Y)");
             Mouse.Click(canvas, new Point(650, 225));
             Robot.AssertText("_shapePositionTextLabel", "Hexagon(600,200,700,250)");
             DrawingToolTest.ClickClear();
@@ -95,6 +105,20 @@ namespace GUITest
             UITestControl canvas = Robot.FindPanel("canvas");
             Mouse.Click(canvas, new Point(500, 500));
             Robot.AssertText("_shapePositionTextLabel", "Hexagon(250,250,600,600)");
+        }
+
+        [TestMethod]
+        public void ResizeShapeTest()
+        {
+            DrawingToolTest.DrawRectangle("canvas", 250, 250, 600, 600);
+            DrawingToolTest.MouseDragging("canvas", 600, 600, 700, 700);
+            UITestControl canvas = Robot.FindPanel("canvas");
+            Mouse.Click(canvas, new Point(650, 650));
+            Robot.AssertText("_shapePositionTextLabel", "Hexagon(250,250,700,700)");
+            Robot.ClickButton("Undo");
+            Robot.AssertText("_shapePositionTextLabel", "Hexagon(250,250,600,600)");
+            Robot.ClickButton("Redo");
+            Robot.AssertText("_shapePositionTextLabel", "Hexagon(250,250,700,700)");
         }
 
         #region 其他測試屬性

@@ -40,10 +40,18 @@ namespace GUITest
             ClickButton("Clear");
         }
 
-        //Using Robot to ClickButton
+        // Using Robot to ClickButton
         private static void ClickButton(string buttonText)
         {
             Robot.ClickButton(buttonText);
+        }
+
+        // Mouse Dragging
+        public static void MouseDragging(string name, int x1, int y1, int x2, int y2)
+        {
+            UITestControl canvas = Robot.FindPanel(name);
+            Mouse.StartDragging(canvas, new Point(x1, y1));
+            Mouse.StopDragging(canvas, new Point(x2, y2));
         }
     }
 }

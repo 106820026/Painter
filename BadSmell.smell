@@ -988,13 +988,29 @@
             </Smell>
             <Smell>
               <Id>51</Id>
+              <SmellType>ICS(空白與空行-3)</SmellType>
+              <HashCode>SpacingAndNewLine3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingForm</Project>
+              <File>Painter.cs</File>
+              <Line>184</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-3) for, foreach, while, switch, if 等關鍵字與左括號之間加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>52</Id>
               <SmellType>ICS(空白與空行-17)</SmellType>
               <HashCode>SpacingAndNewLine17.Painter.cs.2.        FolderBrowserDialog _downloadFolderBrowserDialog;.        //[Serializable]</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>Painter.cs</File>
-              <Line>25</Line>
+              <Line>26</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -1003,30 +1019,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>52</Id>
-              <SmellType>Literal constants(字面常數)-9</SmellType>
-              <HashCode>LiteralConstants.ClickLoad.9</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>DrawingForm</Project>
-              <File>Painter.cs</File>
-              <Line>192</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
               <Id>53</Id>
-              <SmellType>Literal constants(字面常數)-"./"</SmellType>
-              <HashCode>LiteralConstants.ClickLoad."./"</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-HandleHexagonButtonClick(hexagon)</SmellType>
+              <HashCode>UnsuitableNaming.Form.HandleHexagonButtonClick.HandleHexagonButtonClick</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>Painter.cs</File>
-              <Line>193</Line>
+              <Line>98</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -1036,13 +1036,13 @@
             </Smell>
             <Smell>
               <Id>54</Id>
-              <SmellType>Unsuitable naming(名不符實)-HandleHexagonButtonClick(hexagon)</SmellType>
-              <HashCode>UnsuitableNaming.Form.HandleHexagonButtonClick.HandleHexagonButtonClick</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-QUSETION(qusetion)</SmellType>
+              <HashCode>UnsuitableNaming.Form.ClickSave.QUSETION</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>Painter.cs</File>
-              <Line>97</Line>
+              <Line>182</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -1052,6 +1052,38 @@
             </Smell>
             <Smell>
               <Id>55</Id>
+              <SmellType>Unsuitable naming(名不符實)-QUSETION(qusetion)</SmellType>
+              <HashCode>UnsuitableNaming.Form.ClickLoad.QUSETION</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingForm</Project>
+              <File>Painter.cs</File>
+              <Line>194</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>56</Id>
+              <SmellType>Unsuitable naming(名不符實)-UploadFlieAsync(flie)</SmellType>
+              <HashCode>UnsuitableNaming.Form.UploadFlieAsync.UploadFlieAsync</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DrawingForm</Project>
+              <File>Painter.cs</File>
+              <Line>212</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>57</Id>
               <SmellType>Unsuitable naming(名不符實)-_hexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.Form._hexagon._hexagon</HashCode>
               <Severity>Red</Severity>
@@ -1067,7 +1099,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>56</Id>
+              <Id>58</Id>
               <SmellType>Unsuitable naming(名不符實)-_hexagonButtonEnable(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.PresentationModel._hexagonButtonEnable._hexagonButtonEnable</HashCode>
               <Severity>Red</Severity>
@@ -1083,7 +1115,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>57</Id>
+              <Id>59</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawAndFillRectangle.x</HashCode>
               <Severity>Warning</Severity>
@@ -1099,7 +1131,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>58</Id>
+              <Id>60</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawAndFillRectangle.y</HashCode>
               <Severity>Warning</Severity>
@@ -1115,7 +1147,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>59</Id>
+              <Id>61</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawHexagon.DrawHexagon</HashCode>
               <Severity>Red</Severity>
@@ -1131,7 +1163,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>60</Id>
+              <Id>62</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagonFrame(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawHexagonFrame.DrawHexagonFrame</HashCode>
               <Severity>Red</Severity>
@@ -1147,7 +1179,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>61</Id>
+              <Id>63</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawAnglePoint.x</HashCode>
               <Severity>Warning</Severity>
@@ -1163,7 +1195,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>62</Id>
+              <Id>64</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.WindowsFormsGraphicsAdaptor.DrawAnglePoint.y</HashCode>
               <Severity>Warning</Severity>
@@ -1179,7 +1211,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>63</Id>
+              <Id>65</Id>
               <SmellType>Unsuitable naming(名不符實)-HandleHexagonButtonClick(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.MainPage.HandleHexagonButtonClick.HandleHexagonButtonClick</HashCode>
               <Severity>Red</Severity>
@@ -1195,7 +1227,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>64</Id>
+              <Id>66</Id>
               <SmellType>Unsuitable naming(名不符實)-_hexagonButtonEnable(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.PresentationModel._hexagonButtonEnable._hexagonButtonEnable</HashCode>
               <Severity>Red</Severity>
@@ -1211,7 +1243,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>65</Id>
+              <Id>67</Id>
               <SmellType>ICS(縮排與換行-1)</SmellType>
               <HashCode>IndentAndNewLine1.DrawAnglePoint.            ellipse.RenderTransform = new TranslateTransform() { X = x - (int)5m, Y = y - (int)5m };</HashCode>
               <Severity>Red</Severity>
@@ -1227,7 +1259,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>66</Id>
+              <Id>68</Id>
               <SmellType>ICS(縮排與換行-3)</SmellType>
               <HashCode>IndentAndNewLine3.DrawAnglePoint.            ellipse.RenderTransform = new TranslateTransform() { X = x - (int)5m, Y = y - (int)5m };</HashCode>
               <Severity>Red</Severity>
@@ -1243,7 +1275,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>67</Id>
+              <Id>69</Id>
               <SmellType>Unsuitable naming(名不符實)-hexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawHexagon.hexagon</HashCode>
               <Severity>Red</Severity>
@@ -1259,7 +1291,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>68</Id>
+              <Id>70</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawHexagon.DrawHexagon</HashCode>
               <Severity>Red</Severity>
@@ -1275,7 +1307,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>69</Id>
+              <Id>71</Id>
               <SmellType>Unsuitable naming(名不符實)-hexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.LinkPointToHexagon.hexagon</HashCode>
               <Severity>Red</Severity>
@@ -1291,7 +1323,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>70</Id>
+              <Id>72</Id>
               <SmellType>Unsuitable naming(名不符實)-LinkPointToHexagon(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.LinkPointToHexagon.LinkPointToHexagon</HashCode>
               <Severity>Red</Severity>
@@ -1307,7 +1339,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>71</Id>
+              <Id>73</Id>
               <SmellType>Unsuitable naming(名不符實)-DrawHexagonFrame(hexagon)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawHexagonFrame.DrawHexagonFrame</HashCode>
               <Severity>Red</Severity>
@@ -1323,7 +1355,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>72</Id>
+              <Id>74</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawAnglePoint.x</HashCode>
               <Severity>Warning</Severity>
@@ -1339,7 +1371,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>73</Id>
+              <Id>75</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.WindowsStoreGraphicsAdaptor.DrawAnglePoint.y</HashCode>
               <Severity>Warning</Severity>
@@ -1355,14 +1387,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>74</Id>
-              <SmellType>Unresolved warnings(忽視警告)-函式 CreateNewService 缺乏註解</SmellType>
-              <HashCode>.GoogleDriveService.cs.Unresolved warnings(忽視警告)-函式 CreateNewService 缺乏註解.39</HashCode>
+              <Id>76</Id>
+              <SmellType>Unresolved warnings(忽視警告)-因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前的方法。請考慮將 'await' 運算子套用至呼叫的結果。</SmellType>
+              <HashCode>DrawingForm\DrawingForm.Painter.cs.Unresolved warnings(忽視警告)-因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前的方法。請考慮將 'await' 運算子套用至呼叫的結果。.186</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
-              <Project />
-              <File>GoogleDriveService.cs</File>
-              <Line>39</Line>
+              <Project>DrawingForm\DrawingForm</Project>
+              <File>Painter.cs</File>
+              <Line>186</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -1371,7 +1403,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>75</Id>
+              <Id>77</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>129 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByType(System.Type)</HashCode>
               <Severity>Red</Severity>
@@ -1387,7 +1419,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>76</Id>
+              <Id>78</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>134 DrawingApp.DrawingApp_XamlTypeInfo.XamlTypeInfoProvider.GetXamlTypeByName(string)</HashCode>
               <Severity>Red</Severity>
@@ -1403,7 +1435,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>77</Id>
+              <Id>79</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>20 DrawingApp.Program.Main(string[])</HashCode>
               <Severity>Red</Severity>
@@ -1419,7 +1451,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>78</Id>
+              <Id>80</Id>
               <SmellType>Lack of comments(缺乏註解)</SmellType>
               <HashCode>60 DrawingApp.MainPage.UnloadObject(Windows.UI.Xaml.DependencyObject)</HashCode>
               <Severity>Red</Severity>
@@ -1435,7 +1467,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>79</Id>
+              <Id>81</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>62 目前物件 DrawingModel.PointerState，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：DrawingModel.Model.SelectedShape 以及 DrawingModel.Model.SelectedShape 以及 DrawingModel.Model.DrawHint(double, double, double, double)</HashCode>
               <Severity>Red</Severity>
@@ -1451,7 +1483,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>80</Id>
+              <Id>82</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>82 目前物件 DrawingModel.PointerState，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.SelectedShape 以及 DrawingModel.Model.IsSelected</HashCode>
               <Severity>Warning</Severity>
@@ -1467,7 +1499,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>81</Id>
+              <Id>83</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>85 目前物件 DrawingModel.PointerState，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.Model.IsPressed 以及 DrawingModel.Model.IsSelected</HashCode>
               <Severity>Warning</Severity>
@@ -1483,17 +1515,17 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>82</Id>
+              <Id>84</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>193 目前物件 DrawingForm.Form，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.GoogleDriveService，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.GoogleDriveService.ListRootFileAndFolder() 以及 DrawingModel.GoogleDriveService.DownloadFile(Google.Apis.Drive.v2.Data.File, string, System.Action&lt;Google.Apis.Download.IDownloadProgress&gt;)</HashCode>
+              <HashCode>201 目前物件 DrawingForm.Form，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.GoogleDriveService，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.GoogleDriveService.ListRootFileAndFolder() 以及 DrawingModel.GoogleDriveService.DownloadFile(Google.Apis.Drive.v2.Data.File, string, System.Action&lt;Google.Apis.Download.IDownloadProgress&gt;)</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>DrawingForm</Project>
               <File>C:\Users\Rosie\source\repos\DrawingModel\DrawingForm\Painter.cs</File>
-              <Line>193</Line>
-              <StartLine>192</StartLine>
+              <Line>201</Line>
+              <StartLine>200</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>193</EndLine>
+              <EndLine>201</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 DrawingForm.Form，使用物件的方法或屬性次數：0次，Envy到對象物件 DrawingModel.GoogleDriveService，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：DrawingModel.GoogleDriveService.ListRootFileAndFolder() 以及 DrawingModel.GoogleDriveService.DownloadFile(Google.Apis.Drive.v2.Data.File, string, System.Action&lt;Google.Apis.Download.IDownloadProgress&gt;)</Comment>
               <Auto>false</Auto>
@@ -1759,8 +1791,8 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>2092</ProductionLoc>
-          <TestLoc>2300</TestLoc>
+          <ProductionLoc>2120</ProductionLoc>
+          <TestLoc>2332</TestLoc>
         </CodeReview>
       </Data>
     </div>

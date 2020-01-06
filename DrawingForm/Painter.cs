@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DrawingForm
@@ -21,11 +22,7 @@ namespace DrawingForm
         PointerState _pointerState;
         GoogleDriveService _service;
         OpenFileDialog _uploadFileOpenFileDialog;
-        FolderBrowserDialog _downloadFolderBrowserDialog;
-
-
-        //[Serializable]
-        //public class IShape();
+        FolderBrowserDialog _downloadFolderBrowserDialog; 
 
         public Form()
         {
@@ -178,16 +175,11 @@ namespace DrawingForm
         private void ClickSave(object sender, EventArgs e)
         {
             const String UPLOAD_QUESTION = "要上傳嗎";
-            const String QUSETION = "Question";
-            DialogResult dialogResult = MessageBox.Show(UPLOAD_QUESTION, QUSETION, MessageBoxButtons.YesNo);
-            if(dialogResult == DialogResult.Yes)
+            const String QUESTION = "Question";
+            DialogResult dialogResult = MessageBox.Show(UPLOAD_QUESTION, QUESTION, MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                FileStream fileStream = new FileStream(FILE_NAME, FileMode.Create);
-                BinaryFormatter binaryFormatter = new BinaryFormatter();
-                binaryFormatter.Serialize(fileStream, _model.GetTotalShapes);
-                fileStream.Close();
-                const String CONTENT_TYPE = "application/octet-stream";
-                _service.UploadFile(FILE_NAME, CONTENT_TYPE);
+                UploadFileAsync();
             }
         }
 
@@ -195,8 +187,8 @@ namespace DrawingForm
         private void ClickLoad(object sender, EventArgs e)
         {
             const String DOWNLOAD_QUESTION = "要下載嗎";
-            const String QUSETION = "Question";
-            DialogResult dialogResult = MessageBox.Show(DOWNLOAD_QUESTION, QUSETION, MessageBoxButtons.YesNo);
+            const String QUESTION = "Question";
+            DialogResult dialogResult = MessageBox.Show(DOWNLOAD_QUESTION, QUESTION, MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 const String PATH = "./";
@@ -210,6 +202,25 @@ namespace DrawingForm
                     _model.ReloadAllShapes(items);
                 }
             }
+        }
+
+        // 非同步上傳
+        private async Task UploadFileAsync()
+        {
+            _model._modelChanged -= HandleModelChanged;
+            await Task.Factory.StartNew(()=>UploadFileFromGoogleDrive());
+            _model._modelChanged += HandleModelChanged;
+        }
+
+        // 從Google Drive上傳資料
+        private void UploadFileFromGoogleDrive()
+        {
+            FileStream fileStream = new FileStream(FILE_NAME, FileMode.Create);
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            binaryFormatter.Serialize(fileStream, _model.GetTotalShapes);
+            fileStream.Close();
+            const String CONTENT_TYPE = "application/octet-stream";
+            _service.UploadFile(FILE_NAME, CONTENT_TYPE);
         }
     }
 }
