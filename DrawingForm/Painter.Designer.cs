@@ -225,6 +225,7 @@
             // 
             // _load
             // 
+            this._load.Enabled = false;
             this._load.Location = new System.Drawing.Point(161, 3);
             this._load.Name = "_load";
             this._load.Size = new System.Drawing.Size(152, 50);

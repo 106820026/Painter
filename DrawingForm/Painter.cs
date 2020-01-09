@@ -180,6 +180,7 @@ namespace DrawingForm
             if (dialogResult == DialogResult.Yes)
             {
                 UploadFileAsync();
+                _load.Enabled = true;
             }
         }
 

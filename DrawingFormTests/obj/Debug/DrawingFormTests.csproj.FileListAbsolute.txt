@@ -32,3 +32,4 @@ C:\Users\Rosie\source\repos\DrawingModel\DrawingFormTests\bin\Debug\Google.Apis.
 C:\Users\Rosie\source\repos\DrawingModel\DrawingFormTests\bin\Debug\Google.Apis.Core.pdb
 C:\Users\Rosie\source\repos\DrawingModel\DrawingFormTests\bin\Debug\Google.Apis.Core.xml
 C:\Users\Rosie\source\repos\DrawingModel\DrawingFormTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Rosie\source\repos\DrawingModel\DrawingFormTests\bin\Debug\Model\clientSecret.json
